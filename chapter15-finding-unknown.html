@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Finding the Unknown</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#101828;
+    font-weight:700;
+    line-height:1.6;
+}
+
+header{
+    background:#101c3d;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    color:#dce5ff;
+    margin:8px 0;
+}
+
+.container{
+    max-width:1050px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.info,.question{
+    background:white;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.info{
+    padding:20px;
+    margin-bottom:22px;
+}
+
+.section-title{
+    background:#101c3d;
+    color:white;
+    padding:15px 18px;
+    border-radius:12px;
+    margin-top:30px;
+    font-size:21px;
+}
+
+.question{
+    margin:16px 0;
+    padding:20px;
+    border-left:5px solid #243b73;
+}
+
+.question h3{
+    margin-top:0;
+}
+
+.option{
+    display:block;
+    padding:10px 13px;
+    margin:8px 0;
+    border:1px solid #ccd5e1;
+    border-radius:9px;
+    cursor:pointer;
+    background:#fafcff;
+}
+
+.option:hover{
+    background:#edf3ff;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+    transform:scale(1.1);
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:12px;
+    border-radius:9px;
+    background:#e8f7ed;
+    border:1px solid #9bd2ac;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+/* SCORE */
+
+.quiz{
+    counter-reset:score;
+}
+
+.question:not(.match):has(.correct:checked){
+    counter-increment:score;
+}
+
+/* MATCHING = 1 MARK EACH */
+
+.match36:has(.m36a.correct:checked):has(.m36b.correct:checked):has(.m36c.correct:checked):has(.m36d.correct:checked){
+    counter-increment:score;
+}
+
+.match37:has(.m37a.correct:checked):has(.m37b.correct:checked):has(.m37c.correct:checked):has(.m37d.correct:checked){
+    counter-increment:score;
+}
+
+.match38:has(.m38a.correct:checked):has(.m38b.correct:checked):has(.m38c.correct:checked):has(.m38d.correct:checked){
+    counter-increment:score;
+}
+
+.match39:has(.m39a.correct:checked):has(.m39b.correct:checked):has(.m39c.correct:checked):has(.m39d.correct:checked){
+    counter-increment:score;
+}
+
+.match40:has(.m40a.correct:checked):has(.m40b.correct:checked):has(.m40c.correct:checked):has(.m40d.correct:checked){
+    counter-increment:score;
+}
+
+.score-card{
+    margin-top:35px;
+    background:#101c3d;
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.score-number{
+    font-size:40px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.score-note{
+    color:#dce5ff;
+    font-size:14px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:12px;
+}
+
+th,td{
+    border:1px solid #ccd5e1;
+    padding:10px;
+    text-align:center;
+    vertical-align:top;
+}
+
+th{
+    background:#e8edf6;
+}
+
+.note{
+    background:#fff8dc;
+    border-left:5px solid #e1b400;
+    padding:12px 15px;
+    border-radius:9px;
+}
+
+.nav{
+    text-align:center;
+    margin:30px 0;
+}
+
+.nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#243b73;
+    padding:12px 22px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Class 7 Mathematics</h1>
+<p>Ganita Prakash Part 2 • Chapter 15: Finding the Unknown</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+
+<h2>🔎 Chapter 15 — Finding the Unknown</h2>
+
+<p>
+This chapter focuses on using mathematical relationships, equations,
+patterns and logical reasoning to determine unknown quantities.
+Students learn to represent an unknown using a letter and solve
+problems systematically.
+</p>
+
+<div class="note">
+<b>55 Questions:</b>
+15 MCQs + 10 True/False + 5 Assertion & Reasoning +
+5 Fill in the Blanks + 5 Match the Following +
+5 Drag & Drop Style + 10 HOTS.
+</div>
+
+</div>
+
+<form class="quiz">
+
+<!-- =====================================================
+MCQs 1-15
+===================================================== -->
+
+<div class="section-title">Section A — Multiple Choice Questions (15)</div>
+
+<div class="question">
+<h3>1. If x + 7 = 19, what is the value of x?</h3>
+
+<label class="option"><input type="radio" name="q1"> 10</label>
+<label class="correct option"><input class="correct" type="radio" name="q1"> 12</label>
+<label class="option"><input type="radio" name="q1"> 13</label>
+<label class="option"><input type="radio" name="q1"> 26</label>
+
+<div class="answer">Correct Answer: 12</div>
+</div>
+
+
+<div class="question">
+<h3>2. Which equation represents "a number decreased by 9 is 16"?</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q2"> x − 9 = 16</label>
+<label class="option"><input type="radio" name="q2"> x + 9 = 16</label>
+<label class="option"><input type="radio" name="q2"> 9 − x = 16</label>
+<label class="option"><input type="radio" name="q2"> 9x = 16</label>
+
+<div class="answer">Correct Answer: x − 9 = 16</div>
+</div>
+
+
+<div class="question">
+<h3>3. If 5x = 45, then x equals:</h3>
+
+<label class="option"><input type="radio" name="q3"> 5</label>
+<label class="option"><input type="radio" name="q3"> 8</label>
+<label class="correct option"><input class="correct" type="radio" name="q3"> 9</label>
+<label class="option"><input type="radio" name="q3"> 10</label>
+
+<div class="answer">Correct Answer: 9</div>
+</div>
+
+
+<div class="question">
+<h3>4. If y/4 = 7, what is y?</h3>
+
+<label class="option"><input type="radio" name="q4"> 11</label>
+<label class="correct option"><input class="correct" type="radio" name="q4"> 28</label>
+<label class="option"><input type="radio" name="q4"> 24</label>
+<label class="option"><input type="radio" name="q4"> 3</label>
+
+<div class="answer">Correct Answer: 28</div>
+</div>
+
+
+<div class="question">
+<h3>5. Which operation should be used to undo multiplication by 6?</h3>
+
+<label class="option"><input type="radio" name="q5"> Addition of 6</label>
+<label class="correct option"><input class="correct" type="radio" name="q5"> Division by 6</label>
+<label class="option"><input type="radio" name="q5"> Subtraction of 6</label>
+<label class="option"><input type="radio" name="q5"> Multiplication by 6</label>
+
+<div class="answer">Correct Answer: Division by 6</div>
+</div>
+
+
+<div class="question">
+<h3>6. If 3x + 2 = 20, which value satisfies the equation?</h3>
+
+<label class="option"><input type="radio" name="q6"> 4</label>
+<label class="correct option"><input class="correct" type="radio" name="q6"> 6</label>
+<label class="option"><input type="radio" name="q6"> 7</label>
+<label class="option"><input type="radio" name="q6"> 8</label>
+
+<div class="answer">
+Correct Answer: 6, because 3(6) + 2 = 20.
+</div>
+</div>
+
+
+<div class="question">
+<h3>7. If n − 15 = 8, which equation gives n?</h3>
+
+<label class="option"><input type="radio" name="q7"> 8 − 15</label>
+<label class="correct option"><input class="correct" type="radio" name="q7"> 8 + 15</label>
+<label class="option"><input type="radio" name="q7"> 15 − 8</label>
+<label class="option"><input type="radio" name="q7"> 15 × 8</label>
+
+<div class="answer">Correct Answer: n = 8 + 15 = 23</div>
+</div>
+
+
+<div class="question">
+<h3>8. The perimeter of a square is 36 cm. What is its side length?</h3>
+
+<label class="option"><input type="radio" name="q8"> 6 cm</label>
+<label class="option"><input type="radio" name="q8"> 8 cm</label>
+<label class="correct option"><input class="correct" type="radio" name="q8"> 9 cm</label>
+<label class="option"><input type="radio" name="q8"> 12 cm</label>
+
+<div class="answer">Correct Answer: 9 cm</div>
+</div>
+
+
+<div class="question">
+<h3>9. If 2x − 5 = 17, what is x?</h3>
+
+<label class="option"><input type="radio" name="q9"> 6</label>
+<label class="correct option"><input class="correct" type="radio" name="q9"> 11</label>
+<label class="option"><input type="radio" name="q9"> 12</label>
+<label class="option"><input type="radio" name="q9"> 14</label>
+
+<div class="answer">Correct Answer: 11</div>
+</div>
+
+
+<div class="question">
+<h3>10. Which equation describes: "three times a number is 27"?</h3>
+
+<label class="option"><input type="radio" name="q10"> x + 3 = 27</label>
+<label class="correct option"><input class="correct" type="radio" name="q10"> 3x = 27</label>
+<label class="option"><input type="radio" name="q10"> x − 3 = 27</label>
+<label class="option"><input type="radio" name="q10"> x/3 = 27</label>
+
+<div class="answer">Correct Answer: 3x = 27</div>
+</div>
+
+
+<div class="question">
+<h3>11. If 4a = 52, then a is:</h3>
+
+<label class="option"><input type="radio" name="q11"> 11</label>
+<label class="option"><input type="radio" name="q11"> 12</label>
+<label class="correct option"><input class="correct" type="radio" name="q11"> 13</label>
+<label class="option"><input type="radio" name="q11"> 14</label>
+
+<div class="answer">Correct Answer: 13</div>
+</div>
+
+
+<div class="question">
+<h3>12. A number is increased by 13 to give 31. The number is:</h3>
+
+<label class="option"><input type="radio" name="q12"> 16</label>
+<label class="correct option"><input class="correct" type="radio" name="q12"> 18</label>
+<label class="option"><input type="radio" name="q12"> 20</label>
+<label class="option"><input type="radio" name="q12"> 44</label>
+
+<div class="answer">Correct Answer: 18</div>
+</div>
+
+
+<div class="question">
+<h3>13. If 7 + p = 7, what must p be?</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q13"> 0</label>
+<label class="option"><input type="radio" name="q13"> 1</label>
+<label class="option"><input type="radio" name="q13"> 7</label>
+<label class="option"><input type="radio" name="q13"> −7</label>
+
+<div class="answer">Correct Answer: 0</div>
+</div>
+
+
+<div class="question">
+<h3>14. If 5m − 10 = 15, then m equals:</h3>
+
+<label class="option"><input type="radio" name="q14"> 3</label>
+<label class="correct option"><input class="correct" type="radio" name="q14"> 5</label>
+<label class="option"><input type="radio" name="q14"> 7</label>
+<label class="option"><input type="radio" name="q14"> 10</label>
+
+<div class="answer">Correct Answer: 5</div>
+</div>
+
+
+<div class="question">
+<h3>15. A rectangle has length 12 cm and perimeter 34 cm. What is its breadth?</h3>
+
+<label class="option"><input type="radio" name="q15"> 4 cm</label>
+<label class="correct option"><input class="correct" type="radio" name="q15"> 5 cm</label>
+<label class="option"><input type="radio" name="q15"> 6 cm</label>
+<label class="option"><input type="radio" name="q15"> 7 cm</label>
+
+<div class="answer">
+Correct Answer: 5 cm, since 2(12 + b) = 34.
+</div>
+</div>
+
+
+<!-- =====================================================
+TRUE/FALSE
+===================================================== -->
+
+<div class="section-title">Section B — True / False (10)</div>
+
+<div class="question">
+<h3>16. If x + 5 = 12, then x = 7.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q16"> True</label>
+<label class="option"><input type="radio" name="q16"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>17. The solution of 4x = 20 is x = 4.</h3>
+
+<label class="option"><input type="radio" name="q17"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q17"> False</label>
+
+<div class="answer">Correct Answer: False. x = 5.</div>
+</div>
+
+
+<div class="question">
+<h3>18. Subtraction is the inverse operation of addition.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q18"> True</label>
+<label class="option"><input type="radio" name="q18"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>19. If x/3 = 8, then x = 24.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q19"> True</label>
+<label class="option"><input type="radio" name="q19"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>20. The equation 2x + 4 = 10 has solution x = 4.</h3>
+
+<label class="option"><input type="radio" name="q20"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q20"> False</label>
+
+<div class="answer">Correct Answer: False. x = 3.</div>
+</div>
+
+
+<div class="question">
+<h3>21. An equation can have an unknown represented by a letter.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q21"> True</label>
+<label class="option"><input type="radio" name="q21"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>22. If a number is decreased by 6, we can undo the operation by adding 6.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q22"> True</label>
+<label class="option"><input type="radio" name="q22"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>23. The equation 7x = 0 has solution x = 7.</h3>
+
+<label class="option"><input type="radio" name="q23"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q23"> False</label>
+
+<div class="answer">Correct Answer: False. x = 0.</div>
+</div>
+
+
+<div class="question">
+<h3>24. Checking a solution by substituting it back into the equation can help verify the answer.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q24"> True</label>
+<label class="option"><input type="radio" name="q24"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>25. The equation x − 4 = 9 has solution x = 5.</h3>
+
+<label class="option"><input type="radio" name="q25"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q25"> False</label>
+
+<div class="answer">Correct Answer: False. x = 13.</div>
+</div>
+
+
+<!-- =====================================================
+ASSERTION REASON
+===================================================== -->
+
+<div class="section-title">Section C — Assertion & Reasoning (5)</div>
+
+<div class="info">
+<p><b>A:</b> Both Assertion and Reason are true, and Reason correctly explains Assertion.</p>
+<p><b>B:</b> Both are true, but Reason does not correctly explain Assertion.</p>
+<p><b>C:</b> Assertion is true, but Reason is false.</p>
+<p><b>D:</b> Assertion is false, but Reason is true.</p>
+</div>
+
+
+<div class="question">
+<h3>
+26. Assertion: If x + 8 = 15, then x = 7.<br>
+Reason: Subtracting 8 from both sides preserves equality.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q26"> A</label>
+<label class="option"><input type="radio" name="q26"> B</label>
+<label class="option"><input type="radio" name="q26"> C</label>
+<label class="option"><input type="radio" name="q26"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+27. Assertion: If 6x = 42, then x = 7.<br>
+Reason: Division by 6 reverses multiplication by 6.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q27"> A</label>
+<label class="option"><input type="radio" name="q27"> B</label>
+<label class="option"><input type="radio" name="q27"> C</label>
+<label class="option"><input type="radio" name="q27"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+28. Assertion: If x − 10 = 4, then x = 14.<br>
+Reason: Addition and subtraction are inverse operations.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q28"> A</label>
+<label class="option"><input type="radio" name="q28"> B</label>
+<label class="option"><input type="radio" name="q28"> C</label>
+<label class="option"><input type="radio" name="q28"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+29. Assertion: If x/5 = 9, then x = 45.<br>
+Reason: Multiplication by 5 undoes division by 5.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q29"> A</label>
+<label class="option"><input type="radio" name="q29"> B</label>
+<label class="option"><input type="radio" name="q29"> C</label>
+<label class="option"><input type="radio" name="q29"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+30. Assertion: The equation 3x + 2 = 14 has solution x = 4.<br>
+Reason: After subtracting 2, the equation becomes 3x = 12.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q30"> A</label>
+<label class="option"><input type="radio" name="q30"> B</label>
+<label class="option"><input type="radio" name="q30"> C</label>
+<label class="option"><input type="radio" name="q30"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<!-- =====================================================
+FILL BLANK
+===================================================== -->
+
+<div class="section-title">Section D — Fill in the Blanks (5)</div>
+
+
+<div class="question">
+<h3>31. In the equation 9 + x = 21, the value of x is ______.</h3>
+
+<label class="option"><input type="radio" name="q31"> 10</label>
+<label class="correct option"><input class="correct" type="radio" name="q31"> 12</label>
+<label class="option"><input type="radio" name="q31"> 13</label>
+<label class="option"><input type="radio" name="q31"> 30</label>
+
+<div class="answer">Correct Answer: 12</div>
+</div>
+
+
+<div class="question">
+<h3>32. In 5p = 60, p = ______.</h3>
+
+<label class="option"><input type="radio" name="q32"> 10</label>
+<label class="correct option"><input class="correct" type="radio" name="q32"> 12</label>
+<label class="option"><input type="radio" name="q32"> 15</label>
+<label class="option"><input type="radio" name="q32"> 20</label>
+
+<div class="answer">Correct Answer: 12</div>
+</div>
+
+
+<div class="question">
+<h3>33. If t − 17 = 25, then t = ______.</h3>
+
+<label class="option"><input type="radio" name="q33"> 8</label>
+<label class="option"><input type="radio" name="q33"> 32</label>
+<label class="correct option"><input class="correct" type="radio" name="q33"> 42</label>
+<label class="option"><input type="radio" name="q33"> 45</label>
+
+<div class="answer">Correct Answer: 42</div>
+</div>
+
+
+<div class="question">
+<h3>34. If z/6 = 11, then z = ______.</h3>
+
+<label class="option"><input type="radio" name="q34"> 17</label>
+<label class="option"><input type="radio" name="q34"> 54</label>
+<label class="correct option"><input class="correct" type="radio" name="q34"> 66</label>
+<label class="option"><input type="radio" name="q34"> 72</label>
+
+<div class="answer">Correct Answer: 66</div>
+</div>
+
+
+<div class="question">
+<h3>35. If the perimeter of an equilateral triangle is 48 cm, each side is ______ cm.</h3>
+
+<label class="option"><input type="radio" name="q35"> 12</label>
+<label class="correct option"><input class="correct" type="radio" name="q35"> 16</label>
+<label class="option"><input type="radio" name="q35"> 18</label>
+<label class="option"><input type="radio" name="q35"> 24</label>
+
+<div class="answer">Correct Answer: 16 cm</div>
+</div>
+
+
+<!-- =====================================================
+MATCHING
+===================================================== -->
+
+<div class="section-title">Section E — Match the Following (5)</div>
+
+
+<div class="question match match36">
+<h3>36. Match each equation with its solution.</h3>
+
+<table>
+
+<tr>
+<th>Equation</th>
+<th>Choose the solution</th>
+</tr>
+
+<tr>
+<td>x + 6 = 14</td>
+<td>
+<label><input class="m36a correct" type="radio" name="m36a"> x = 8</label>
+<label><input type="radio" name="m36a"> x = 6</label>
+<label><input type="radio" name="m36a"> x = 20</label>
+<label><input type="radio" name="m36a"> x = 2</label>
+</td>
+</tr>
+
+<tr>
+<td>y − 5 = 11</td>
+<td>
+<label><input class="m36b correct" type="radio" name="m36b"> y = 16</label>
+<label><input type="radio" name="m36b"> y = 6</label>
+<label><input type="radio" name="m36b"> y = 11</label>
+<label><input type="radio" name="m36b"> y = 55</label>
+</td>
+</tr>
+
+<tr>
+<td>3p = 27</td>
+<td>
+<label><input class="m36c correct" type="radio" name="m36c"> p = 9</label>
+<label><input type="radio" name="m36c"> p = 6</label>
+<label><input type="radio" name="m36c"> p = 24</label>
+<label><input type="radio" name="m36c"> p = 30</label>
+</td>
+</tr>
+
+<tr>
+<td>q/4 = 6</td>
+<td>
+<label><input class="m36d correct" type="radio" name="m36d"> q = 24</label>
+<label><input type="radio" name="m36d"> q = 10</label>
+<label><input type="radio" name="m36d"> q = 18</label>
+<label><input type="radio" name="m36d"> q = 2</label>
+</td>
+</tr>
+
+</table>
+
+<div class="answer">
+Correct matches: x=8, y=16, p=9, q=24.
+</div>
+</div>
+
+
+<div class="question match match37">
+<h3>37. Match each verbal statement with its equation.</h3>
+
+<table>
+
+<tr>
+<th>Statement</th>
+<th>Equation</th>
+</tr>
+
+<tr>
+<td>A number increased by 7 is 19</td>
+<td>
+<label><input class="m37a correct" type="radio" name="m37a"> x + 7 = 19</label>
+<label><input type="radio" name="m37a"> x − 7 = 19</label>
+<label><input type="radio" name="m37a"> 7x = 19</label>
+<label><input type="radio" name="m37a"> x/7 = 19</label>
+</td>
+</tr>
+
+<tr>
+<td>A number decreased by 4 is 15</td>
+<td>
+<label><input class="m37b correct" type="radio" name="m37b"> x − 4 = 15</label>
+<label><input type="radio" name="m37b"> x + 4 = 15</label>
+<label><input type="radio" name="m37b"> 4x = 15</label>
+<label><input type="radio" name="m37b"> x/4 = 15</label>
+</td>
+</tr>
+
+<tr>
+<td>Five times a number is 35</td>
+<td>
+<label><input class="m37c correct" type="radio" name="m37c"> 5x = 35</label>
+<label><input type="radio" name="m37c"> x + 5 = 35</label>
+<label><input type="radio" name="m37c"> x − 5 = 35</label>
+<label><input type="radio" name="m37c"> x/5 = 35</label>
+</td>
+</tr>
+
+<tr>
+<td>A number divided by 8 is 6</td>
+<td>
+<label><input class="m37d correct" type="radio" name="m37d"> x/8 = 6</label>
+<label><input type="radio" name="m37d"> x + 8 = 6</label>
+<label><input type="radio" name="m37d"> 8x = 6</label>
+<label><input type="radio" name="m37d"> x − 8 = 6</label>
+</td>
+</tr>
+
+</table>
+
+<div class="answer">Correct matches shown above.</div>
+</div>
+
+
+<div class="question match match38">
+<h3>38. Match each operation with its inverse operation.</h3>
+
+<table>
+
+<tr>
+<th>Operation</th>
+<th>Inverse</th>
+</tr>
+
+<tr>
+<td>Addition</td>
+<td>
+<label><input class="m38a correct" type="radio" name="m38a"> Subtraction</label>
+<label><input type="radio" name="m38a"> Multiplication</label>
+<label><input type="radio" name="m38a"> Division</label>
+<label><input type="radio" name="m38a"> Addition</label>
+</td>
+</tr>
+
+<tr>
+<td>Multiplication</td>
+<td>
+<label><input class="m38b correct" type="radio" name="m38b"> Division</label>
+<label><input type="radio" name="m38b"> Addition</label>
+<label><input type="radio" name="m38b"> Subtraction</label>
+<label><input type="radio" name="m38b"> Multiplication</label>
+</td>
+</tr>
+
+<tr>
+<td>Subtraction</td>
+<td>
+<label><input class="m38c correct" type="radio" name="m38c"> Addition</label>
+<label><input type="radio" name="m38c"> Division</label>
+<label><input type="radio" name="m38c"> Multiplication</label>
+<label><input type="radio" name="m38c"> Subtraction</label>
+</td>
+</tr>
+
+<tr>
+<td>Division</td>
+<td>
+<label><input class="m38d correct" type="radio" name="m38d"> Multiplication</label>
+<label><input type="radio" name="m38d"> Addition</label>
+<label><input type="radio" name="m38d"> Subtraction</label>
+<label><input type="radio" name="m38d"> Division</label>
+</td>
+</tr>
+
+</table>
+
+<div class="answer">
+Correct matches: Addition→Subtraction;
+Multiplication→Division; Subtraction→Addition;
+Division→Multiplication.
+</div>
+</div>
+
+
+<div class="question match match39">
+<h3>39. Match each equation with the first operation needed to isolate the variable.</h3>
+
+<table>
+
+<tr>
+<th>Equation</th>
+<th>First operation</th>
+</tr>
+
+<tr>
+<td>x + 12 = 30</td>
+<td>
+<label><input class="m39a correct" type="radio" name="m39a"> Subtract 12</label>
+<label><input type="radio" name="m39a"> Add 12</label>
+<label><input type="radio" name="m39a"> Multiply by 12</label>
+<label><input type="radio" name="m39a"> Divide by 12</label>
+</td>
+</tr>
+
+<tr>
+<td>y − 9 = 17</td>
+<td>
+<label><input class="m39b correct" type="radio" name="m39b"> Add 9</label>
+<label><input type="radio" name="m39b"> Subtract 9</label>
+<label><input type="radio" name="m39b"> Multiply by 9</label>
+<label><input type="radio" name="m39b"> Divide by 9</label>
+</td>
+</tr>
+
+<tr>
+<td>7p = 56</td>
+<td>
+<label><input class="m39c correct" type="radio" name="m39c"> Divide by 7</label>
+<label><input type="radio" name="m39c"> Add 7</label>
+<label><input type="radio" name="m39c"> Subtract 7</label>
+<label><input type="radio" name="m39c"> Multiply by 7</label>
+</td>
+</tr>
+
+<tr>
+<td>q/5 = 13</td>
+<td>
+<label><input class="m39d correct" type="radio" name="m39d"> Multiply by 5</label>
+<label><input type="radio" name="m39d"> Divide by 5</label>
+<label><input type="radio" name="m39d"> Add 5</label>
+<label><input type="radio" name="m39d"> Subtract 5</label>
+</td>
+</tr>
+
+</table>
+
+<div class="answer">Correct matches shown above.</div>
+</div>
+
+
+<div class="question match match40">
+<h3>40. Match each situation with the correct equation.</h3>
+
+<table>
+
+<tr>
+<th>Situation</th>
+<th>Equation</th>
+</tr>
+
+<tr>
+<td>Four identical notebooks cost ₹120</td>
+<td>
+<label><input class="m40a correct" type="radio" name="m40a"> 4x = 120</label>
+<label><input type="radio" name="m40a"> x + 4 = 120</label>
+<label><input type="radio" name="m40a"> x − 4 = 120</label>
+<label><input type="radio" name="m40a"> x/4 = 120</label>
+</td>
+</tr>
+
+<tr>
+<td>A number and 15 total 42</td>
+<td>
+<label><input class="m40b correct" type="radio" name="m40b"> x + 15 = 42</label>
+<label><input type="radio" name="m40b"> x − 15 = 42</label>
+<label><input type="radio" name="m40b"> 15x = 42</label>
+<label><input type="radio" name="m40b"> x/15 = 42</label>
+</td>
+</tr>
+
+<tr>
+<td>A number is 8 less than 25</td>
+<td>
+<label><input class="m40c correct" type="radio" name="m40c"> x + 8 = 25</label>
+<label><input type="radio" name="m40c"> x − 8 = 25</label>
+<label><input type="radio" name="m40c"> 8x = 25</label>
+<label><input type="radio" name="m40c"> x/8 = 25</label>
+</td>
+</tr>
+
+<tr>
+<td>A number shared equally among 6 groups gives 9 each</td>
+<td>
+<label><input class="m40d correct" type="radio" name="m40d"> x/6 = 9</label>
+<label><input type="radio" name="m40d"> 6x = 9</label>
+<label><input type="radio" name="m40d"> x + 6 = 9</label>
+<label><input type="radio" name="m40d"> x − 6 = 9</label>
+</td>
+</tr>
+
+</table>
+
+<div class="answer">Correct matches shown above.</div>
+</div>
+
+
+<!-- =====================================================
+DRAG AND DROP
+===================================================== -->
+
+<div class="section-title">Section F — Drag & Drop Style (5)</div>
+
+<div class="info">
+<p>
+Choose the answer you would drag into the target box.
+This is a CSS-only simulation of a drag-and-drop activity.
+</p>
+</div>
+
+
+<div class="question">
+<h3>41. Drag the value that makes x + 11 = 25 true.</h3>
+
+<label class="option"><input type="radio" name="q41"> 12</label>
+<label class="correct option"><input class="correct" type="radio" name="q41"> 14</label>
+<label class="option"><input type="radio" name="q41"> 15</label>
+<label class="option"><input type="radio" name="q41"> 16</label>
+
+<div class="answer">Correct Answer: 14</div>
+</div>
+
+
+<div class="question">
+<h3>42. Drag the value that satisfies 8x = 64.</h3>
+
+<label class="option"><input type="radio" name="q42"> 6</label>
+<label class="option"><input type="radio" name="q42"> 7</label>
+<label class="correct option"><input class="correct" type="radio" name="q42"> 8</label>
+<label class="option"><input type="radio" name="q42"> 9</label>
+
+<div class="answer">Correct Answer: 8</div>
+</div>
+
+
+<div class="question">
+<h3>43. Drag the number that completes 3y − 4 = 17.</h3>
+
+<label class="option"><input type="radio" name="q43"> 5</label>
+<label class="correct option"><input class="correct" type="radio" name="q43"> 7</label>
+<label class="option"><input type="radio" name="q43"> 8</label>
+<label class="option"><input type="radio" name="q43"> 9</label>
+
+<div class="answer">Correct Answer: 7</div>
+</div>
+
+
+<div class="question">
+<h3>44. Drag the missing side of a rectangle with perimeter 30 cm and length 9 cm.</h3>
+
+<label class="option"><input type="radio" name="q44"> 5 cm</label>
+<label class="correct option"><input class="correct" type="radio" name="q44"> 6 cm</label>
+<label class="option"><input type="radio" name="q44"> 7 cm</label>
+<label class="option"><input type="radio" name="q44"> 8 cm</label>
+
+<div class="answer">
+Correct Answer: 6 cm.
+</div>
+</div>
+
+
+<div class="question">
+<h3>45. Drag the value of k if k/7 = 6.</h3>
+
+<label class="option"><input type="radio" name="q45"> 13</label>
+<label class="option"><input type="radio" name="q45"> 35</label>
+<label class="correct option"><input class="correct" type="radio" name="q45"> 42</label>
+<label class="option"><input type="radio" name="q45"> 49</label>
+
+<div class="answer">Correct Answer: 42</div>
+</div>
+
+
+<!-- =====================================================
+HOTS
+===================================================== -->
+
+<div class="section-title">Section G — HOTS / Higher Order Thinking (10)</div>
+
+
+<div class="question">
+<h3>
+46. A number is multiplied by 4 and then increased by 7.
+The result is 31. What is the original number?
+</h3>
+
+<label class="option"><input type="radio" name="q46"> 5</label>
+<label class="correct option"><input class="correct" type="radio" name="q46"> 6</label>
+<label class="option"><input type="radio" name="q46"> 7</label>
+<label class="option"><input type="radio" name="q46"> 8</label>
+
+<div class="answer">
+Correct Answer: 6. Equation: 4x + 7 = 31 → 4x = 24 → x = 6.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+47. The sum of two consecutive whole numbers is 41.
+Which pair are the numbers?
+</h3>
+
+<label class="option"><input type="radio" name="q47"> 19 and 22</label>
+<label class="correct option"><input class="correct" type="radio" name="q47"> 20 and 21</label>
+<label class="option"><input type="radio" name="q47"> 18 and 23</label>
+<label class="option"><input type="radio" name="q47"> 15 and 26</label>
+
+<div class="answer">
+Correct Answer: 20 and 21.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+48. A rectangle has length 3 cm more than its breadth.
+Its perimeter is 30 cm. What are its dimensions?
+</h3>
+
+<label class="option"><input type="radio" name="q48"> 8 cm × 7 cm</label>
+<label class="correct option"><input class="correct" type="radio" name="q48"> 9 cm × 6 cm</label>
+<label class="option"><input type="radio" name="q48"> 10 cm × 5 cm</label>
+<label class="option"><input type="radio" name="q48"> 11 cm × 4 cm</label>
+
+<div class="answer">
+Correct Answer: 9 cm × 6 cm.
+If breadth = x, length = x + 3.
+2(x + x + 3) = 30 → 4x + 6 = 30 → x = 6.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+49. Ravi thinks of a number. He doubles it, subtracts 9,
+and gets 25. What number did he think of?
+</h3>
+
+<label class="option"><input type="radio" name="q49"> 15</label>
+<label class="correct option"><input class="correct" type="radio" name="q49"> 17</label>
+<label class="option"><input type="radio" name="q49"> 18</label>
+<label class="option"><input type="radio" name="q49"> 20</label>
+
+<div class="answer">
+Correct Answer: 17. 2x − 9 = 25 → 2x = 34 → x = 17.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+50. Three times a number is 12 more than the number itself.
+Find the number.
+</h3>
+
+<label class="option"><input type="radio" name="q50"> 4</label>
+<label class="correct option"><input class="correct" type="radio" name="q50"> 6</label>
+<label class="option"><input type="radio" name="q50"> 8</label>
+<label class="option"><input type="radio" name="q50"> 12</label>
+
+<div class="answer">
+Correct Answer: 6.
+3x = x + 12 → 2x = 12 → x = 6.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+51. The perimeter of a triangle is 42 cm. Two sides are 13 cm
+and 15 cm. Find the third side.
+</h3>
+
+<label class="option"><input type="radio" name="q51"> 12 cm</label>
+<label class="correct option"><input class="correct" type="radio" name="q51"> 14 cm</label>
+<label class="option"><input type="radio" name="q51"> 15 cm</label>
+<label class="option"><input type="radio" name="q51"> 16 cm</label>
+
+<div class="answer">
+Correct Answer: 14 cm.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+52. A shopkeeper has some pencils. After giving 18 pencils away,
+24 pencils remain. How many pencils were there originally?
+</h3>
+
+<label class="option"><input type="radio" name="q52"> 6</label>
+<label class="option"><input type="radio" name="q52"> 36</label>
+<label class="correct option"><input class="correct" type="radio" name="q52"> 42</label>
+<label class="option"><input type="radio" name="q52"> 48</label>
+
+<div class="answer">
+Correct Answer: 42. x − 18 = 24 → x = 42.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+53. A number is divided by 5 and then 3 is added.
+The result is 11. Find the number.
+</h3>
+
+<label class="option"><input type="radio" name="q53"> 35</label>
+<label class="correct option"><input class="correct" type="radio" name="q53"> 40</label>
+<label class="option"><input type="radio" name="q53"> 45</label>
+<label class="option"><input type="radio" name="q53"> 55</label>
+
+<div class="answer">
+Correct Answer: 40.
+x/5 + 3 = 11 → x/5 = 8 → x = 40.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+54. The average of three numbers is 18. Two of the numbers are
+14 and 21. What is the third number?
+</h3>
+
+<label class="option"><input type="radio" name="q54"> 17</label>
+<label class="correct option"><input class="correct" type="radio" name="q54"> 19</label>
+<label class="option"><input type="radio" name="q54"> 20</label>
+<label class="option"><input type="radio" name="q54"> 22</label>
+
+<div class="answer">
+Correct Answer: 19.
+Total = 18 × 3 = 54; third number = 54 − 14 − 21 = 19.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+55. A father is 4 times as old as his son. Their ages together
+are 50 years. What are their ages?
+</h3>
+
+<label class="option"><input type="radio" name="q55"> Son 8, Father 42</label>
+<label class="correct option"><input class="correct" type="radio" name="q55"> Son 10, Father 40</label>
+<label class="option"><input type="radio" name="q55"> Son 12, Father 38</label>
+<label class="option"><input type="radio" name="q55"> Son 15, Father 35</label>
+
+<div class="answer">
+Correct Answer: Son = 10 years, Father = 40 years.
+If son = x, father = 4x.
+x + 4x = 50 → 5x = 50 → x = 10.
+</div>
+</div>
+
+
+<!-- =====================================================
+SCORE
+===================================================== -->
+
+<div class="score-card">
+
+<h2>🏆 Final Chapter Score</h2>
+
+<div class="score-number"></div>
+
+<p>Correct answers out of 55</p>
+
+<p class="score-note">
+Your score is calculated automatically using HTML + CSS.
+No JavaScript is used.
+</p>
+
+</div>
+
+</form>
+
+<div class="nav">
+<a href="index.html">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+Class 7 Mathematics • Ganita Prakash Part 2 • Chapter 15
+</footer>
+
+</body>
+</html>

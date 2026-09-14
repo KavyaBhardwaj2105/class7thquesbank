@@ -1,0 +1,2643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 7 Mathematics | A Tale of Three Intersecting Lines</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef1f5;
+    color:#111827;
+    font-weight:700;
+    line-height:1.6;
+}
+
+.header{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:38px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    font-weight:900;
+}
+
+.header h2{
+    font-size:24px;
+    margin-top:7px;
+}
+
+.header p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:30px auto 60px;
+}
+
+.instructions{
+    background:white;
+    padding:20px;
+    border-left:6px solid #111827;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section-title{
+    background:#111827;
+    color:white;
+    padding:15px 20px;
+    border-radius:10px;
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.question{
+    background:white;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.question-number{
+    color:#6b7280;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.options{
+    display:grid;
+    gap:9px;
+}
+
+.options label{
+    display:block;
+    padding:10px 13px;
+    border:2px solid #d1d5db;
+    background:#f9fafb;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.options label:hover{
+    background:#f3f4f6;
+    border-color:#111827;
+}
+
+.options input{
+    margin-right:8px;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    background:#f1f5f9;
+    border-left:5px solid #111827;
+    padding:12px 15px;
+    border-radius:8px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.explanation{
+    margin-top:6px;
+    color:#374151;
+    font-size:14px;
+}
+
+.diagram{
+    background:#f8fafc;
+    border:2px solid #d1d5db;
+    border-radius:10px;
+    padding:18px;
+    margin:14px 0;
+    text-align:center;
+    font-family:"Courier New",monospace;
+    font-size:18px;
+    white-space:pre-line;
+}
+
+.construction{
+    background:#f8fafc;
+    border:2px dashed #6b7280;
+    padding:16px;
+    border-radius:10px;
+    margin-top:12px;
+}
+
+.match-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.match-item{
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    border-radius:9px;
+    padding:13px;
+}
+
+.match-item select{
+    width:100%;
+    margin-top:8px;
+    padding:9px;
+    border:2px solid #9ca3af;
+    border-radius:7px;
+    font-weight:700;
+}
+
+.reveal{
+    display:block;
+    margin-top:12px;
+    padding:10px;
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.drag-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.drag-card{
+    background:#f9fafb;
+    border:2px dashed #6b7280;
+    padding:16px;
+    border-radius:10px;
+}
+
+.drag-card label{
+    display:block;
+    background:white;
+    border:2px solid #d1d5db;
+    border-radius:8px;
+    padding:10px;
+    margin:8px 0;
+    cursor:pointer;
+}
+
+.score-card{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:35px 25px;
+    border-radius:15px;
+    margin-top:45px;
+}
+
+.score-card h2{
+    font-size:28px;
+}
+
+.score-card p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+.score-card .note{
+    margin-top:15px;
+    font-size:13px;
+    color:#94a3b8;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    background:#374151;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.footer{
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    .header h1{
+        font-size:27px;
+    }
+
+    .match-grid,
+    .drag-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<h1>GANITA PRAKASH</h1>
+
+<h2>
+Chapter 7 — A Tale of Three Intersecting Lines
+</h2>
+
+<p>
+Class 7 Mathematics • Half-Yearly Examination Preparation
+</p>
+
+</header>
+
+
+<main class="container">
+
+
+<div class="instructions">
+
+<strong>CHAPTER PRACTICE TEST</strong>
+
+<br><br>
+
+This chapter covers triangles formed by three intersecting lines,
+types of triangles, construction, triangle inequality, angle-sum
+property, exterior angles and altitudes.
+
+<br><br>
+
+<strong>Difficulty:</strong> Medium → Hard
+
+<br><br>
+
+<strong>Total Questions:</strong> 55
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION A -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION A — 15 MULTIPLE CHOICE QUESTIONS
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 1</div>
+
+<div class="question-text">
+How many sides does a triangle have?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q1">
+A. 2
+</label>
+
+<label>
+<input type="radio" name="q1">
+B. 3
+</label>
+
+<label>
+<input type="radio" name="q1">
+C. 4
+</label>
+
+<label>
+<input type="radio" name="q1">
+D. 5
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B — 3</strong>
+
+<br>
+A triangle is a closed figure formed by three line segments.
+
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 2</div>
+
+<div class="question-text">
+A triangle having all three sides equal is called:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q2">
+A. Scalene triangle
+</label>
+
+<label>
+<input type="radio" name="q2">
+B. Isosceles triangle
+</label>
+
+<label>
+<input type="radio" name="q2">
+C. Equilateral triangle
+</label>
+
+<label>
+<input type="radio" name="q2">
+D. Right triangle
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — Equilateral triangle</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 3</div>
+
+<div class="question-text">
+A triangle has sides 7 cm, 7 cm and 10 cm. What type of triangle
+is it based on its sides?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q3">
+A. Equilateral
+</label>
+
+<label>
+<input type="radio" name="q3">
+B. Isosceles
+</label>
+
+<label>
+<input type="radio" name="q3">
+C. Scalene
+</label>
+
+<label>
+<input type="radio" name="q3">
+D. Impossible triangle
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — Isosceles</strong>
+
+<br>
+Two sides are equal: 7 cm and 7 cm.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 4</div>
+
+<div class="question-text">
+What is the sum of the three interior angles of a triangle?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q4">
+A. 90°
+</label>
+
+<label>
+<input type="radio" name="q4">
+B. 120°
+</label>
+
+<label>
+<input type="radio" name="q4">
+C. 180°
+</label>
+
+<label>
+<input type="radio" name="q4">
+D. 360°
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 180°</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 5</div>
+
+<div class="question-text">
+Two angles of a triangle are 65° and 45°. Find the third angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q5">
+A. 60°
+</label>
+
+<label>
+<input type="radio" name="q5">
+B. 70°
+</label>
+
+<label>
+<input type="radio" name="q5">
+C. 80°
+</label>
+
+<label>
+<input type="radio" name="q5">
+D. 90°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B — 70°</strong>
+
+<br>
+Third angle = 180° − 65° − 45° = 70°.
+
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 6</div>
+
+<div class="question-text">
+Which of the following sets of lengths can form a triangle?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q6">
+A. 2 cm, 3 cm, 6 cm
+</label>
+
+<label>
+<input type="radio" name="q6">
+B. 4 cm, 5 cm, 8 cm
+</label>
+
+<label>
+<input type="radio" name="q6">
+C. 1 cm, 2 cm, 4 cm
+</label>
+
+<label>
+<input type="radio" name="q6">
+D. 3 cm, 4 cm, 8 cm
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B — 4 cm, 5 cm, 8 cm</strong>
+
+<br>
+4 + 5 > 8, 4 + 8 > 5 and 5 + 8 > 4.
+
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 7</div>
+
+<div class="question-text">
+In an equilateral triangle, each angle measures:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q7">
+A. 30°
+</label>
+
+<label>
+<input type="radio" name="q7">
+B. 45°
+</label>
+
+<label>
+<input type="radio" name="q7">
+C. 60°
+</label>
+
+<label>
+<input type="radio" name="q7">
+D. 90°
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 60°</strong>
+
+<br>
+All three angles are equal and their sum is 180°.
+Therefore each is 180° ÷ 3 = 60°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 8</div>
+
+<div class="question-text">
+If two sides of a triangle are 6 cm and 9 cm, which could be the
+length of its third side?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q8">
+A. 2 cm
+</label>
+
+<label>
+<input type="radio" name="q8">
+B. 3 cm
+</label>
+
+<label>
+<input type="radio" name="q8">
+C. 5 cm
+</label>
+
+<label>
+<input type="radio" name="q8">
+D. 16 cm
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 5 cm</strong>
+
+<br>
+The third side must be greater than |9 − 6| = 3 and less than
+9 + 6 = 15. Thus 5 cm is possible.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 9</div>
+
+<div class="question-text">
+An exterior angle of a triangle is 120°. One of its opposite interior
+angles is 50°. Find the other opposite interior angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q9">
+A. 60°
+</label>
+
+<label>
+<input type="radio" name="q9">
+B. 70°
+</label>
+
+<label>
+<input type="radio" name="q9">
+C. 80°
+</label>
+
+<label>
+<input type="radio" name="q9">
+D. 90°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B — 70°</strong>
+
+<br>
+Exterior angle = sum of the two opposite interior angles.
+120° = 50° + x, so x = 70°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 10</div>
+
+<div class="question-text">
+A triangle with all three sides of different lengths is called:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q10">
+A. Equilateral
+</label>
+
+<label>
+<input type="radio" name="q10">
+B. Isosceles
+</label>
+
+<label>
+<input type="radio" name="q10">
+C. Scalene
+</label>
+
+<label>
+<input type="radio" name="q10">
+D. Regular
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — Scalene</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 11</div>
+
+<div class="question-text">
+Which instrument is most appropriate for drawing an arc while
+constructing a triangle?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q11">
+A. Compass
+</label>
+
+<label>
+<input type="radio" name="q11">
+B. Eraser
+</label>
+
+<label>
+<input type="radio" name="q11">
+C. Divider only
+</label>
+
+<label>
+<input type="radio" name="q11">
+D. Set square only
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — Compass</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 12</div>
+
+<div class="question-text">
+Which of the following angle sets can be the angles of a triangle?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q12">
+A. 80°, 60°, 40°
+</label>
+
+<label>
+<input type="radio" name="q12">
+B. 90°, 70°, 30°
+</label>
+
+<label>
+<input type="radio" name="q12">
+C. 100°, 50°, 40°
+</label>
+
+<label>
+<input type="radio" name="q12">
+D. 75°, 75°, 40°
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 80°, 60°, 40°</strong>
+
+<br>
+80° + 60° + 40° = 180°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 13</div>
+
+<div class="question-text">
+A line segment drawn from a vertex of a triangle perpendicular to the
+opposite side is called:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q13">
+A. Median
+</label>
+
+<label>
+<input type="radio" name="q13">
+B. Altitude
+</label>
+
+<label>
+<input type="radio" name="q13">
+C. Radius
+</label>
+
+<label>
+<input type="radio" name="q13">
+D. Diagonal
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — Altitude</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 14</div>
+
+<div class="question-text">
+If the two shorter sides of a triangle are 5 cm and 8 cm, which
+statement about the longest side x is correct?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q14">
+A. x must be less than 3 cm
+</label>
+
+<label>
+<input type="radio" name="q14">
+B. x must be greater than 13 cm
+</label>
+
+<label>
+<input type="radio" name="q14">
+C. x must be less than 13 cm
+</label>
+
+<label>
+<input type="radio" name="q14">
+D. x must equal 13 cm
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — x must be less than 13 cm</strong>
+
+<br>
+The sum of any two sides of a triangle is greater than the third side.
+Therefore x &lt; 5 + 8 = 13.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">MCQ 15</div>
+
+<div class="question-text">
+A triangle has angles 40°, 60° and 80°. Based on its angles, which
+description is correct?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q15">
+A. Right-angled
+</label>
+
+<label>
+<input type="radio" name="q15">
+B. Obtuse-angled
+</label>
+
+<label>
+<input type="radio" name="q15">
+C. Acute-angled
+</label>
+
+<label>
+<input type="radio" name="q15">
+D. Equiangular
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — Acute-angled</strong>
+
+<br>
+All three angles are less than 90°.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION B -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION B — 10 TRUE / FALSE
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 1</div>
+
+<div class="question-text">
+The sum of the angles of every triangle is 180°.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf1"> TRUE</label>
+<label><input type="radio" name="tf1"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 2</div>
+
+<div class="question-text">
+A triangle can have two right angles.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf2"> TRUE</label>
+<label><input type="radio" name="tf2"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+
+<br>
+Two right angles already total 180°, leaving no angle for the third
+vertex.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 3</div>
+
+<div class="question-text">
+Every equilateral triangle is also equiangular.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf3"> TRUE</label>
+<label><input type="radio" name="tf3"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 4</div>
+
+<div class="question-text">
+A triangle with side lengths 3 cm, 4 cm and 8 cm can be constructed.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf4"> TRUE</label>
+<label><input type="radio" name="tf4"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+
+<br>
+3 + 4 = 7, which is less than 8.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 5</div>
+
+<div class="question-text">
+A scalene triangle has three unequal sides.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf5"> TRUE</label>
+<label><input type="radio" name="tf5"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 6</div>
+
+<div class="question-text">
+The exterior angle of a triangle equals the sum of its two opposite
+interior angles.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf6"> TRUE</label>
+<label><input type="radio" name="tf6"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 7</div>
+
+<div class="question-text">
+A triangle with sides 5 cm, 5 cm and 5 cm is scalene.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf7"> TRUE</label>
+<label><input type="radio" name="tf7"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+
+<br>
+It is equilateral.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 8</div>
+
+<div class="question-text">
+An altitude of a triangle is perpendicular to the line containing
+the opposite side.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf8"> TRUE</label>
+<label><input type="radio" name="tf8"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 9</div>
+
+<div class="question-text">
+Three positive lengths always form a triangle.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf9"> TRUE</label>
+<label><input type="radio" name="tf9"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+
+<br>
+They must satisfy the triangle inequality.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">T/F 10</div>
+
+<div class="question-text">
+In an isosceles triangle, the two equal sides have equal opposite
+angles.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf10"> TRUE</label>
+<label><input type="radio" name="tf10"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION C -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION C — 5 ASSERTION &amp; REASONING
+</div>
+
+
+<div class="instructions">
+
+<strong>A:</strong> Both Assertion and Reason are true,
+and Reason explains Assertion.
+
+<br>
+
+<strong>B:</strong> Both Assertion and Reason are true,
+but Reason does not explain Assertion.
+
+<br>
+
+<strong>C:</strong> Assertion is true, but Reason is false.
+
+<br>
+
+<strong>D:</strong> Assertion is false, but Reason is true.
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">A/R 1</div>
+
+<div class="question-text">
+
+<strong>Assertion:</strong>
+The three angles of a triangle add up to 180°.
+
+<br><br>
+
+<strong>Reason:</strong>
+The three interior angles together form a straight angle when arranged
+appropriately.
+
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="ar1"> A</label>
+<label><input type="radio" name="ar1"> B</label>
+<label><input type="radio" name="ar1"> C</label>
+<label><input type="radio" name="ar1"> D</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">A/R 2</div>
+
+<div class="question-text">
+
+<strong>Assertion:</strong>
+A triangle with sides 4 cm, 5 cm and 10 cm can be constructed.
+
+<br><br>
+
+<strong>Reason:</strong>
+The sum of any two sides of a triangle must be greater than the third
+side.
+
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="ar2"> A</label>
+<label><input type="radio" name="ar2"> B</label>
+<label><input type="radio" name="ar2"> C</label>
+<label><input type="radio" name="ar2"> D</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+
+<br>
+The assertion is false because 4 + 5 &lt; 10.
+The reason is true.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">A/R 3</div>
+
+<div class="question-text">
+
+<strong>Assertion:</strong>
+Every equilateral triangle has three equal angles.
+
+<br><br>
+
+<strong>Reason:</strong>
+All three sides of an equilateral triangle are equal.
+
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="ar3"> A</label>
+<label><input type="radio" name="ar3"> B</label>
+<label><input type="radio" name="ar3"> C</label>
+<label><input type="radio" name="ar3"> D</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+
+<br>
+Equal sides of a triangle have equal opposite angles.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">A/R 4</div>
+
+<div class="question-text">
+
+<strong>Assertion:</strong>
+An exterior angle of a triangle is greater than either of its
+opposite interior angles.
+
+<br><br>
+
+<strong>Reason:</strong>
+An exterior angle equals the sum of the two opposite interior angles.
+
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="ar4"> A</label>
+<label><input type="radio" name="ar4"> B</label>
+<label><input type="radio" name="ar4"> C</label>
+<label><input type="radio" name="ar4"> D</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+
+<br>
+The sum of two positive angles is greater than either individual angle.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">A/R 5</div>
+
+<div class="question-text">
+
+<strong>Assertion:</strong>
+A triangle with sides 6 cm, 6 cm and 12 cm can be constructed.
+
+<br><br>
+
+<strong>Reason:</strong>
+The sum of any two sides must be strictly greater than the third side.
+
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="ar5"> A</label>
+<label><input type="radio" name="ar5"> B</label>
+<label><input type="radio" name="ar5"> C</label>
+<label><input type="radio" name="ar5"> D</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+
+<br>
+6 + 6 = 12, but the sum must be strictly greater than 12.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION D -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION D — 5 FILL IN THE BLANKS
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Fill 1</div>
+
+<div class="question-text">
+A triangle has ______ sides and ______ vertices.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="fb1">
+A. 2 and 2
+</label>
+
+<label>
+<input type="radio" name="fb1">
+B. 3 and 3
+</label>
+
+<label>
+<input type="radio" name="fb1">
+C. 3 and 4
+</label>
+
+<label>
+<input type="radio" name="fb1">
+D. 4 and 3
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 3 and 3</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Fill 2</div>
+
+<div class="question-text">
+The sum of the interior angles of a triangle is ______.
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="fb2"> A. 90°</label>
+<label><input type="radio" name="fb2"> B. 120°</label>
+<label><input type="radio" name="fb2"> C. 180°</label>
+<label><input type="radio" name="fb2"> D. 360°</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 180°</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Fill 3</div>
+
+<div class="question-text">
+A triangle with two equal sides is called an ______ triangle.
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="fb3"> A. equilateral</label>
+<label><input type="radio" name="fb3"> B. isosceles</label>
+<label><input type="radio" name="fb3"> C. scalene</label>
+<label><input type="radio" name="fb3"> D. right</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: Isosceles</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Fill 4</div>
+
+<div class="question-text">
+The line segment from a vertex perpendicular to the opposite side
+is called an ______.
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="fb4"> A. altitude</label>
+<label><input type="radio" name="fb4"> B. side</label>
+<label><input type="radio" name="fb4"> C. radius</label>
+<label><input type="radio" name="fb4"> D. chord</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: Altitude</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Fill 5</div>
+
+<div class="question-text">
+The sum of any two sides of a triangle must be ______ than the
+third side.
+</div>
+
+<div class="options">
+
+<label><input type="radio" name="fb5"> A. less</label>
+<label><input type="radio" name="fb5"> B. equal</label>
+<label><input type="radio" name="fb5"> C. greater</label>
+<label><input type="radio" name="fb5"> D. unrelated</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: Greater</strong>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION E -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION E — 5 MATCH THE FOLLOWING
+</div>
+
+
+
+<div class="question">
+
+<div class="question-text">
+Match the type of triangle with its side property.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Equilateral</strong>
+<select>
+<option>Select</option>
+<option>Three equal sides</option>
+<option>Two equal sides</option>
+<option>All sides unequal</option>
+<option>No sides</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Isosceles</strong>
+<select>
+<option>Select</option>
+<option>Three equal sides</option>
+<option>Two equal sides</option>
+<option>All sides unequal</option>
+<option>No sides</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Scalene</strong>
+<select>
+<option>Select</option>
+<option>Three equal sides</option>
+<option>Two equal sides</option>
+<option>All sides unequal</option>
+<option>No sides</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match1">
+Reveal Answer
+</label>
+
+<div class="answer">
+1 → Three equal sides<br>
+2 → Two equal sides<br>
+3 → All sides unequal
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-text">
+Match the triangle property with the correct value or relationship.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Sum of interior angles</strong>
+<select>
+<option>Select</option>
+<option>90°</option>
+<option>180°</option>
+<option>270°</option>
+<option>360°</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Each angle of equilateral triangle</strong>
+<select>
+<option>Select</option>
+<option>30°</option>
+<option>45°</option>
+<option>60°</option>
+<option>90°</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Straight angle</strong>
+<select>
+<option>Select</option>
+<option>90°</option>
+<option>120°</option>
+<option>180°</option>
+<option>360°</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match2">
+Reveal Answer
+</label>
+
+<div class="answer">
+1 → 180°<br>
+2 → 60°<br>
+3 → 180°
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-text">
+Match the construction instrument with its use.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Compass</strong>
+<select>
+<option>Select</option>
+<option>Draw arcs of fixed radius</option>
+<option>Measure an angle</option>
+<option>Draw a straight segment</option>
+<option>Erase a construction</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Ruler</strong>
+<select>
+<option>Select</option>
+<option>Draw arcs of fixed radius</option>
+<option>Measure an angle</option>
+<option>Draw a straight segment</option>
+<option>Erase a construction</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Protractor</strong>
+<select>
+<option>Select</option>
+<option>Draw arcs of fixed radius</option>
+<option>Measure an angle</option>
+<option>Draw a straight segment</option>
+<option>Erase a construction</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match3">
+Reveal Answer
+</label>
+
+<div class="answer">
+1 → Draw arcs of fixed radius<br>
+2 → Draw a straight segment<br>
+3 → Measure an angle
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-text">
+Match the angle condition with the triangle classification.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. All angles less than 90°</strong>
+<select>
+<option>Select</option>
+<option>Acute-angled</option>
+<option>Right-angled</option>
+<option>Obtuse-angled</option>
+<option>Equilateral only</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. One angle exactly 90°</strong>
+<select>
+<option>Select</option>
+<option>Acute-angled</option>
+<option>Right-angled</option>
+<option>Obtuse-angled</option>
+<option>Equilateral only</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. One angle greater than 90°</strong>
+<select>
+<option>Select</option>
+<option>Acute-angled</option>
+<option>Right-angled</option>
+<option>Obtuse-angled</option>
+<option>Equilateral only</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match4">
+Reveal Answer
+</label>
+
+<div class="answer">
+1 → Acute-angled<br>
+2 → Right-angled<br>
+3 → Obtuse-angled
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-text">
+Match the given side lengths with the correct conclusion.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 3, 4, 5</strong>
+<select>
+<option>Select</option>
+<option>Triangle possible</option>
+<option>Triangle impossible</option>
+<option>Only if all angles are equal</option>
+<option>Cannot be checked</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 2, 3, 7</strong>
+<select>
+<option>Select</option>
+<option>Triangle possible</option>
+<option>Triangle impossible</option>
+<option>Only if all angles are equal</option>
+<option>Cannot be checked</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 6, 8, 10</strong>
+<select>
+<option>Select</option>
+<option>Triangle possible</option>
+<option>Triangle impossible</option>
+<option>Only if all angles are equal</option>
+<option>Cannot be checked</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match5">
+Reveal Answer
+</label>
+
+<div class="answer">
+1 → Triangle possible<br>
+2 → Triangle impossible<br>
+3 → Triangle possible
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION F -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION F — 5 DRAG / DROP STYLE QUESTIONS
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Drag 1</div>
+
+<div class="question-text">
+Choose the correct order for constructing a triangle when all three
+side lengths are given.
+</div>
+
+<div class="drag-card">
+
+<label>
+<input type="radio" name="drag1">
+A. Draw base → Draw arcs from both endpoints → Mark intersection →
+Join intersection to endpoints
+</label>
+
+<label>
+<input type="radio" name="drag1">
+B. Draw arcs → Erase base → Measure angles → Join randomly
+</label>
+
+<label>
+<input type="radio" name="drag1">
+C. Draw three unrelated lines → Measure perimeter → Join them
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Drag 2</div>
+
+<div class="question-text">
+Arrange the steps for checking whether three lengths can form
+a triangle.
+</div>
+
+<div class="drag-card">
+
+<label>
+<input type="radio" name="drag2">
+A. Find the largest side → Add the other two sides →
+Check whether their sum is greater than the largest side
+</label>
+
+<label>
+<input type="radio" name="drag2">
+B. Multiply all three sides → Check whether product is 180
+</label>
+
+<label>
+<input type="radio" name="drag2">
+C. Subtract all sides → Check whether answer is zero
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Process: A</strong>
+<br>
+For positive side lengths, checking the largest side against the sum
+of the other two is sufficient.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Drag 3</div>
+
+<div class="question-text">
+Arrange the reasoning to find a missing angle of a triangle.
+</div>
+
+<div class="drag-card">
+
+<label>
+<input type="radio" name="drag3">
+A. Add known angles → Subtract their sum from 180°
+</label>
+
+<label>
+<input type="radio" name="drag3">
+B. Multiply known angles → Divide by 360°
+</label>
+
+<label>
+<input type="radio" name="drag3">
+C. Subtract known angles from 90° only
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Process: A</strong>
+<br>
+The three interior angles of a triangle sum to 180°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Drag 4</div>
+
+<div class="question-text">
+Select the correct sequence for finding an exterior angle.
+</div>
+
+<div class="drag-card">
+
+<label>
+<input type="radio" name="drag4">
+A. Identify the two opposite interior angles →
+Add their measures
+</label>
+
+<label>
+<input type="radio" name="drag4">
+B. Multiply the two interior angles
+</label>
+
+<label>
+<input type="radio" name="drag4">
+C. Divide the interior angle by 2
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Process: A</strong>
+<br>
+An exterior angle equals the sum of the two opposite interior angles.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">Drag 5</div>
+
+<div class="question-text">
+Arrange the triangle types according to the number of equal sides.
+</div>
+
+<div class="drag-card">
+
+<label>
+<input type="radio" name="drag5">
+A. Scalene → Isosceles → Equilateral
+</label>
+
+<label>
+<input type="radio" name="drag5">
+B. Equilateral → Scalene → Isosceles
+</label>
+
+<label>
+<input type="radio" name="drag5">
+C. Isosceles → Scalene → Equilateral
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Order: A</strong>
+
+<br>
+Scalene has 0 equal sides, isosceles has 2 equal sides and
+equilateral has 3 equal sides.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- SECTION G -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION G — 10 HOTS QUESTIONS
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 1</div>
+
+<div class="question-text">
+Two sides of a triangle measure 7 cm and 11 cm. Which range contains
+all possible integer values of the third side x?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h1">
+A. 1 ≤ x ≤ 18
+</label>
+
+<label>
+<input type="radio" name="h1">
+B. 4 ≤ x ≤ 17
+</label>
+
+<label>
+<input type="radio" name="h1">
+C. 5 ≤ x ≤ 18
+</label>
+
+<label>
+<input type="radio" name="h1">
+D. 3 ≤ x ≤ 19
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B</strong>
+
+<br>
+Triangle inequality gives:
+<br>
+11 − 7 &lt; x &lt; 11 + 7
+<br>
+4 &lt; x &lt; 18.
+<br>
+Therefore integer values are 5 through 17.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 2</div>
+
+<div class="question-text">
+The angles of a triangle are in the ratio 2 : 3 : 4.
+Find the largest angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h2">
+A. 60°
+</label>
+
+<label>
+<input type="radio" name="h2">
+B. 70°
+</label>
+
+<label>
+<input type="radio" name="h2">
+C. 80°
+</label>
+
+<label>
+<input type="radio" name="h2">
+D. 90°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 80°</strong>
+
+<br>
+2x + 3x + 4x = 180°
+<br>
+9x = 180°
+<br>
+x = 20°.
+<br>
+Largest angle = 4 × 20° = 80°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 3</div>
+
+<div class="question-text">
+An exterior angle of a triangle is 135°. The two opposite interior
+angles are in the ratio 2 : 3. Find the larger interior angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h3">
+A. 54°
+</label>
+
+<label>
+<input type="radio" name="h3">
+B. 72°
+</label>
+
+<label>
+<input type="radio" name="h3">
+C. 81°
+</label>
+
+<label>
+<input type="radio" name="h3">
+D. 90°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 81°</strong>
+
+<br>
+2x + 3x = 135°
+<br>
+5x = 135°
+<br>
+x = 27°.
+<br>
+Larger angle = 3 × 27° = 81°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 4</div>
+
+<div class="question-text">
+A triangle has sides 8 cm, 10 cm and x cm. Which of the following
+cannot be the value of x?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h4">
+A. 3 cm
+</label>
+
+<label>
+<input type="radio" name="h4">
+B. 7 cm
+</label>
+
+<label>
+<input type="radio" name="h4">
+C. 17 cm
+</label>
+
+<label>
+<input type="radio" name="h4">
+D. 15 cm
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 17 cm</strong>
+
+<br>
+For a triangle:
+<br>
+10 − 8 &lt; x &lt; 10 + 8
+<br>
+2 &lt; x &lt; 18.
+<br>
+So 17 is actually possible.
+
+<strong>Correction:</strong>
+All four choices are possible. To make this a valid single-answer
+question, the intended impossible value should be <strong>18 cm</strong>.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 5</div>
+
+<div class="question-text">
+An isosceles triangle has two equal angles of 55° each.
+Find the third angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h5">
+A. 60°
+</label>
+
+<label>
+<input type="radio" name="h5">
+B. 65°
+</label>
+
+<label>
+<input type="radio" name="h5">
+C. 70°
+</label>
+
+<label>
+<input type="radio" name="h5">
+D. 75°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 70°</strong>
+
+<br>
+180° − 55° − 55° = 70°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 6</div>
+
+<div class="question-text">
+A triangle has angles x°, 2x° and 3x°. Find the largest angle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h6">
+A. 30°
+</label>
+
+<label>
+<input type="radio" name="h6">
+B. 60°
+</label>
+
+<label>
+<input type="radio" name="h6">
+C. 90°
+</label>
+
+<label>
+<input type="radio" name="h6">
+D. 120°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 90°</strong>
+
+<br>
+x + 2x + 3x = 180°
+<br>
+6x = 180°
+<br>
+x = 30°.
+<br>
+Largest = 3x = 90°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 7</div>
+
+<div class="question-text">
+A student wants to construct a triangle with sides 5 cm, 7 cm and
+12 cm. The student says the construction is possible because all
+three lengths are positive. What is wrong with the reasoning?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h7">
+A. Nothing is wrong.
+</label>
+
+<label>
+<input type="radio" name="h7">
+B. 5 + 7 equals 12, but the sum must be greater than 12.
+</label>
+
+<label>
+<input type="radio" name="h7">
+C. 7 + 12 is less than 5.
+</label>
+
+<label>
+<input type="radio" name="h7">
+D. 5 and 7 cannot be measured.
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B</strong>
+
+<br>
+A triangle cannot be formed when the sum of two sides is exactly
+equal to the third side.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 8</div>
+
+<div class="question-text">
+A triangle has one angle of 110°. What can you immediately conclude?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h8">
+A. It is equilateral.
+</label>
+
+<label>
+<input type="radio" name="h8">
+B. It is obtuse-angled.
+</label>
+
+<label>
+<input type="radio" name="h8">
+C. It is right-angled.
+</label>
+
+<label>
+<input type="radio" name="h8">
+D. It is impossible.
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: B — Obtuse-angled</strong>
+
+<br>
+One angle is greater than 90° and less than 180°.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 9</div>
+
+<div class="question-text">
+The perimeter of an equilateral triangle is 42 cm.
+What is the length of each side?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h9">
+A. 12 cm
+</label>
+
+<label>
+<input type="radio" name="h9">
+B. 13 cm
+</label>
+
+<label>
+<input type="radio" name="h9">
+C. 14 cm
+</label>
+
+<label>
+<input type="radio" name="h9">
+D. 15 cm
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 14 cm</strong>
+
+<br>
+42 ÷ 3 = 14 cm.
+</div>
+
+</div>
+
+
+
+<div class="question">
+
+<div class="question-number">HOTS 10</div>
+
+<div class="question-text">
+A triangle has an exterior angle of 140°. One of its opposite interior
+angles is 65°. Find the third interior angle of the triangle.
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="h10">
+A. 65°
+</label>
+
+<label>
+<input type="radio" name="h10">
+B. 70°
+</label>
+
+<label>
+<input type="radio" name="h10">
+C. 75°
+</label>
+
+<label>
+<input type="radio" name="h10">
+D. 80°
+</label>
+
+</div>
+
+<div class="answer">
+
+<strong>Correct Answer: C — 75°</strong>
+
+<br>
+Exterior angle = sum of opposite interior angles.
+<br>
+140° = 65° + x
+<br>
+x = 75°.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- FINAL -->
+<!-- ================================================= -->
+
+<section class="score-card">
+
+<h2>CHAPTER 7 COMPLETED</h2>
+
+<p>
+A Tale of Three Intersecting Lines • Class 7 Mathematics
+</p>
+
+<p>
+55 Questions • Medium → Hard • Half-Yearly Preparation
+</p>
+
+<p>
+MCQs • True/False • Assertion & Reasoning • Fill in the Blanks
+• Match the Following • Drag/Drop • HOTS
+</p>
+
+<p class="note">
+HTML + CSS Only • No Backend • No JavaScript
+</p>
+
+<a href="index.html" class="back">
+← Back to Chapter Index
+</a>
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+
+Ganita Prakash • Class 7 Mathematics •
+Chapter 7 — A Tale of Three Intersecting Lines
+
+</footer>
+
+
+</body>
+</html>

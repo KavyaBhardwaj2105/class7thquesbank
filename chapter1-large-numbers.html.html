@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Large Numbers Around Us</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef1f5;
+    color:#111827;
+    font-weight:700;
+    line-height:1.6;
+}
+
+.header{
+    background:#111827;
+    color:#fff;
+    padding:35px 20px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:34px;
+    font-weight:900;
+}
+
+.header h2{
+    margin-top:6px;
+    font-size:22px;
+    color:#e5e7eb;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:30px auto 60px;
+}
+
+.instructions{
+    background:#fff;
+    border-left:6px solid #111827;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.instructions strong{
+    font-size:18px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section-title{
+    background:#111827;
+    color:white;
+    padding:15px 20px;
+    border-radius:10px;
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.question{
+    background:#fff;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.question-number{
+    font-size:14px;
+    color:#4b5563;
+    margin-bottom:7px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.options{
+    display:grid;
+    gap:9px;
+}
+
+.options label{
+    display:block;
+    border:2px solid #d1d5db;
+    border-radius:8px;
+    padding:11px 14px;
+    cursor:pointer;
+    transition:.2s;
+    background:#f9fafb;
+}
+
+.options label:hover{
+    border-color:#111827;
+    background:#f3f4f6;
+}
+
+.options input{
+    margin-right:9px;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:12px 15px;
+    border-radius:8px;
+    background:#e5e7eb;
+    border-left:5px solid #111827;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.correct-choice:has(input:checked){
+    background:#d1fae5;
+    border-color:#065f46;
+}
+
+.wrong-choice:has(input:checked){
+    background:#fee2e2;
+    border-color:#991b1b;
+}
+
+.explanation{
+    margin-top:5px;
+    font-size:14px;
+    color:#374151;
+}
+
+.match-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.match-item{
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    padding:12px;
+    border-radius:8px;
+}
+
+.match-item select{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    border:2px solid #9ca3af;
+    border-radius:7px;
+    font-weight:700;
+}
+
+.drag-area{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.drag-card{
+    background:#f9fafb;
+    border:2px dashed #6b7280;
+    border-radius:10px;
+    padding:18px;
+}
+
+.place-option{
+    display:block;
+    padding:10px;
+    background:white;
+    border:2px solid #d1d5db;
+    border-radius:7px;
+    margin-top:8px;
+    cursor:pointer;
+}
+
+.place-option input{
+    margin-right:8px;
+}
+
+.hots{
+    border-left:6px solid #374151;
+}
+
+.score{
+    margin-top:45px;
+    background:#111827;
+    color:white;
+    padding:35px 25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.score h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.score p{
+    color:#d1d5db;
+}
+
+.back{
+    display:inline-block;
+    margin-top:25px;
+    color:#fff;
+    text-decoration:none;
+    background:#374151;
+    padding:10px 18px;
+    border-radius:8px;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    color:#d1d5db;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .header h1{
+        font-size:27px;
+    }
+
+    .match-grid,
+    .drag-area{
+        grid-template-columns:1fr;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>GANITA PRAKASH</h1>
+    <h2>Chapter 1 — Large Numbers Around Us</h2>
+    <p>Class 7 Mathematics • Half-Yearly Examination Preparation</p>
+</header>
+
+<main class="container">
+
+<div class="instructions">
+<strong>How to use this question bank</strong>
+<br>
+Choose an answer in every question. Immediately after selecting an option,
+the correct answer and explanation will appear.
+<br><br>
+<strong>Difficulty:</strong> Medium → Hard
+<br>
+<strong>Total Questions:</strong> 55
+<br>
+<strong>Topics:</strong> Large numbers, Indian & International numeration,
+place value, estimation, comparison, rounding and real-life applications.
+</div>
+
+
+<!-- ========================================================= -->
+<!-- MCQS -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION A — MULTIPLE CHOICE QUESTIONS
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 1</div>
+<div class="question-text">
+The population of a city is 7,08,45,216. What is the place value of digit 8?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="q1">
+A. 8,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q1">
+B. 8,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q1">
+C. 80,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q1">
+D. 80,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 8,00,000</strong>
+<div class="explanation">
+The digit 8 is in the lakh place.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 2</div>
+<div class="question-text">
+Which is the greatest number?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q2">
+A. 9,98,76,543
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q2">
+B. 10,02,34,567
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q2">
+C. 9,99,99,999
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q2">
+D. 10,00,99,999
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 10,02,34,567</strong>
+<div class="explanation">
+It has 10 crore, while the other two 9-crore numbers are smaller.
+Between the two 10-crore numbers, 02,34,567 is greater than 00,99,999.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 3</div>
+<div class="question-text">
+Which number is represented by 6 crore + 4 lakh + 8 thousand + 25?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q3">
+A. 6,04,08,250
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q3">
+B. 6,04,08,025
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q3">
+C. 6,40,08,025
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q3">
+D. 6,04,80,025
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 6,04,08,025</strong>
+<div class="explanation">
+60,000,000 + 400,000 + 8,000 + 25 = 60,408,025.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 4</div>
+<div class="question-text">
+In the International system, 4,305,018,072 is read as:
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q4">
+A. Four hundred thirty crore five lakh eighteen thousand seventy-two
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q4">
+B. Four billion three hundred five million eighteen thousand seventy-two
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q4">
+C. Forty-three billion five million eighteen thousand seventy-two
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q4">
+D. Four billion thirty-five million eighteen thousand seventy-two
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<div class="explanation">
+4,305,018,072 = 4 billion + 305 million + 18 thousand + 72.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 5</div>
+<div class="question-text">
+What is 99,99,999 + 1?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q5">
+A. 1,00,00,000
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q5">
+B. 1,00,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q5">
+C. 99,99,998
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q5">
+D. 10,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A/B — 1,00,00,000</strong>
+<div class="explanation">
+99,99,999 is one less than one crore. Adding 1 gives exactly one crore.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 6</div>
+<div class="question-text">
+Which is the correct expanded form of 5,07,03,009?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="q6">
+A. 5,00,00,000 + 7,00,000 + 3,000 + 9
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q6">
+B. 5,00,00,000 + 70,000 + 3,000 + 9
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q6">
+C. 5,00,00,000 + 7,00,000 + 30,000 + 9
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q6">
+D. 5,00,00,000 + 7,000 + 300 + 9
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+The digits occupy crore, lakh, thousand and ones places respectively.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 7</div>
+<div class="question-text">
+A number is 2 crore more than 8,75,43,210. What is the number?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q7">
+A. 8,95,43,210
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q7">
+B. 9, - 
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q7">
+C. 8,77,43,210
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q7">
+D. 10,75,43,210
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 8,95,43,210</strong>
+<div class="explanation">
+8,75,43,210 + 2,00,00,000 = 10,75,43,210.
+Correction: therefore the correct option is D.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 8</div>
+<div class="question-text">
+Which number rounds to 45,00,000 when rounded to the nearest lakh?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q8">
+A. 44,42,100
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q8">
+B. 44,76,500
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q8">
+C. 45,62,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q8">
+D. 43,48,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 44,76,500</strong>
+<div class="explanation">
+The number is closer to 45 lakh than 44 lakh.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 9</div>
+<div class="question-text">
+A number has 8 in the crore place, 3 in the lakh place and 6 in the thousands place. Which could be the number?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="q9">
+A. 8,03,06,521
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q9">
+B. 8,30,60,521
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q9">
+C. 3,08,06,521
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q9">
+D. 8,03,60,521
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 10</div>
+<div class="question-text">
+Which statement is always true?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q10">
+A. Every 7-digit number is greater than every 8-digit number.
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q10">
+B. Every 8-digit number is greater than every 7-digit number.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q10">
+C. Numbers with more digits are always odd.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q10">
+D. All crore numbers have exactly 8 digits.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 11</div>
+<div class="question-text">
+The difference between 7,50,00,000 and 6,99,99,999 is:
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q11">
+A. 50,00,001
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q11">
+B. 50,00001
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q11">
+C. 51,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q11">
+D. 5,00,001
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 50,001</strong>
+<div class="explanation">
+7,50,00,000 − 6,99,99,999 = 50,001.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 12</div>
+<div class="question-text">
+Which number is exactly halfway between 40,00,000 and 50,00,000?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q12">
+A. 44,00,000
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q12">
+B. 45,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q12">
+C. 46,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q12">
+D. 49,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 45,00,000</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 13</div>
+<div class="question-text">
+If 1 million = 10 lakh, then 35 million equals:
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q13">
+A. 3.5 lakh
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q13">
+B. 3.5 crore
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q13">
+C. 35 crore
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q13">
+D. 350 crore
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 3.5 crore</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 14</div>
+<div class="question-text">
+A company sold 12,48,750 units in one year and 15,76,250 in the next. How many more units were sold in the second year?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q14">
+A. 2,17,500
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q14">
+B. 3,27,500
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q14">
+C. 3,37,500
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q14">
+D. 2,27,500
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 3,27,500</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 15</div>
+<div class="question-text">
+A number becomes 6,00,00,000 when rounded to the nearest crore. Which interval contains all possible whole numbers that round to this value?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="q15">
+A. 5,00,00,000 to 6,99,99,999
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="q15">
+B. 5,50,00,000 to 6,49,99,999
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q15">
+C. 5,90,00,000 to 6,10,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="q15">
+D. 5,00,00,001 to 6,00,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<div class="explanation">
+Numbers from 5.5 crore up to but not including 6.5 crore round to 6 crore.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- TRUE FALSE -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION B — TRUE OR FALSE
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 1</div>
+<div class="question-text">
+1 crore is equal to 10 million.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf1">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf1">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 2</div>
+<div class="question-text">
+The place value of 7 in 47,25,631 is 7,00,000.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf2">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf2">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 3</div>
+<div class="question-text">
+10 lakh is greater than 1 crore.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="tf3">
+TRUE
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="tf3">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+1 crore = 10 lakh, so 10 lakh is equal to 1 crore.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 4</div>
+<div class="question-text">
+The number 8,00,00,001 is greater than 80,00,000.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf4">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf4">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 5</div>
+<div class="question-text">
+Every number ending in 000 becomes zero when rounded to the nearest thousand.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf5">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf5">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 6</div>
+<div class="question-text">
+In the Indian system, commas are placed after every three digits from the right.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="tf6">
+TRUE
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="tf6">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+After the first three digits, commas occur after every two digits.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 7</div>
+<div class="question-text">
+The successor of 99,99,999 is 1,00,00,000.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf7">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf7">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 8</div>
+<div class="question-text">
+8,76,54,321 and 87,65,432 have the same number of digits.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="tf8">
+TRUE
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="tf8">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+The first has 8 digits and the second has 7 digits.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 9</div>
+<div class="question-text">
+When comparing two numbers with the same number of digits, their leftmost digits should be compared first.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="tf9">
+TRUE
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="tf9">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 10</div>
+<div class="question-text">
+Rounding 7,49,999 to the nearest lakh gives 7,00,000.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="tf10">
+TRUE
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="tf10">
+FALSE
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+7,49,999 is closer to 7,00,000 than 8,00,000? Difference from 7 lakh is 49,999, so it actually rounds to 7,00,000. Therefore the statement is TRUE.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- ASSERTION REASON -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION C — ASSERTION & REASONING
+</div>
+
+<div class="instructions">
+<strong>Choose:</strong><br>
+A — Both Assertion and Reason are true, and Reason correctly explains Assertion.<br>
+B — Both are true, but Reason does not correctly explain Assertion.<br>
+C — Assertion is true, Reason is false.<br>
+D — Assertion is false, Reason is true.
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 1</div>
+<div class="question-text">
+Assertion: 5,00,00,000 is greater than 49,99,999.<br>
+Reason: Every 8-digit number is greater than every 7-digit number.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="ar1">
+A
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar1">
+B
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar1">
+C
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar1">
+D
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 2</div>
+<div class="question-text">
+Assertion: 1 crore = 100 lakh.<br>
+Reason: 1 lakh = 10,000.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="ar2">
+A
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar2">
+B
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar2">
+C
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="ar2">
+D
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+<div class="explanation">
+Assertion is true. Reason is false because 1 lakh = 1,00,000.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 3</div>
+<div class="question-text">
+Assertion: 76,43,210 rounded to the nearest lakh is 76,00,000.<br>
+Reason: The digit immediately to the right of the lakh place is 4.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="ar3">
+A
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar3">
+B
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar3">
+C
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar3">
+D
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 4</div>
+<div class="question-text">
+Assertion: 7,05,04,000 has zero in the ten-thousands place.<br>
+Reason: The digit 4 is in the thousands place.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="ar4">
+A
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="ar4">
+B
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar4">
+C
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar4">
+D
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<div class="explanation">
+Both statements are true, but the position of 4 does not explain why the ten-thousands digit is zero.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 5</div>
+<div class="question-text">
+Assertion: 9,99,999 is less than 10,00,000.<br>
+Reason: Adding 1 to 9,99,999 gives 10,00,000.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="ar5">
+A
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar5">
+B
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar5">
+C
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="ar5">
+D
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- FILL BLANKS -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION D — FILL IN THE BLANKS
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 1</div>
+<div class="question-text">
+10 lakh = ______ crore.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="fb1">
+A. 1/10
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb1">
+B. 10
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb1">
+C. 100
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb1">
+D. 1
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 1/10 crore</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 2</div>
+<div class="question-text">
+The smallest 8-digit number is ______.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="fb2">
+A. 1,00,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb2">
+B. 99,99,999
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb2">
+C. 10,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb2">
+D. 1,00,00,001
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 1,00,00,000</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 3</div>
+<div class="question-text">
+The number immediately after 6,99,99,999 is ______.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="fb3">
+A. 6,99,99,998
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="fb3">
+B. 7,00,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb3">
+C. 7,00,00,001
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb3">
+D. 6,00,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 7,00,00,000</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 4</div>
+<div class="question-text">
+The digit in the crore place of 8,42,76,519 is ______.
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="fb4">
+A. 8
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb4">
+B. 4
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb4">
+C. 2
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb4">
+D. 5
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 8</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 5</div>
+<div class="question-text">
+One billion is equal to ______ crore.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="fb5">
+A. 1
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb5">
+B. 10
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="fb5">
+C. 100
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="fb5">
+D. 1000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Answer: 100 crore</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- MATCH -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION E — MATCH THE FOLLOWING
+</div>
+
+<div class="question">
+
+<div class="question-text">
+Match each number with its correct description.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 1,00,00,000</strong>
+<select>
+<option>Select</option>
+<option>1 million</option>
+<option>1 crore</option>
+<option>10 crore</option>
+<option>1 billion</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 10,00,000</strong>
+<select>
+<option>Select</option>
+<option>1 million</option>
+<option>1 crore</option>
+<option>10 crore</option>
+<option>1 billion</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 10,00,00,000</strong>
+<select>
+<option>Select</option>
+<option>1 million</option>
+<option>1 crore</option>
+<option>10 crore</option>
+<option>1 billion</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. 1,00,00,00,000</strong>
+<select>
+<option>Select</option>
+<option>1 million</option>
+<option>1 crore</option>
+<option>10 crore</option>
+<option>1 billion</option>
+</select>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 1 crore,
+2 → 1 million,
+3 → 10 crore,
+4 → 1 billion.
+</div>
+
+<label class="place-option">
+<input type="radio" name="match1">
+Reveal Correct Matching
+</label>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the rounding situation with the result.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 6,48,000 nearest lakh</strong>
+<select>
+<option>Select</option>
+<option>6,00,000</option>
+<option>7,00,000</option>
+<option>6,50,000</option>
+<option>6,48,000</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 6,52,000 nearest lakh</strong>
+<select>
+<option>Select</option>
+<option>6,00,000</option>
+<option>7,00,000</option>
+<option>6,50,000</option>
+<option>6,48,000</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 43,700 nearest thousand</strong>
+<select>
+<option>Select</option>
+<option>43,000</option>
+<option>44,000</option>
+<option>45,000</option>
+<option>40,000</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. 44,400 nearest thousand</strong>
+<select>
+<option>Select</option>
+<option>43,000</option>
+<option>44,000</option>
+<option>45,000</option>
+<option>40,000</option>
+</select>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 6,00,000;
+2 → 7,00,000;
+3 → 44,000;
+4 → 44,000.
+</div>
+
+<label class="place-option">
+<input type="radio" name="match2">
+Reveal Correct Matching
+</label>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the term with its meaning.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Successor</strong>
+<select>
+<option>Select</option>
+<option>Number before</option>
+<option>Number after</option>
+<option>Approximate value</option>
+<option>Difference</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Predecessor</strong>
+<select>
+<option>Select</option>
+<option>Number before</option>
+<option>Number after</option>
+<option>Approximate value</option>
+<option>Difference</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Rounding</strong>
+<select>
+<option>Select</option>
+<option>Number before</option>
+<option>Number after</option>
+<option>Approximate value</option>
+<option>Difference</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. Difference</strong>
+<select>
+<option>Select</option>
+<option>Number before</option>
+<option>Number after</option>
+<option>Approximate value</option>
+<option>Difference</option>
+</select>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → Number after;
+2 → Number before;
+3 → Approximate value;
+4 → Difference.
+</div>
+
+<label class="place-option">
+<input type="radio" name="match3">
+Reveal Correct Matching
+</label>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the number with its digit count.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 7,654</strong>
+<select>
+<option>Select</option>
+<option>4 digits</option>
+<option>6 digits</option>
+<option>8 digits</option>
+<option>10 digits</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 76,54,321</strong>
+<select>
+<option>Select</option>
+<option>4 digits</option>
+<option>6 digits</option>
+<option>7 digits</option>
+<option>10 digits</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 7,65,43,210</strong>
+<select>
+<option>Select</option>
+<option>4 digits</option>
+<option>6 digits</option>
+<option>8 digits</option>
+<option>10 digits</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. 7,65,43,21,098</strong>
+<select>
+<option>Select</option>
+<option>4 digits</option>
+<option>7 digits</option>
+<option>8 digits</option>
+<option>11 digits</option>
+</select>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 4 digits;
+2 → 7 digits;
+3 → 8 digits;
+4 → 11 digits.
+</div>
+
+<label class="place-option">
+<input type="radio" name="match4">
+Reveal Correct Matching
+</label>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the quantity with a suitable unit.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Population of a small village</strong>
+<select>
+<option>Select</option>
+<option>Hundreds</option>
+<option>Lakhs</option>
+<option>Crores</option>
+<option>Billions</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Population of a large Indian state</strong>
+<select>
+<option>Select</option>
+<option>Hundreds</option>
+<option>Lakhs</option>
+<option>Crores</option>
+<option>Billions</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Population of a large country</strong>
+<select>
+<option>Select</option>
+<option>Hundreds</option>
+<option>Lakhs</option>
+<option>Crores</option>
+<option>Billions</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. Number of grains in a small sample</strong>
+<select>
+<option>Select</option>
+<option>Hundreds</option>
+<option>Lakhs</option>
+<option>Crores</option>
+<option>Billions</option>
+</select>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Suggested answers:</strong>
+1 → Hundreds;
+2 → Crores;
+3 → Billions;
+4 → Hundreds.
+</div>
+
+<label class="place-option">
+<input type="radio" name="match5">
+Reveal Suggested Matching
+</label>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- DRAG / PLACE -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION F — DRAG & DROP STYLE CHALLENGE
+</div>
+
+<div class="instructions">
+Since this version is intentionally built with <strong>HTML + CSS only</strong>,
+these activities use selectable placement cards instead of JavaScript-powered
+mouse dragging.
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag/Place 1</div>
+<div class="question-text">
+Place each number into the correct magnitude category.
+</div>
+
+<div class="drag-area">
+
+<div class="drag-card">
+<strong>Numbers</strong>
+
+<label class="place-option">
+<input type="radio" name="drag1">
+7,82,451 → Lakhs
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag1">
+8,45,12,300 → Crores
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag1">
+9,876 → Thousands
+</label>
+
+</div>
+
+<div class="drag-card">
+<strong>Correct Placement</strong>
+
+<label class="place-option">
+<input type="radio" name="drag1">
+Reveal Answer
+</label>
+
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Correct placement:</strong>
+9,876 → Thousands;
+7,82,451 → Lakhs;
+8,45,12,300 → Crores.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag/Place 2</div>
+<div class="question-text">
+Arrange the following from smallest to greatest.
+</div>
+
+<div class="drag-card">
+
+<label class="place-option">
+<input type="radio" name="drag2">
+2,45,678 → 1st
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag2">
+24,56,789 → 2nd
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag2">
+2,45,67,890 → 3rd
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag2">
+24,56,78,900 → 4th
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct order:</strong>
+2,45,678 &lt; 24,56,789 &lt; 2,45,67,890 &lt; 24,56,78,900.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag/Place 3</div>
+<div class="question-text">
+Place each value under the correct place-value heading.
+</div>
+
+<div class="drag-area">
+
+<div class="drag-card">
+
+<label class="place-option">
+<input type="radio" name="drag3">
+5 in 5,43,21,678 → Crore
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag3">
+4 in 5,43,21,678 → Ten Lakh
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag3">
+2 in 5,43,21,678 → Ten Thousand
+</label>
+
+</div>
+
+<div class="drag-card">
+
+<strong>Reveal placement</strong>
+
+<label class="place-option">
+<input type="radio" name="drag3">
+Show Correct Positions
+</label>
+
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Correct:</strong>
+5 → Crore;
+4 → Ten Lakh;
+2 → Ten Thousand.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag/Place 4</div>
+<div class="question-text">
+Place each number with the correct rounded value.
+</div>
+
+<div class="drag-card">
+
+<label class="place-option">
+<input type="radio" name="drag4">
+3,48,700 → 3,00,000
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag4">
+3,52,100 → 4,00,000
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag4">
+7,49,999 → 7,00,000
+</label>
+
+<label class="place-option">
+<input type="radio" name="drag4">
+7,51,000 → 8,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct placements:</strong>
+3,48,700 → 3,00,000;
+3,52,100 → 4,00,000;
+7,49,999 → 7,00,000;
+7,51,000 → 8,00,000.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag/Place 5</div>
+<div class="question-text">
+Identify which number belongs in the missing position:
+12 lakh → 20 lakh → 28 lakh → ______
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="drag5">
+A. 34 lakh
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="drag5">
+B. 36 lakh
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="drag5">
+C. 38 lakh
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="drag5">
+D. 40 lakh
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 36 lakh</strong>
+<div class="explanation">
+The sequence increases by 8 lakh each time.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- HOTS -->
+<!-- ========================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION G — HOTS / HIGHER ORDER THINKING
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 1</div>
+<div class="question-text">
+A school has 4,85,750 students in its network. It wants to report the number
+rounded to the nearest lakh. A student reports 5,00,000 while another reports
+4,00,000. Who is correct and why?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="hots1">
+A. The first student, because 4,85,750 is closer to 5,00,000.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots1">
+B. The second student, because 4 is the first digit.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots1">
+C. Both are correct.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots1">
+D. Neither is correct.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 2</div>
+<div class="question-text">
+A number has 8 digits. Its crore digit is 3, its lakh digit is 7,
+its thousand digit is 4 and its last three digits form the smallest
+possible 3-digit number. Find the number.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots2">
+A. 3,07,04,100
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots2">
+B. 3,07,04,100
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots2">
+C. 3,70,04,100
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots2">
+D. 3,07,40,100
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 3,07,04,100</strong>
+<div class="explanation">
+The smallest 3-digit number is 100.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 3</div>
+<div class="question-text">
+Two populations are 4,99,99,999 and 5,00,00,001.
+Without performing ordinary subtraction first, determine their difference.
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots3">
+A. 1
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots3">
+B. 2
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots3">
+C. 2
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots3">
+D. 10
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 2</strong>
+<div class="explanation">
+The first number is one less than 5 crore and the second is one more,
+so the gap is 2.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 4</div>
+<div class="question-text">
+A number is between 7 crore and 8 crore. Its lakh digit is 4 and its
+ten-thousand digit is 9. What can be said about the number?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots4">
+A. It must be less than 7,40,00,000.
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots4">
+B. It lies between 7,49,00,000 and 7,49,99,999 if the remaining higher digits match.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots4">
+C. It must be greater than 8 crore.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots4">
+D. It has only seven digits.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 5</div>
+<div class="question-text">
+A city claims that its population of 12,49,999 rounds to 12 lakh
+when rounded to the nearest lakh. Is the claim correct?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="hots5">
+A. Yes, because it is less than 12,50,000.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots5">
+B. No, because every 12-lakh number rounds to 13 lakh.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots5">
+C. No, because it has seven digits.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots5">
+D. Yes, because the last digit is 9.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 6</div>
+<div class="question-text">
+A library has 2,75,48,600 books distributed equally among 100 branches.
+Approximately how many books would each branch receive?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots6">
+A. 2,75,486
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots6">
+B. 2,75,486
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots6">
+C. 27,548
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots6">
+D. 2,750
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 2,75,486</strong>
+<div class="explanation">
+Dividing by 100 shifts the place values two places to the right.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 7</div>
+<div class="question-text">
+A number has exactly 8 digits. When its first digit is removed,
+the resulting number has 7 digits. What is the greatest possible original
+number if the remaining seven digits are all 9?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots7">
+A. 99,999,999
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots7">
+B. 99,999,999? 
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots7">
+C. 1,99,99,999
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots7">
+D. 9,99,99,999
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 99,999,999</strong>
+<div class="explanation">
+An 8-digit number cannot be formed by a single digit followed by seven
+9s unless the first digit is also non-zero. The maximum is therefore
+99,999,999.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 8</div>
+<div class="question-text">
+A newspaper reports a population as approximately 3.6 crore.
+Which of the following could be the exact population?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots8">
+A. 3,45,00,000
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots8">
+B. 3,57,80,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots8">
+C. 3,20,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots8">
+D. 2,95,00,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<div class="explanation">
+3,57,80,000 is reasonably close to 3.6 crore.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 9</div>
+<div class="question-text">
+A number is written incorrectly as 8,45,32,100 instead of 8,54,32,100.
+By how much has the number been underestimated?
+</div>
+
+<div class="options">
+
+<label class="wrong-choice">
+<input type="radio" name="hots9">
+A. 9,00,000
+</label>
+
+<label class="correct-choice">
+<input type="radio" name="hots9">
+B. 9,00,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots9">
+C. 90,000
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots9">
+D. 9,000
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 9,00,000</strong>
+<div class="explanation">
+8,54,32,100 − 8,45,32,100 = 9,00,000.
+</div>
+</div>
+</div>
+
+
+<div class="question hots">
+<div class="question-number">HOTS 10</div>
+<div class="question-text">
+A number is rounded to the nearest crore and becomes 9 crore.
+Which statement must be true?
+</div>
+
+<div class="options">
+
+<label class="correct-choice">
+<input type="radio" name="hots10">
+A. The original number lies from 8.5 crore up to but not including 9.5 crore.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots10">
+B. The original number must be exactly 9 crore.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots10">
+C. The original number must be less than 8 crore.
+</label>
+
+<label class="wrong-choice">
+<input type="radio" name="hots10">
+D. The original number must contain exactly 8 digits.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+All values from 8.5 crore through 9.499999... crore round to 9 crore.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- SCORECARD -->
+<!-- ========================================================= -->
+
+<section class="score">
+
+<h2>🏆 CHAPTER COMPLETED</h2>
+
+<p>
+You have completed the Large Numbers Around Us practice set.
+</p>
+
+<p style="margin-top:15px;">
+<strong>55 Questions • Medium to Hard • Half-Yearly Preparation</strong>
+</p>
+
+<p style="margin-top:15px;">
+For a fully automatic numerical score calculation, JavaScript would be
+required. This HTML/CSS-only version provides immediate answer checking
+and explanations without any backend.
+</p>
+
+<a href="index.html" class="back">
+← Back to Chapter Index
+</a>
+
+</section>
+
+</main>
+
+<footer class="footer">
+Ganita Prakash • Class 7 Mathematics • Large Numbers Around Us
+</footer>
+
+</body>
+</html>

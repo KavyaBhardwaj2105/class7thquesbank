@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Chapter 9 - Geometric Twins</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#172033;
+    font-weight:700;
+}
+
+header{
+    background:#101a35;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:10px 0 0;
+    color:#dce4ff;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:25px auto 60px;
+}
+
+.instructions,
+.section{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:24px;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+}
+
+.instructions h2,
+.section h2{
+    margin-top:0;
+    color:#101a35;
+}
+
+.instructions li{
+    margin:8px 0;
+}
+
+.question{
+    border:2px solid #dce2ec;
+    border-radius:15px;
+    padding:20px;
+    margin:18px 0;
+    background:#fbfcfe;
+}
+
+.question h3{
+    margin-top:0;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:11px 14px;
+    margin:9px 0;
+    border:1px solid #ccd4e2;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#f0f4ff;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:13px;
+    border-left:5px solid #101a35;
+    background:#eaf0ff;
+    border-radius:8px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.quiz{
+    counter-reset:score;
+}
+
+.question:has(.correct:checked){
+    counter-increment:score;
+}
+
+.match-row{
+    margin:12px 0;
+    padding:12px;
+    background:#f4f6fa;
+    border-radius:10px;
+}
+
+select{
+    padding:9px;
+    border:2px solid #cbd4e3;
+    border-radius:8px;
+    font-weight:700;
+    margin:4px;
+}
+
+.small{
+    font-size:14px;
+    color:#596579;
+}
+
+.hint{
+    background:#fff7dc;
+    border-left:5px solid #d69e00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.score-card{
+    background:#101a35;
+    color:white;
+    padding:35px;
+    text-align:center;
+    border-radius:22px;
+    margin-top:30px;
+}
+
+.score-card h2{
+    color:white;
+    margin-top:0;
+}
+
+.score-number{
+    font-size:48px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.reset-btn,
+.back-btn{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:800;
+    border:none;
+    cursor:pointer;
+    margin:8px;
+}
+
+.reset-btn{
+    background:white;
+    color:#101a35;
+}
+
+.back-btn{
+    background:#101a35;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Class 7 Mathematics</h1>
+    <p>Ganita Prakash Part 2 — Chapter 9: Geometric Twins</p>
+</header>
+
+<div class="container">
+
+<div class="instructions">
+<h2>📐 Half-Yearly Revision Test</h2>
+
+<ul>
+<li>15 Multiple Choice Questions</li>
+<li>10 True / False</li>
+<li>5 Assertion & Reasoning</li>
+<li>5 Fill in the Blanks</li>
+<li>5 Match the Following</li>
+<li>5 Drag & Drop Style Questions</li>
+<li>10 HOTS Questions</li>
+<li><strong>Total: 55 Questions</strong></li>
+</ul>
+
+<div class="hint">
+Select an answer to reveal the correct answer immediately.
+Correctly answered selectable questions are automatically added to the score.
+</div>
+
+<p class="small">
+HTML + CSS only. The Drag & Drop section uses a CSS-only placement format;
+real browser drag-and-drop interaction requires JavaScript.
+</p>
+</div>
+
+
+<form class="quiz">
+
+<!-- ================= MCQs ================= -->
+
+<div class="section">
+<h2>Section A — Multiple Choice Questions</h2>
+
+<div class="question">
+<h3>Q1. Two line segments have the same length. Which term best describes their relationship?</h3>
+<label class="option"><input type="radio" name="q1"><span>Parallel</span></label>
+<label class="option"><input class="correct" type="radio" name="q1"><span>Congruent</span></label>
+<label class="option"><input type="radio" name="q1"><span>Perpendicular</span></label>
+<label class="option"><input type="radio" name="q1"><span>Intersecting</span></label>
+<div class="answer">Correct Answer: Congruent. Line segments of equal length are congruent.</div>
+</div>
+
+<div class="question">
+<h3>Q2. Which transformation changes the position of a figure but preserves its shape and size?</h3>
+<label class="option"><input type="radio" name="q2"><span>Stretching</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q2"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q2"><span>Enlargement</span></label>
+<label class="option"><input type="radio" name="q2"><span>Distortion</span></label>
+<div class="answer">Correct Answer: Translation.</div>
+</div>
+
+<div class="question">
+<h3>Q3. A figure is turned through an angle while keeping its size unchanged. Which transformation has occurred?</h3>
+<label class="option"><input type="radio" name="q3"><span>Reflection</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q3"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q3"><span>Scaling</span></label>
+<label class="option"><input type="radio" name="q3"><span>Shearing</span></label>
+<div class="answer">Correct Answer: Rotation.</div>
+</div>
+
+<div class="question">
+<h3>Q4. A mirror image of a shape is produced across a line. Which transformation is this?</h3>
+<label class="option"><input type="radio" name="q4"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q4"><span>Rotation</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q4"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q4"><span>Expansion</span></label>
+<div class="answer">Correct Answer: Reflection.</div>
+</div>
+
+<div class="question">
+<h3>Q5. If △ABC and △PQR are congruent, which statement must be true?</h3>
+<label class="option"><input type="radio" name="q5"><span>Only their areas are equal</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q5"><span>Corresponding sides and angles are equal</span></label>
+<label class="option"><input type="radio" name="q5"><span>Only their perimeters are equal</span></label>
+<label class="option"><input type="radio" name="q5"><span>They must have the same orientation</span></label>
+<div class="answer">Correct Answer: Corresponding sides and angles are equal.</div>
+</div>
+
+<div class="question">
+<h3>Q6. Which pair of figures can be congruent even though one is turned upside down?</h3>
+<label class="option"><input type="radio" name="q6"><span>Only figures with different sizes</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q6"><span>Figures related by rotation</span></label>
+<label class="option"><input type="radio" name="q6"><span>Figures with different side lengths</span></label>
+<label class="option"><input type="radio" name="q6"><span>Figures with different angles</span></label>
+<div class="answer">Correct Answer: Figures related by rotation.</div>
+</div>
+
+<div class="question">
+<h3>Q7. Which condition is sufficient to prove two line segments congruent?</h3>
+<label class="option"><input type="radio" name="q7"><span>They are drawn in the same direction</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q7"><span>Their lengths are equal</span></label>
+<label class="option"><input type="radio" name="q7"><span>They intersect</span></label>
+<label class="option"><input type="radio" name="q7"><span>They are perpendicular</span></label>
+<div class="answer">Correct Answer: Their lengths are equal.</div>
+</div>
+
+<div class="question">
+<h3>Q8. A square is rotated by 90°. What happens to its size?</h3>
+<label class="option"><input type="radio" name="q8"><span>It doubles</span></label>
+<label class="option"><input type="radio" name="q8"><span>It becomes half</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q8"><span>It remains unchanged</span></label>
+<label class="option"><input type="radio" name="q8"><span>It becomes zero</span></label>
+<div class="answer">Correct Answer: It remains unchanged.</div>
+</div>
+
+<div class="question">
+<h3>Q9. Which transformation always preserves distances between corresponding points?</h3>
+<label class="option"><input type="radio" name="q9"><span>Stretching</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q9"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q9"><span>Unequal scaling</span></label>
+<label class="option"><input type="radio" name="q9"><span>Distortion</span></label>
+<div class="answer">Correct Answer: Reflection.</div>
+</div>
+
+<div class="question">
+<h3>Q10. Two triangles have side lengths 5 cm, 7 cm and 9 cm each. What can be concluded?</h3>
+<label class="option"><input type="radio" name="q10"><span>They are necessarily different triangles</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q10"><span>They are congruent by SSS</span></label>
+<label class="option"><input type="radio" name="q10"><span>Only their areas are equal</span></label>
+<label class="option"><input type="radio" name="q10"><span>Only their angles are equal</span></label>
+<div class="answer">Correct Answer: They are congruent by SSS.</div>
+</div>
+
+<div class="question">
+<h3>Q11. If a triangle is reflected in a mirror line, what happens to the lengths of its sides?</h3>
+<label class="option"><input type="radio" name="q11"><span>All become longer</span></label>
+<label class="option"><input type="radio" name="q11"><span>All become shorter</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q11"><span>They remain unchanged</span></label>
+<label class="option"><input type="radio" name="q11"><span>Only one changes</span></label>
+<div class="answer">Correct Answer: They remain unchanged.</div>
+</div>
+
+<div class="question">
+<h3>Q12. Which pair of angles guarantees congruence of two triangles when the included side is also equal?</h3>
+<label class="option"><input type="radio" name="q12"><span>AAA</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q12"><span>ASA</span></label>
+<label class="option"><input type="radio" name="q12"><span>SSA</span></label>
+<label class="option"><input type="radio" name="q12"><span>AAA with different side lengths</span></label>
+<div class="answer">Correct Answer: ASA.</div>
+</div>
+
+<div class="question">
+<h3>Q13. Which of the following is NOT generally enough by itself to establish triangle congruence?</h3>
+<label class="option"><input type="radio" name="q13"><span>SSS</span></label>
+<label class="option"><input type="radio" name="q13"><span>SAS</span></label>
+<label class="option"><input type="radio" name="q13"><span>ASA</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q13"><span>AAA</span></label>
+<div class="answer">Correct Answer: AAA. It establishes similarity, not necessarily congruence.</div>
+</div>
+
+<div class="question">
+<h3>Q14. If corresponding sides of two triangles are equal, their corresponding angles are:</h3>
+<label class="option"><input type="radio" name="q14"><span>Always different</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q14"><span>Equal</span></label>
+<label class="option"><input type="radio" name="q14"><span>Always supplementary</span></label>
+<label class="option"><input type="radio" name="q14"><span>Always complementary</span></label>
+<div class="answer">Correct Answer: Equal.</div>
+</div>
+
+<div class="question">
+<h3>Q15. A rectangle measuring 8 cm × 5 cm is moved 6 cm to the right. What is its new area?</h3>
+<label class="option"><input type="radio" name="q15"><span>13 cm²</span></label>
+<label class="option"><input type="radio" name="q15"><span>40 cm²</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q15"><span>40 cm²</span></label>
+<label class="option"><input type="radio" name="q15"><span>48 cm²</span></label>
+<div class="answer">Correct Answer: 40 cm². Translation does not change dimensions.</div>
+</div>
+
+</div>
+
+
+<!-- ================= TRUE FALSE ================= -->
+
+<div class="section">
+<h2>Section B — True / False</h2>
+
+<div class="question">
+<h3>Q16. Congruent figures have the same shape and the same size.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q16"><span>True</span></label>
+<label class="option"><input type="radio" name="q16"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q17. Rotating a figure changes its side lengths.</h3>
+<label class="option"><input type="radio" name="q17"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q17"><span>False</span></label>
+<div class="answer">Correct Answer: False.</div>
+</div>
+
+<div class="question">
+<h3>Q18. A reflected triangle has the same area as the original triangle.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q18"><span>True</span></label>
+<label class="option"><input type="radio" name="q18"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q19. Two squares of different side lengths can be congruent.</h3>
+<label class="option"><input type="radio" name="q19"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q19"><span>False</span></label>
+<div class="answer">Correct Answer: False. Congruent squares must have equal side lengths.</div>
+</div>
+
+<div class="question">
+<h3>Q20. Translation changes the shape of a figure.</h3>
+<label class="option"><input type="radio" name="q20"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q20"><span>False</span></label>
+<div class="answer">Correct Answer: False.</div>
+</div>
+
+<div class="question">
+<h3>Q21. If two triangles have all three corresponding sides equal, they are congruent.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q21"><span>True</span></label>
+<label class="option"><input type="radio" name="q21"><span>False</span></label>
+<div class="answer">Correct Answer: True — SSS criterion.</div>
+</div>
+
+<div class="question">
+<h3>Q22. AAA alone always proves two triangles congruent.</h3>
+<label class="option"><input type="radio" name="q22"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q22"><span>False</span></label>
+<div class="answer">Correct Answer: False. AAA establishes similarity, not necessarily equal size.</div>
+</div>
+
+<div class="question">
+<h3>Q23. Reflection reverses the orientation of a figure.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q23"><span>True</span></label>
+<label class="option"><input type="radio" name="q23"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q24. Congruent figures always have equal perimeters.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q24"><span>True</span></label>
+<label class="option"><input type="radio" name="q24"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q25. A translation can change the area of a rectangle.</h3>
+<label class="option"><input type="radio" name="q25"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q25"><span>False</span></label>
+<div class="answer">Correct Answer: False.</div>
+</div>
+
+</div>
+
+
+<!-- ================= ASSERTION REASON ================= -->
+
+<div class="section">
+<h2>Section C — Assertion & Reasoning</h2>
+
+<p>
+<strong>A:</strong> Both A and R are true, and R explains A.<br>
+<strong>B:</strong> Both A and R are true, but R does not explain A.<br>
+<strong>C:</strong> A is true, but R is false.<br>
+<strong>D:</strong> A is false, but R is true.
+</p>
+
+<div class="question">
+<h3>Q26. Assertion: A translated figure is congruent to the original.<br>
+Reason: Translation preserves every distance and angle.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q26"><span>A</span></label>
+<label class="option"><input type="radio" name="q26"><span>B</span></label>
+<label class="option"><input type="radio" name="q26"><span>C</span></label>
+<label class="option"><input type="radio" name="q26"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q27. Assertion: Two triangles with equal corresponding sides are congruent.<br>
+Reason: SSS is a valid triangle congruence criterion.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q27"><span>A</span></label>
+<label class="option"><input type="radio" name="q27"><span>B</span></label>
+<label class="option"><input type="radio" name="q27"><span>C</span></label>
+<label class="option"><input type="radio" name="q27"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q28. Assertion: Two figures with equal areas must be congruent.<br>
+Reason: Congruent figures have equal areas.</h3>
+<label class="option"><input type="radio" name="q28"><span>A</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q28"><span>D</span></label>
+<label class="option"><input type="radio" name="q28"><span>B</span></label>
+<label class="option"><input type="radio" name="q28"><span>C</span></label>
+<div class="answer">Correct Answer: D. Equal area does not guarantee equal shape and size, but congruent figures do have equal areas.</div>
+</div>
+
+<div class="question">
+<h3>Q29. Assertion: Reflection preserves the size of a figure.<br>
+Reason: Reflection preserves distances between corresponding points.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q29"><span>A</span></label>
+<label class="option"><input type="radio" name="q29"><span>B</span></label>
+<label class="option"><input type="radio" name="q29"><span>C</span></label>
+<label class="option"><input type="radio" name="q29"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q30. Assertion: AAA proves triangle congruence.<br>
+Reason: AAA gives equality of corresponding angles.</h3>
+<label class="option"><input type="radio" name="q30"><span>A</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q30"><span>D</span></label>
+<label class="option"><input type="radio" name="q30"><span>B</span></label>
+<label class="option"><input type="radio" name="q30"><span>C</span></label>
+<div class="answer">Correct Answer: D. AAA is true as an angle relationship, but it does not establish congruence without a size condition.</div>
+</div>
+
+</div>
+
+
+<!-- ================= FILL ================= -->
+
+<div class="section">
+<h2>Section D — Fill in the Blanks</h2>
+
+<div class="question">
+<h3>Q31. Figures having exactly the same shape and size are called ______ figures.</h3>
+<label class="option"><input type="radio" name="q31"><span>Similar</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q31"><span>Congruent</span></label>
+<label class="option"><input type="radio" name="q31"><span>Parallel</span></label>
+<label class="option"><input type="radio" name="q31"><span>Symmetric</span></label>
+<div class="answer">Correct Answer: Congruent.</div>
+</div>
+
+<div class="question">
+<h3>Q32. Moving a figure without turning or changing its size is called a ______.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q32"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q32"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q32"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q32"><span>Scaling</span></label>
+<div class="answer">Correct Answer: Translation.</div>
+</div>
+
+<div class="question">
+<h3>Q33. Turning a figure around a fixed point is called ______.</h3>
+<label class="option"><input type="radio" name="q33"><span>Translation</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q33"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q33"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q33"><span>Stretching</span></label>
+<div class="answer">Correct Answer: Rotation.</div>
+</div>
+
+<div class="question">
+<h3>Q34. The congruence criterion involving three corresponding sides is called ______.</h3>
+<label class="option"><input type="radio" name="q34"><span>AAA</span></label>
+<label class="option"><input type="radio" name="q34"><span>ASA</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q34"><span>SSS</span></label>
+<label class="option"><input type="radio" name="q34"><span>SSA</span></label>
+<div class="answer">Correct Answer: SSS.</div>
+</div>
+
+<div class="question">
+<h3>Q35. A mirror image across a line is known as a ______.</h3>
+<label class="option"><input type="radio" name="q35"><span>Translation</span></label>
+<label class="option"><input class="correct" type="radio" name="q35"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q35"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q35"><span>Enlargement</span></label>
+<div class="answer">Correct Answer: Reflection.</div>
+</div>
+
+</div>
+
+
+<!-- ================= MATCH ================= -->
+
+<div class="section">
+<h2>Section E — Match the Following</h2>
+
+<div class="question">
+<h3>Q36. Match the transformation with its description.</h3>
+
+<div class="match-row">Translation →
+<select>
+<option>Select</option>
+<option>Mirror image</option>
+<option>Turning around a point</option>
+<option>Sliding</option>
+<option>Changing size</option>
+</select>
+</div>
+
+<div class="match-row">Reflection →
+<select>
+<option>Select</option>
+<option>Mirror image</option>
+<option>Turning around a point</option>
+<option>Sliding</option>
+<option>Changing size</option>
+</select>
+</div>
+
+<div class="match-row">Rotation →
+<select>
+<option>Select</option>
+<option>Mirror image</option>
+<option>Turning around a point</option>
+<option>Sliding</option>
+<option>Changing size</option>
+</select>
+</div>
+
+<div class="match-row">Scaling →
+<select>
+<option>Select</option>
+<option>Mirror image</option>
+<option>Turning around a point</option>
+<option>Sliding</option>
+<option>Changing size</option>
+</select>
+</div>
+
+<p class="small">
+Answers: Translation → Sliding; Reflection → Mirror image;
+Rotation → Turning around a point; Scaling → Changing size.
+</p>
+</div>
+
+
+<div class="question">
+<h3>Q37. Match each congruence criterion with its condition.</h3>
+
+<div class="match-row">SSS →
+<select>
+<option>Select</option>
+<option>Three sides</option>
+<option>Two sides and included angle</option>
+<option>Two angles and included side</option>
+<option>Three angles</option>
+</select>
+</div>
+
+<div class="match-row">SAS →
+<select>
+<option>Select</option>
+<option>Three sides</option>
+<option>Two sides and included angle</option>
+<option>Two angles and included side</option>
+<option>Three angles</option>
+</select>
+</div>
+
+<div class="match-row">ASA →
+<select>
+<option>Select</option>
+<option>Three sides</option>
+<option>Two sides and included angle</option>
+<option>Two angles and included side</option>
+<option>Three angles</option>
+</select>
+</div>
+
+<div class="match-row">AAA →
+<select>
+<option>Select</option>
+<option>Three sides</option>
+<option>Two sides and included angle</option>
+<option>Two angles and included side</option>
+<option>Three angles</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q38. Match the figure with a suitable congruent partner.</h3>
+
+<div class="match-row">Square of side 4 cm →
+<select>
+<option>Select</option>
+<option>Square of side 4 cm</option>
+<option>Square of side 7 cm</option>
+<option>Rectangle 4 × 5 cm</option>
+<option>Triangle with side 4 cm</option>
+</select>
+</div>
+
+<div class="match-row">Equilateral triangle of side 6 cm →
+<select>
+<option>Select</option>
+<option>Square of side 4 cm</option>
+<option>Equilateral triangle of side 6 cm</option>
+<option>Rectangle 6 × 4 cm</option>
+<option>Triangle with sides 5,6,7 cm</option>
+</select>
+</div>
+
+<div class="match-row">Rectangle 8 × 3 cm →
+<select>
+<option>Select</option>
+<option>Rectangle 8 × 3 cm</option>
+<option>Rectangle 8 × 4 cm</option>
+<option>Square of side 8 cm</option>
+<option>Triangle 8,3,3 cm</option>
+</select>
+</div>
+
+<div class="match-row">Circle of radius 5 cm →
+<select>
+<option>Select</option>
+<option>Circle of radius 3 cm</option>
+<option>Circle of radius 5 cm</option>
+<option>Square of side 5 cm</option>
+<option>Circle of diameter 5 cm</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q39. Match each movement with what happens to size.</h3>
+
+<div class="match-row">Translation →
+<select>
+<option>Select</option>
+<option>Unchanged</option>
+<option>Increases</option>
+<option>Decreases</option>
+<option>May become distorted</option>
+</select>
+</div>
+
+<div class="match-row">Rotation →
+<select>
+<option>Select</option>
+<option>Unchanged</option>
+<option>Increases</option>
+<option>Decreases</option>
+<option>May become distorted</option>
+</select>
+</div>
+
+<div class="match-row">Reflection →
+<select>
+<option>Select</option>
+<option>Unchanged</option>
+<option>Increases</option>
+<option>Decreases</option>
+<option>May become distorted</option>
+</select>
+</div>
+
+<div class="match-row">Uniform enlargement →
+<select>
+<option>Select</option>
+<option>Unchanged</option>
+<option>Increases</option>
+<option>Decreases</option>
+<option>May become distorted</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q40. Match each statement with its correct conclusion.</h3>
+
+<div class="match-row">Equal corresponding sides →
+<select>
+<option>Select</option>
+<option>SSS possible</option>
+<option>Different size</option>
+<option>Different shape</option>
+<option>No geometric relation</option>
+</select>
+</div>
+
+<div class="match-row">Two equal sides and included angle →
+<select>
+<option>Select</option>
+<option>SSS possible</option>
+<option>SAS possible</option>
+<option>AAA only</option>
+<option>No relation</option>
+</select>
+</div>
+
+<div class="match-row">Two equal angles and included side →
+<select>
+<option>Select</option>
+<option>ASA possible</option>
+<option>SSS only</option>
+<option>AAA only</option>
+<option>Translation only</option>
+</select>
+</div>
+
+<div class="match-row">Equal angles only →
+<select>
+<option>Select</option>
+<option>Congruence always</option>
+<option>Similarity may be established</option>
+<option>Equal side lengths automatically</option>
+<option>Equal perimeter automatically</option>
+</select>
+</div>
+</div>
+
+</div>
+
+
+<!-- ================= DRAG STYLE ================= -->
+
+<div class="section">
+<h2>Section F — Drag & Drop Style</h2>
+
+<div class="question">
+<h3>Q41. Place the transformation “sliding a triangle 5 cm right” into the correct box.</h3>
+<label class="option"><input class="correct" type="radio" name="q41"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q41"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q41"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q41"><span>Scaling</span></label>
+<div class="answer">Correct placement: Translation.</div>
+</div>
+
+<div class="question">
+<h3>Q42. Place “turning a square through 90°” into the correct box.</h3>
+<label class="option"><input type="radio" name="q42"><span>Translation</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q42"><span>Rotation</span></label>
+<label class="option"><input type="radio" name="q42"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q42"><span>Scaling</span></label>
+<div class="answer">Correct placement: Rotation.</div>
+</div>
+
+<div class="question">
+<h3>Q43. Place “producing a mirror image” into the correct box.</h3>
+<label class="option"><input type="radio" name="q43"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q43"><span>Rotation</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q43"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q43"><span>Scaling</span></label>
+<div class="answer">Correct placement: Reflection.</div>
+</div>
+
+<div class="question">
+<h3>Q44. Place “making a figure twice as large while preserving its shape” into the correct box.</h3>
+<label class="option"><input type="radio" name="q44"><span>Translation</span></label>
+<label class="option"><input type="radio" name="q44"><span>Reflection</span></label>
+<label class="option"><input type="radio" name="q44"><span>Rotation</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q44"><span>Enlargement</span></label>
+<div class="answer">Correct placement: Enlargement.</div>
+</div>
+
+<div class="question">
+<h3>Q45. Place two triangles with corresponding sides 6 cm, 8 cm and 10 cm into the correct relationship.</h3>
+<label class="option"><input type="radio" name="q45"><span>Similar only</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q45"><span>Congruent by SSS</span></label>
+<label class="option"><input type="radio" name="q45"><span>Unrelated</span></label>
+<label class="option"><input type="radio" name="q45"><span>Different in size</span></label>
+<div class="answer">Correct placement: Congruent by SSS.</div>
+</div>
+
+</div>
+
+
+<!-- ================= HOTS ================= -->
+
+<div class="section">
+<h2>Section G — HOTS / Higher Order Thinking</h2>
+
+<div class="question">
+<h3>Q46. Triangle ABC has sides 5 cm, 6 cm and 7 cm. Triangle PQR also has sides 5 cm, 6 cm and 7 cm. Can you conclude that the triangles are congruent?</h3>
+<label class="correct option"><input class="correct" type="radio" name="q46"><span>Yes, by SSS</span></label>
+<label class="option"><input type="radio" name="q46"><span>No, because their names differ</span></label>
+<label class="option"><input type="radio" name="q46"><span>No, because triangles cannot be congruent after rotation</span></label>
+<label class="option"><input type="radio" name="q46"><span>Only their areas are equal</span></label>
+<div class="answer">Correct Answer: Yes, by SSS.</div>
+</div>
+
+<div class="question">
+<h3>Q47. A rectangle is translated 12 cm upward. Its original length is 14 cm and width is 9 cm. What is its new area?</h3>
+<label class="option"><input type="radio" name="q47"><span>126 cm²</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q47"><span>126 cm²</span></label>
+<label class="option"><input type="radio" name="q47"><span>252 cm²</span></label>
+<label class="option"><input type="radio" name="q47"><span>117 cm²</span></label>
+<div class="answer">Correct Answer: 126 cm². Translation does not change dimensions.</div>
+</div>
+
+<div class="question">
+<h3>Q48. Two triangles have two sides of lengths 7 cm and 9 cm. Their included angles are both 40°. What congruence criterion applies?</h3>
+<label class="option"><input type="radio" name="q48"><span>SSS</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q48"><span>SAS</span></label>
+<label class="option"><input type="radio" name="q48"><span>AAA</span></label>
+<label class="option"><input type="radio" name="q48"><span>SSA</span></label>
+<div class="answer">Correct Answer: SAS.</div>
+</div>
+
+<div class="question">
+<h3>Q49. Two triangles have equal corresponding angles but one has sides exactly twice as long as the other. What is the best conclusion?</h3>
+<label class="option"><input type="radio" name="q49"><span>They are congruent</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q49"><span>They are similar but not congruent</span></label>
+<label class="option"><input type="radio" name="q49"><span>They are unrelated</span></label>
+<label class="option"><input type="radio" name="q49"><span>They must have equal area</span></label>
+<div class="answer">Correct Answer: They are similar but not congruent.</div>
+</div>
+
+<div class="question">
+<h3>Q50. A shape is reflected and then translated. Which property definitely remains unchanged?</h3>
+<label class="option"><input type="radio" name="q50"><span>Its location</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q50"><span>Its side lengths</span></label>
+<label class="option"><input type="radio" name="q50"><span>Its position relative to the page</span></label>
+<label class="option"><input type="radio" name="q50"><span>The coordinates of every point</span></label>
+<div class="answer">Correct Answer: Its side lengths.</div>
+</div>
+
+<div class="question">
+<h3>Q51. A student says, “If two figures have the same perimeter, they must be congruent.” Which example disproves the claim?</h3>
+<label class="option"><input type="radio" name="q51"><span>Two identical squares</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q51"><span>A 3×5 rectangle and a 4×4 square</span></label>
+<label class="option"><input type="radio" name="q51"><span>Two translated triangles</span></label>
+<label class="option"><input type="radio" name="q51"><span>Two reflected circles of equal radius</span></label>
+<div class="answer">Correct Answer: A 3×5 rectangle and a 4×4 square. Both have perimeter 16 cm, but their shapes and dimensions differ.</div>
+</div>
+
+<div class="question">
+<h3>Q52. A triangle is rotated 180° about one of its vertices. What happens to the lengths of its three sides?</h3>
+<label class="correct option"><input class="correct" type="radio" name="q52"><span>All remain unchanged</span></label>
+<label class="option"><input type="radio" name="q52"><span>All double</span></label>
+<label class="option"><input type="radio" name="q52"><span>All become half</span></label>
+<label class="option"><input type="radio" name="q52"><span>Only the base changes</span></label>
+<div class="answer">Correct Answer: All remain unchanged.</div>
+</div>
+
+<div class="question">
+<h3>Q53. Two triangles have sides 8 cm, 10 cm and 12 cm. A second pair has sides 16 cm, 20 cm and 24 cm. What is their relationship?</h3>
+<label class="option"><input type="radio" name="q53"><span>Congruent</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q53"><span>Similar but not congruent</span></label>
+<label class="option"><input type="radio" name="q53"><span>Neither related nor similar</span></label>
+<label class="option"><input type="radio" name="q53"><span>Equal in every measurement</span></label>
+<div class="answer">Correct Answer: Similar but not congruent. Every corresponding side in the second triangle is twice the first.</div>
+</div>
+
+<div class="question">
+<h3>Q54. A square has side 6 cm. It is reflected and then rotated. What is its perimeter after both transformations?</h3>
+<label class="option"><input type="radio" name="q54"><span>12 cm</span></label>
+<label class="option"><input type="radio" name="q54"><span>18 cm</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q54"><span>24 cm</span></label>
+<label class="option"><input type="radio" name="q54"><span>36 cm</span></label>
+<div class="answer">Correct Answer: 24 cm. Neither reflection nor rotation changes side length.</div>
+</div>
+
+<div class="question">
+<h3>Q55. Triangle A has sides 4 cm, 5 cm and 6 cm. Triangle B has sides 4 cm, 5 cm and 7 cm. Which conclusion is correct?</h3>
+<label class="option"><input type="radio" name="q55"><span>They are congruent by SSS</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q55"><span>They cannot be congruent by SSS because one corresponding side differs</span></label>
+<label class="option"><input type="radio" name="q55"><span>They are identical because two sides match</span></label>
+<label class="option"><input type="radio" name="q55"><span>They must have equal areas</span></label>
+<div class="answer">Correct Answer: They cannot be congruent by SSS because one corresponding side differs.</div>
+</div>
+
+</div>
+
+
+<!-- ================= SCORE ================= -->
+
+<section class="score-card">
+<h2>🏆 Your Final Score</h2>
+
+<div class="score-number"></div>
+
+<p>Correct Answers out of 55</p>
+
+<button type="reset" class="reset-btn">
+Reset Test
+</button>
+</section>
+
+</form>
+
+<div style="text-align:center;margin-top:25px;">
+<a href="index.html" class="back-btn">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+Class 7 Mathematics • Ganita Prakash Part 2 • Chapter 9 — Geometric Twins
+</footer>
+
+</body>
+</html>

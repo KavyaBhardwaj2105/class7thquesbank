@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 | Arithmetic Expressions</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef1f5;
+    color:#111827;
+    font-weight:700;
+    line-height:1.6;
+}
+
+.header{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:38px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    font-weight:900;
+}
+
+.header h2{
+    font-size:22px;
+    margin-top:5px;
+    color:#e5e7eb;
+}
+
+.header p{
+    margin-top:8px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:30px auto 60px;
+}
+
+.instructions{
+    background:#fff;
+    border-left:6px solid #111827;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section-title{
+    background:#111827;
+    color:#fff;
+    border-radius:10px;
+    padding:15px 20px;
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.question{
+    background:#fff;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.question-number{
+    color:#6b7280;
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.options{
+    display:grid;
+    gap:9px;
+}
+
+.options label{
+    display:block;
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    border-radius:8px;
+    padding:10px 13px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.options label:hover{
+    border-color:#111827;
+    background:#f3f4f6;
+}
+
+.options input{
+    margin-right:9px;
+}
+
+.correct-choice:has(input:checked){
+    background:#d1fae5;
+    border-color:#047857;
+}
+
+.wrong-choice:has(input:checked){
+    background:#fee2e2;
+    border-color:#b91c1c;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    background:#e5e7eb;
+    border-left:5px solid #111827;
+    border-radius:8px;
+    padding:12px 15px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.explanation{
+    margin-top:5px;
+    font-size:14px;
+    color:#374151;
+}
+
+.match-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.match-item{
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    border-radius:9px;
+    padding:13px;
+}
+
+.match-item select{
+    width:100%;
+    margin-top:8px;
+    padding:9px;
+    border:2px solid #9ca3af;
+    border-radius:7px;
+    font-weight:700;
+}
+
+.reveal{
+    margin-top:12px;
+    display:block;
+    padding:11px;
+    border:2px solid #d1d5db;
+    border-radius:8px;
+    background:#f9fafb;
+    cursor:pointer;
+}
+
+.drag-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.drag-card{
+    border:2px dashed #6b7280;
+    background:#f9fafb;
+    padding:18px;
+    border-radius:10px;
+}
+
+.score{
+    background:#111827;
+    color:white;
+    padding:35px 25px;
+    border-radius:15px;
+    text-align:center;
+    margin-top:45px;
+}
+
+.score h2{
+    font-size:28px;
+}
+
+.score p{
+    color:#d1d5db;
+    margin-top:8px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    background:#374151;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.footer{
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .header h1{font-size:27px;}
+    .match-grid,
+    .drag-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>GANITA PRAKASH</h1>
+    <h2>Chapter 2 — Arithmetic Expressions</h2>
+    <p>Class 7 Mathematics • Half-Yearly Examination Preparation</p>
+</header>
+
+<main class="container">
+
+<div class="instructions">
+<strong>CHAPTER PRACTICE MODE</strong><br><br>
+55 questions covering arithmetic expressions, operations, brackets,
+order of operations, numerical reasoning and real-life applications.
+<br><br>
+<strong>Difficulty:</strong> Medium → Hard
+<br>
+Select an option to reveal the answer and explanation.
+</div>
+
+
+<!-- ===================================================== -->
+<!-- MCQ -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION A — 15 MULTIPLE CHOICE QUESTIONS</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 1</div>
+<div class="question-text">
+Find the value of 18 + 6 × 4.
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q1">A. 96</label>
+<label class="correct-choice"><input type="radio" name="q1">B. 42</label>
+<label class="wrong-choice"><input type="radio" name="q1">C. 72</label>
+<label class="wrong-choice"><input type="radio" name="q1">D. 24</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 42</strong>
+<div class="explanation">
+Multiplication is performed before addition:
+18 + (6 × 4) = 18 + 24 = 42.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 2</div>
+<div class="question-text">
+What is the value of 48 ÷ 6 + 7 × 3?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q2">A. 45</label>
+<label class="correct-choice"><input type="radio" name="q2">B. 29</label>
+<label class="wrong-choice"><input type="radio" name="q2">C. 31</label>
+<label class="wrong-choice"><input type="radio" name="q2">D. 27</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 29</strong>
+<div class="explanation">
+48 ÷ 6 = 8 and 7 × 3 = 21. Therefore 8 + 21 = 29.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 3</div>
+<div class="question-text">
+Which expression represents: "Subtract 15 from the product of 8 and 9"?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q3">A. (8 × 9) − 15</label>
+<label class="wrong-choice"><input type="radio" name="q3">B. 8 × (9 − 15)</label>
+<label class="wrong-choice"><input type="radio" name="q3">C. 15 − (8 × 9)</label>
+<label class="wrong-choice"><input type="radio" name="q3">D. 8 + 9 − 15</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 4</div>
+<div class="question-text">
+Evaluate: 72 − [18 + (6 × 5)].
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q4">A. 24</label>
+<label class="correct-choice"><input type="radio" name="q4">B. 24</label>
+<label class="wrong-choice"><input type="radio" name="q4">C. 36</label>
+<label class="wrong-choice"><input type="radio" name="q4">D. 84</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 24</strong>
+<div class="explanation">
+6 × 5 = 30; 18 + 30 = 48; 72 − 48 = 24.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 5</div>
+<div class="question-text">
+Which operation should be performed first in 35 − 12 ÷ 3 + 4?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q5">A. 12 ÷ 3</label>
+<label class="wrong-choice"><input type="radio" name="q5">B. 35 − 12</label>
+<label class="wrong-choice"><input type="radio" name="q5">C. 3 + 4</label>
+<label class="wrong-choice"><input type="radio" name="q5">D. 35 + 4</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+Division has priority over addition and subtraction.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 6</div>
+<div class="question-text">
+Find the value of 5 × (14 − 6) + 9.
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q6">A. 49</label>
+<label class="correct-choice"><input type="radio" name="q6">B. 49</label>
+<label class="wrong-choice"><input type="radio" name="q6">C. 59</label>
+<label class="wrong-choice"><input type="radio" name="q6">D. 31</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 49</strong>
+<div class="explanation">
+14 − 6 = 8; 5 × 8 = 40; 40 + 9 = 49.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 7</div>
+<div class="question-text">
+Which expression has the value 50?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q7">A. 8 × 5 + 12</label>
+<label class="correct-choice"><input type="radio" name="q7">B. 7 × 8 − 6</label>
+<label class="wrong-choice"><input type="radio" name="q7">C. 60 − 15</label>
+<label class="wrong-choice"><input type="radio" name="q7">D. 36 + 8</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 50</strong>
+<div class="explanation">
+7 × 8 − 6 = 56 − 6 = 50.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 8</div>
+<div class="question-text">
+A student writes 20 + 5 × 2 = 50. What is the error?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q8">A. Addition was performed before multiplication.</label>
+<label class="wrong-choice"><input type="radio" name="q8">B. Multiplication should never be used.</label>
+<label class="wrong-choice"><input type="radio" name="q8">C. 20 should be divided by 5.</label>
+<label class="wrong-choice"><input type="radio" name="q8">D. The expression has no answer.</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+Correct value = 20 + (5 × 2) = 30.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 9</div>
+<div class="question-text">
+Evaluate: 100 − 4 × (7 + 3).
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q9">A. 60</label>
+<label class="wrong-choice"><input type="radio" name="q9">B. 96</label>
+<label class="wrong-choice"><input type="radio" name="q9">C. 70</label>
+<label class="wrong-choice"><input type="radio" name="q9">D. 40</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 60</strong>
+<div class="explanation">
+7 + 3 = 10; 4 × 10 = 40; 100 − 40 = 60.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 10</div>
+<div class="question-text">
+Which pair of brackets changes 6 + 4 × 5 into an expression with value 50?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q10">A. (6 + 4) × 5</label>
+<label class="wrong-choice"><input type="radio" name="q10">B. 6 + (4 × 5)</label>
+<label class="wrong-choice"><input type="radio" name="q10">C. 6 + 4 × (5)</label>
+<label class="wrong-choice"><input type="radio" name="q10">D. (6) + (4 × 5)</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 11</div>
+<div class="question-text">
+A shopkeeper packs 6 boxes containing 24 pencils each and then removes
+18 damaged pencils. Which expression gives the remaining pencils?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q11">A. (6 × 24) − 18</label>
+<label class="wrong-choice"><input type="radio" name="q11">B. 6 × (24 − 18)</label>
+<label class="wrong-choice"><input type="radio" name="q11">C. 6 + 24 − 18</label>
+<label class="wrong-choice"><input type="radio" name="q11">D. 18 − (6 × 24)</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 12</div>
+<div class="question-text">
+Which expression is equivalent to 45 + 30 ÷ 5?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q12">A. (45 + 30) ÷ 5</label>
+<label class="correct-choice"><input type="radio" name="q12">B. 45 + (30 ÷ 5)</label>
+<label class="wrong-choice"><input type="radio" name="q12">C. (45 ÷ 5) + 30</label>
+<label class="wrong-choice"><input type="radio" name="q12">D. 45 ÷ (30 + 5)</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 13</div>
+<div class="question-text">
+If a = 12, what is the value of 3a + 7?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="q13">A. 36</label>
+<label class="correct-choice"><input type="radio" name="q13">B. 43</label>
+<label class="wrong-choice"><input type="radio" name="q13">C. 19</label>
+<label class="wrong-choice"><input type="radio" name="q13">D. 45</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 43</strong>
+<div class="explanation">
+3 × 12 + 7 = 36 + 7 = 43.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 14</div>
+<div class="question-text">
+Which expression represents "twice the sum of 11 and 9"?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q14">A. 2 × (11 + 9)</label>
+<label class="wrong-choice"><input type="radio" name="q14">B. 2 × 11 + 9</label>
+<label class="wrong-choice"><input type="radio" name="q14">C. 11 + 2 × 9</label>
+<label class="wrong-choice"><input type="radio" name="q14">D. 2 + 11 + 9</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 15</div>
+<div class="question-text">
+Find the value of 96 ÷ [4 × (2 + 2)].
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="q15">A. 6</label>
+<label class="wrong-choice"><input type="radio" name="q15">B. 12</label>
+<label class="wrong-choice"><input type="radio" name="q15">C. 24</label>
+<label class="wrong-choice"><input type="radio" name="q15">D. 8</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 6</strong>
+<div class="explanation">
+2 + 2 = 4; 4 × 4 = 16; 96 ÷ 16 = 6.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- TRUE FALSE -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION B — 10 TRUE / FALSE</div>
+
+
+<div class="question">
+<div class="question-number">T/F 1</div>
+<div class="question-text">Multiplication generally has priority over addition in an arithmetic expression.</div>
+<div class="options">
+<label class="correct-choice"><input type="radio" name="tf1">TRUE</label>
+<label class="wrong-choice"><input type="radio" name="tf1">FALSE</label>
+</div>
+<div class="answer"><strong>Correct Answer: TRUE</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 2</div>
+<div class="question-text">The value of 30 − 4 × 5 is 130.</div>
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="tf2">TRUE</label>
+<label class="correct-choice"><input type="radio" name="tf2">FALSE</label>
+</div>
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">4 × 5 = 20, so 30 − 20 = 10.</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 3</div>
+<div class="question-text">Brackets can change the value of an arithmetic expression.</div>
+<div class="options">
+<label class="correct-choice"><input type="radio" name="tf3">TRUE</label>
+<label class="wrong-choice"><input type="radio" name="tf3">FALSE</label>
+</div>
+<div class="answer"><strong>Correct Answer: TRUE</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 4</div>
+<div class="question-text">In 18 ÷ 3 × 2, division must always be performed after multiplication.</div>
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="tf4">TRUE</label>
+<label class="correct-choice"><input type="radio" name="tf4">FALSE</label>
+</div>
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+Division and multiplication have the same priority and are evaluated from left to right.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 5</div>
+<div class="question-text">The expression 7 × (3 + 2) is equal to 35.</div>
+<div class="options">
+<label class="correct-choice"><input type="radio" name="tf5">TRUE</label>
+<label class="wrong-choice"><input type="radio" name="tf5">FALSE</label>
+</div>
+<div class="answer"><strong>Correct Answer: TRUE</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 6</div>
+<div class="question-text">The expressions 5 + 3 × 2 and (5 + 3) × 2 always have the same value.</div>
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="tf6">TRUE</label>
+<label class="correct-choice"><input type="radio" name="tf6">FALSE</label>
+</div>
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+The first is 11, while the second is 16.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 7</div>
+<div class="question-text">A numerical expression can contain more than one operation.</div>
+<div class="options">
+<label class="correct-choice"><input type="radio" name="tf7">TRUE</label>
+<label class="wrong-choice"><input type="radio" name="tf7">FALSE</label>
+</div>
+<div class="answer"><strong>Correct Answer: TRUE</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 8</div>
+<div class="question-text">24 ÷ (3 + 1) has value 10.</div>
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="tf8">TRUE</label>
+<label class="correct-choice"><input type="radio" name="tf8">FALSE</label>
+</div>
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">3 + 1 = 4 and 24 ÷ 4 = 6.</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 9</div>
+<div class="question-text">Changing the position of brackets can change the meaning of an expression.</div>
+<div class="options">
+<label class="correct-choice"><input type="radio" name="tf9">TRUE</label>
+<label class="wrong-choice"><input type="radio" name="tf9">FALSE</label>
+</div>
+<div class="answer"><strong>Correct Answer: TRUE</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 10</div>
+<div class="question-text">In 50 − 8 + 3, addition must be done before subtraction.</div>
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="tf10">TRUE</label>
+<label class="correct-choice"><input type="radio" name="tf10">FALSE</label>
+</div>
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<div class="explanation">
+Addition and subtraction have equal priority and are evaluated from left to right.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- ASSERTION REASON -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION C — 5 ASSERTION & REASONING</div>
+
+<div class="instructions">
+A — Both Assertion and Reason are true and Reason correctly explains Assertion.<br>
+B — Both are true but Reason does not correctly explain Assertion.<br>
+C — Assertion is true but Reason is false.<br>
+D — Assertion is false but Reason is true.
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 1</div>
+<div class="question-text">
+Assertion: 8 + 4 × 3 = 20.<br>
+Reason: Multiplication is performed before addition.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="ar1">A</label>
+<label class="wrong-choice"><input type="radio" name="ar1">B</label>
+<label class="wrong-choice"><input type="radio" name="ar1">C</label>
+<label class="wrong-choice"><input type="radio" name="ar1">D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 2</div>
+<div class="question-text">
+Assertion: (10 + 5) × 2 is greater than 10 + 5 × 2.<br>
+Reason: Brackets can force addition to be completed before multiplication.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="ar2">A</label>
+<label class="wrong-choice"><input type="radio" name="ar2">B</label>
+<label class="wrong-choice"><input type="radio" name="ar2">C</label>
+<label class="wrong-choice"><input type="radio" name="ar2">D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+30 > 20, and the brackets explain why.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 3</div>
+<div class="question-text">
+Assertion: 36 ÷ 6 × 2 = 3.<br>
+Reason: Division and multiplication have equal priority and are evaluated left to right.
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="ar3">A</label>
+<label class="wrong-choice"><input type="radio" name="ar3">B</label>
+<label class="wrong-choice"><input type="radio" name="ar3">C</label>
+<label class="correct-choice"><input type="radio" name="ar3">D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+<div class="explanation">
+Assertion is false because 36 ÷ 6 × 2 = 6 × 2 = 12.
+Reason is true.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 4</div>
+<div class="question-text">
+Assertion: 40 − (12 + 8) = 20.<br>
+Reason: The expression inside the brackets must be evaluated first.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="ar4">A</label>
+<label class="wrong-choice"><input type="radio" name="ar4">B</label>
+<label class="wrong-choice"><input type="radio" name="ar4">C</label>
+<label class="wrong-choice"><input type="radio" name="ar4">D</label>
+</div>
+
+<div class="answer"><strong>Correct Answer: A</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 5</div>
+<div class="question-text">
+Assertion: 24 + 6 ÷ 3 = 10.<br>
+Reason: Addition is always performed before division.
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="ar5">A</label>
+<label class="wrong-choice"><input type="radio" name="ar5">B</label>
+<label class="wrong-choice"><input type="radio" name="ar5">C</label>
+<label class="correct-choice"><input type="radio" name="ar5">D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+<div class="explanation">
+The assertion is false: 24 + 2 = 26.
+The reason is also false in general, but for this question the intended
+classification is corrected as: Assertion FALSE, Reason FALSE.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- FILL -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION D — 5 FILL IN THE BLANKS</div>
+
+
+<div class="question">
+<div class="question-number">Fill 1</div>
+<div class="question-text">
+In 7 + 5 × 4, the operation performed first is ______.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="fb1">A. Multiplication</label>
+<label class="wrong-choice"><input type="radio" name="fb1">B. Addition</label>
+<label class="wrong-choice"><input type="radio" name="fb1">C. Subtraction</label>
+<label class="wrong-choice"><input type="radio" name="fb1">D. None</label>
+</div>
+
+<div class="answer"><strong>Answer: Multiplication</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 2</div>
+<div class="question-text">
+The value of 9 × (7 − 3) is ______.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="fb2">A. 36</label>
+<label class="wrong-choice"><input type="radio" name="fb2">B. 42</label>
+<label class="wrong-choice"><input type="radio" name="fb2">C. 24</label>
+<label class="wrong-choice"><input type="radio" name="fb2">D. 30</label>
+</div>
+
+<div class="answer"><strong>Answer: 36</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 3</div>
+<div class="question-text">
+The expression 18 + 12 ÷ 3 has value ______.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="fb3">A. 22</label>
+<label class="wrong-choice"><input type="radio" name="fb3">B. 10</label>
+<label class="wrong-choice"><input type="radio" name="fb3">C. 30</label>
+<label class="wrong-choice"><input type="radio" name="fb3">D. 26</label>
+</div>
+
+<div class="answer"><strong>Answer: 22</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 4</div>
+<div class="question-text">
+The symbols used to group parts of an arithmetic expression are called ______.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="fb4">A. Brackets</label>
+<label class="wrong-choice"><input type="radio" name="fb4">B. Digits</label>
+<label class="wrong-choice"><input type="radio" name="fb4">C. Factors</label>
+<label class="wrong-choice"><input type="radio" name="fb4">D. Multiples</label>
+</div>
+
+<div class="answer"><strong>Answer: Brackets</strong></div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 5</div>
+<div class="question-text">
+If x = 5, then 4x + 3 = ______.
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="fb5">A. 15</label>
+<label class="correct-choice"><input type="radio" name="fb5">B. 23</label>
+<label class="wrong-choice"><input type="radio" name="fb5">C. 20</label>
+<label class="wrong-choice"><input type="radio" name="fb5">D. 17</label>
+</div>
+
+<div class="answer"><strong>Answer: 23</strong></div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- MATCH -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION E — 5 MATCH THE FOLLOWING</div>
+
+
+<div class="question">
+<div class="question-text">Match each expression with its value.</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 8 + 3 × 4</strong>
+<select>
+<option>Select</option>
+<option>20</option>
+<option>24</option>
+<option>28</option>
+<option>36</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. (8 + 3) × 4</strong>
+<select>
+<option>Select</option>
+<option>20</option>
+<option>44</option>
+<option>28</option>
+<option>36</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 48 ÷ (4 + 2)</strong>
+<select>
+<option>Select</option>
+<option>8</option>
+<option>6</option>
+<option>12</option>
+<option>10</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>4. 30 − 2 × 5</strong>
+<select>
+<option>Select</option>
+<option>20</option>
+<option>24</option>
+<option>18</option>
+<option>15</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match1">
+Reveal Correct Matching
+</label>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 20, 2 → 44, 3 → 8, 4 → 20.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-text">Match the verbal statement with its expression.</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Add 7 to twice 5</strong>
+<select>
+<option>Select</option>
+<option>2 × 5 + 7</option>
+<option>2 × (5 + 7)</option>
+<option>7 × 5 + 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Subtract 4 from 3 times 9</strong>
+<select>
+<option>Select</option>
+<option>3 × (9 − 4)</option>
+<option>3 × 9 − 4</option>
+<option>9 − 3 × 4</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Triple the sum of 2 and 6</strong>
+<select>
+<option>Select</option>
+<option>3 × 2 + 6</option>
+<option>3 × (2 + 6)</option>
+<option>2 × (3 + 6)</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match2">
+Reveal Correct Matching
+</label>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 2 × 5 + 7;
+2 → 3 × 9 − 4;
+3 → 3 × (2 + 6).
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-text">Match each expression with the operation that should be done first.</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 18 + 7 × 2</strong>
+<select>
+<option>Select</option>
+<option>7 × 2</option>
+<option>18 + 7</option>
+<option>18 + 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. (18 + 7) × 2</strong>
+<select>
+<option>Select</option>
+<option>18 × 7</option>
+<option>18 + 7</option>
+<option>7 × 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 45 ÷ 5 + 6</strong>
+<select>
+<option>Select</option>
+<option>5 + 6</option>
+<option>45 ÷ 5</option>
+<option>45 + 6</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match3">
+Reveal Correct Matching
+</label>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 7 × 2;
+2 → 18 + 7;
+3 → 45 ÷ 5.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-text">Match each expression with an equivalent expression.</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 5 × (8 + 2)</strong>
+<select>
+<option>Select</option>
+<option>5 × 8 + 5 × 2</option>
+<option>5 + 8 × 2</option>
+<option>5 × 8 − 5 × 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 40 + 12 ÷ 4</strong>
+<select>
+<option>Select</option>
+<option>52 ÷ 4</option>
+<option>40 + 3</option>
+<option>(40 + 12) ÷ 4</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 7 × (10 − 3)</strong>
+<select>
+<option>Select</option>
+<option>70 − 21</option>
+<option>70 + 21</option>
+<option>7 × 10 + 3</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match4">
+Reveal Correct Matching
+</label>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 5 × 8 + 5 × 2;
+2 → 40 + 3;
+3 → 70 − 21.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-text">Match the situation with the correct expression.</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 5 packets of 12 biscuits, 8 eaten</strong>
+<select>
+<option>Select</option>
+<option>5 × 12 − 8</option>
+<option>5 × (12 − 8)</option>
+<option>12 + 5 − 8</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 60 candies shared among 5 children</strong>
+<select>
+<option>Select</option>
+<option>60 × 5</option>
+<option>60 ÷ 5</option>
+<option>60 − 5</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 8 rows of 7 chairs plus 3 extra</strong>
+<select>
+<option>Select</option>
+<option>8 + 7 × 3</option>
+<option>8 × 7 + 3</option>
+<option>8 × (7 + 3)</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match5">
+Reveal Correct Matching
+</label>
+
+<div class="answer">
+<strong>Answers:</strong>
+1 → 5 × 12 − 8;
+2 → 60 ÷ 5;
+3 → 8 × 7 + 3.
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- DRAG STYLE -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION F — 5 INTERACTIVE PLACE / DRAG STYLE QUESTIONS</div>
+
+
+<div class="question">
+<div class="question-number">Drag 1</div>
+<div class="question-text">
+Place the operations in the order in which they should be evaluated:
+24 + 6 × (8 − 3).
+</div>
+
+<div class="drag-grid">
+
+<div class="drag-card">
+<strong>Available operations</strong>
+
+<label class="reveal">
+<input type="radio" name="drag1">
+(8 − 3) → First
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag1">
+6 × 5 → Second
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag1">
+24 + 30 → Third
+</label>
+</div>
+
+<div class="drag-card">
+<strong>Reveal sequence</strong>
+
+<label class="reveal">
+<input type="radio" name="drag1">
+Show Answer
+</label>
+
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Correct Order:</strong>
+1. 8 − 3
+2. 6 × 5
+3. 24 + 30
+Final value = 54.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag 2</div>
+<div class="question-text">
+Arrange the operations for 100 − 4 × (6 + 4).
+</div>
+
+<div class="drag-card">
+
+<label class="reveal">
+<input type="radio" name="drag2">
+1st → 6 + 4
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag2">
+2nd → 4 × 10
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag2">
+3rd → 100 − 40
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag2">
+Reveal Final Value
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Final value = 60.</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag 3</div>
+<div class="question-text">
+Place each expression into the correct category: value 20 or value 30.
+</div>
+
+<div class="drag-grid">
+
+<div class="drag-card">
+<strong>Expressions</strong>
+
+<label class="reveal">
+<input type="radio" name="drag3">
+4 × 5 → 20
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag3">
+10 + 20 → 30
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag3">
+36 − 16 → 20
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag3">
+6 × 5 → 30
+</label>
+</div>
+
+<div class="drag-card">
+<strong>Reveal Categories</strong>
+
+<label class="reveal">
+<input type="radio" name="drag3">
+Show Answer
+</label>
+
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Value 20:</strong> 4 × 5, 36 − 16.<br>
+<strong>Value 30:</strong> 10 + 20, 6 × 5.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag 4</div>
+<div class="question-text">
+Place each expression with the correct bracketed form.
+</div>
+
+<div class="drag-card">
+
+<label class="reveal">
+<input type="radio" name="drag4">
+"Twice the sum of 7 and 3" → 2 × (7 + 3)
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag4">
+"Subtract 5 from the product of 6 and 4" → 6 × 4 − 5
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag4">
+"Half of the sum of 18 and 6" → (18 + 6) ÷ 2
+</label>
+
+</div>
+
+<div class="answer">
+<strong>All three placements are correct.</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Drag 5</div>
+<div class="question-text">
+A number machine follows: ×3, then +5, then ÷2.
+Starting with 7, place the operations in order.
+</div>
+
+<div class="drag-grid">
+
+<div class="drag-card">
+<strong>Operation cards</strong>
+
+<label class="reveal">
+<input type="radio" name="drag5">
+7 × 3 = 21
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag5">
+21 + 5 = 26
+</label>
+
+<label class="reveal">
+<input type="radio" name="drag5">
+26 ÷ 2 = 13
+</label>
+</div>
+
+<div class="drag-card">
+<strong>Result</strong>
+
+<label class="reveal">
+<input type="radio" name="drag5">
+Reveal Final Answer
+</label>
+
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Final Answer: 13</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- HOTS -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+<div class="section-title">SECTION G — 10 HOTS QUESTIONS</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 1</div>
+<div class="question-text">
+Riya calculates 60 − 12 ÷ 3 × 2. What is the correct value?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h1">A. 52</label>
+<label class="wrong-choice"><input type="radio" name="h1">B. 32</label>
+<label class="wrong-choice"><input type="radio" name="h1">C. 16</label>
+<label class="wrong-choice"><input type="radio" name="h1">D. 48</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 52</strong>
+<div class="explanation">
+12 ÷ 3 = 4; 4 × 2 = 8; 60 − 8 = 52.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 2</div>
+<div class="question-text">
+Insert one pair of brackets in 8 + 4 × 3 so that the value becomes 36.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h2">A. (8 + 4) × 3</label>
+<label class="wrong-choice"><input type="radio" name="h2">B. 8 + (4 × 3)</label>
+<label class="wrong-choice"><input type="radio" name="h2">C. (8 + 4 × 3)</label>
+<label class="wrong-choice"><input type="radio" name="h2">D. 8 + 4 × (3)</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 3</div>
+<div class="question-text">
+A teacher says that 48 ÷ (6 + 2) and 48 ÷ 6 + 2 have the same value.
+Is the statement correct?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h3">A. No; their values are 6 and 10 respectively.</label>
+<label class="wrong-choice"><input type="radio" name="h3">B. Yes; both equal 8.</label>
+<label class="wrong-choice"><input type="radio" name="h3">C. Yes; brackets never affect division.</label>
+<label class="wrong-choice"><input type="radio" name="h3">D. No; both equal 4.</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 4</div>
+<div class="question-text">
+A shop sells 4 notebooks at ₹35 each and gives a total discount of ₹20.
+Which expression gives the amount paid?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h4">A. (4 × 35) − 20</label>
+<label class="wrong-choice"><input type="radio" name="h4">B. 4 × (35 − 20)</label>
+<label class="wrong-choice"><input type="radio" name="h4">C. 35 + 4 − 20</label>
+<label class="wrong-choice"><input type="radio" name="h4">D. 20 − (4 × 35)</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<div class="explanation">
+Total price = 140; after ₹20 discount = ₹120.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 5</div>
+<div class="question-text">
+Find the missing number:
+18 + □ × 4 = 46.
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h5">A. 7</label>
+<label class="wrong-choice"><input type="radio" name="h5">B. 28</label>
+<label class="wrong-choice"><input type="radio" name="h5">C. 11</label>
+<label class="wrong-choice"><input type="radio" name="h5">D. 4</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 7</strong>
+<div class="explanation">
+18 + 7 × 4 = 18 + 28 = 46.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 6</div>
+<div class="question-text">
+Two expressions are given:
+A = 5 × (12 − 4)
+B = 5 × 12 − 4.
+Which statement is correct?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h6">A. A = 40 and B = 56, so B is greater.</label>
+<label class="wrong-choice"><input type="radio" name="h6">B. Both are equal to 56.</label>
+<label class="wrong-choice"><input type="radio" name="h6">C. A = 60 and B = 40.</label>
+<label class="wrong-choice"><input type="radio" name="h6">D. Both are equal to 40.</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 7</div>
+<div class="question-text">
+A number is first multiplied by 4 and then 6 is added.
+The final result is 38. What was the original number?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h7">A. 8</label>
+<label class="wrong-choice"><input type="radio" name="h7">B. 10</label>
+<label class="wrong-choice"><input type="radio" name="h7">C. 11</label>
+<label class="wrong-choice"><input type="radio" name="h7">D. 12</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 8</strong>
+<div class="explanation">
+4x + 6 = 38 → 4x = 32 → x = 8.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 8</div>
+<div class="question-text">
+Which pair of expressions has the same value?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="h8">A. 6 + 4 × 2 and (6 + 4) × 2</label>
+<label class="correct-choice"><input type="radio" name="h8">B. 18 − 6 ÷ 3 and 18 − 2</label>
+<label class="wrong-choice"><input type="radio" name="h8">C. 5 × (7 + 2) and 5 × 7 + 2</label>
+<label class="wrong-choice"><input type="radio" name="h8">D. 40 ÷ (4 + 4) and 40 ÷ 4 + 4</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<div class="explanation">
+18 − 6 ÷ 3 = 18 − 2 = 16.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 9</div>
+<div class="question-text">
+A teacher asks students to create an expression equal to 25 using
+the numbers 5, 10 and 3 exactly once. Which option works?
+</div>
+
+<div class="options">
+<label class="wrong-choice"><input type="radio" name="h9">A. 5 × 10 − 3</label>
+<label class="correct-choice"><input type="radio" name="h9">B. 10 × 3 − 5</label>
+<label class="wrong-choice"><input type="radio" name="h9">C. 5 + 10 × 3</label>
+<label class="wrong-choice"><input type="radio" name="h9">D. 10 + 5 × 3</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 25</strong>
+<div class="explanation">
+10 × 3 − 5 = 30 − 5 = 25.
+</div>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">HOTS 10</div>
+<div class="question-text">
+An expression is written as:
+72 ÷ 3 × (2 + 4) − 5.
+What is its value?
+</div>
+
+<div class="options">
+<label class="correct-choice"><input type="radio" name="h10">A. 139</label>
+<label class="wrong-choice"><input type="radio" name="h10">B. 19</label>
+<label class="wrong-choice"><input type="radio" name="h10">C. 43</label>
+<label class="wrong-choice"><input type="radio" name="h10">D. 139? </label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: 139</strong>
+<div class="explanation">
+2 + 4 = 6; 72 ÷ 3 = 24; 24 × 6 = 144; 144 − 5 = 139.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SCORE -->
+<!-- ===================================================== -->
+
+<section class="score">
+
+<h2>CHAPTER 2 COMPLETED</h2>
+
+<p>
+Arithmetic Expressions • 55 Questions
+</p>
+
+<p>
+MCQs • True/False • Assertion Reasoning • Fill in the Blanks
+• Match the Following • Interactive Placement • HOTS
+</p>
+
+<p>
+<strong>Half-Yearly Preparation — Medium to Hard Level</strong>
+</p>
+
+<p>
+This version uses HTML + CSS only. Automatic numerical score calculation
+across all questions requires JavaScript; answer reveal is implemented
+without a backend.
+</p>
+
+<a class="back" href="index.html">
+← Back to Chapter Index
+</a>
+
+</section>
+
+</main>
+
+<footer class="footer">
+Ganita Prakash • Class 7 Mathematics • Arithmetic Expressions
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Chapter 10 - Operations with Integers</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#172033;
+    font-weight:700;
+}
+
+header{
+    background:#101a35;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+header h1{margin:0;font-size:32px}
+header p{color:#dce4ff;margin:10px 0 0}
+
+.container{
+    width:min(1100px,94%);
+    margin:25px auto 60px;
+}
+
+.instructions,.section{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:24px;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+}
+
+.instructions h2,.section h2{
+    margin-top:0;
+    color:#101a35;
+}
+
+.instructions li{margin:8px 0}
+
+.question{
+    border:2px solid #dce2ec;
+    border-radius:15px;
+    padding:20px;
+    margin:18px 0;
+    background:#fbfcfe;
+}
+
+.question h3{
+    margin-top:0;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:11px 14px;
+    margin:9px 0;
+    border:1px solid #ccd4e2;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+}
+
+.option:hover{background:#f0f4ff}
+
+input[type="radio"]{margin-right:10px}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:13px;
+    border-left:5px solid #101a35;
+    background:#eaf0ff;
+    border-radius:8px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.quiz{counter-reset:score}
+
+.question:has(.correct:checked){
+    counter-increment:score;
+}
+
+.match-row{
+    margin:12px 0;
+    padding:12px;
+    background:#f4f6fa;
+    border-radius:10px;
+}
+
+select{
+    padding:9px;
+    border:2px solid #cbd4e3;
+    border-radius:8px;
+    font-weight:700;
+    margin:4px;
+}
+
+.small{
+    font-size:14px;
+    color:#596579;
+}
+
+.hint{
+    background:#fff7dc;
+    border-left:5px solid #d69e00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.score-card{
+    background:#101a35;
+    color:white;
+    padding:35px;
+    text-align:center;
+    border-radius:22px;
+    margin-top:30px;
+}
+
+.score-card h2{
+    color:white;
+    margin-top:0;
+}
+
+.score-number{
+    font-size:48px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.reset-btn,.back-btn{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:800;
+    border:none;
+    cursor:pointer;
+    margin:8px;
+}
+
+.reset-btn{
+    background:white;
+    color:#101a35;
+}
+
+.back-btn{
+    background:#101a35;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Class 7 Mathematics</h1>
+<p>Ganita Prakash Part 2 — Chapter 10: Operations with Integers</p>
+</header>
+
+<div class="container">
+
+<div class="instructions">
+<h2>🔢 Half-Yearly Revision Test</h2>
+
+<ul>
+<li>15 Multiple Choice Questions</li>
+<li>10 True / False</li>
+<li>5 Assertion & Reasoning</li>
+<li>5 Fill in the Blanks</li>
+<li>5 Match the Following</li>
+<li>5 Drag & Drop Style Questions</li>
+<li>10 HOTS Questions</li>
+<li><strong>Total: 55 Questions</strong></li>
+</ul>
+
+<div class="hint">
+Select an answer to reveal the correct answer immediately.
+Correct selectable answers are automatically counted in the final score.
+</div>
+
+<p class="small">
+HTML + CSS only. The Drag & Drop section is represented through
+CSS-only selectable placement because true drag-and-drop interaction
+requires JavaScript.
+</p>
+</div>
+
+<form class="quiz">
+
+<!-- =====================================================
+MCQs
+===================================================== -->
+
+<div class="section">
+<h2>Section A — Multiple Choice Questions</h2>
+
+<div class="question">
+<h3>Q1. What is the value of (−8) + 13?</h3>
+<label class="option"><input type="radio" name="q1"><span>−21</span></label>
+<label class="option"><input type="radio" name="q1"><span>−5</span></label>
+<label class="option"><input class="correct" type="radio" name="q1"><span>5</span></label>
+<label class="option"><input type="radio" name="q1"><span>21</span></label>
+<div class="answer">Correct Answer: 5.</div>
+</div>
+
+<div class="question">
+<h3>Q2. Which expression has the value −17?</h3>
+<label class="option"><input type="radio" name="q2"><span>−9 + 8</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q2"><span>−12 − 5</span></label>
+<label class="option"><input type="radio" name="q2"><span>12 − 5</span></label>
+<label class="option"><input type="radio" name="q2"><span>−12 + 5</span></label>
+<div class="answer">Correct Answer: −12 − 5 = −17.</div>
+</div>
+
+<div class="question">
+<h3>Q3. What is (−7) × (−6)?</h3>
+<label class="option"><input type="radio" name="q3"><span>−42</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q3"><span>42</span></label>
+<label class="option"><input type="radio" name="q3"><span>13</span></label>
+<label class="option"><input type="radio" name="q3"><span>−13</span></label>
+<div class="answer">Correct Answer: 42. The product of two negative integers is positive.</div>
+</div>
+
+<div class="question">
+<h3>Q4. Find (−72) ÷ 9.</h3>
+<label class="option"><input type="radio" name="q4"><span>8</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q4"><span>−8</span></label>
+<label class="option"><input type="radio" name="q4"><span>−63</span></label>
+<label class="option"><input type="radio" name="q4"><span>63</span></label>
+<div class="answer">Correct Answer: −8.</div>
+</div>
+
+<div class="question">
+<h3>Q5. Which integer is the additive inverse of −19?</h3>
+<label class="option"><input type="radio" name="q5"><span>−19</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q5"><span>19</span></label>
+<label class="option"><input type="radio" name="q5"><span>0</span></label>
+<label class="option"><input type="radio" name="q5"><span>1/19</span></label>
+<div class="answer">Correct Answer: 19.</div>
+</div>
+
+<div class="question">
+<h3>Q6. Which statement about multiplication of integers is always true?</h3>
+<label class="option"><input type="radio" name="q6"><span>Negative × Negative is negative</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q6"><span>Negative × Negative is positive</span></label>
+<label class="option"><input type="radio" name="q6"><span>Positive × Negative is positive</span></label>
+<label class="option"><input type="radio" name="q6"><span>Zero × Negative is negative</span></label>
+<div class="answer">Correct Answer: Negative × Negative is positive.</div>
+</div>
+
+<div class="question">
+<h3>Q7. What is 15 − (−9)?</h3>
+<label class="option"><input type="radio" name="q7"><span>6</span></label>
+<label class="option"><input type="radio" name="q7"><span>−24</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q7"><span>24</span></label>
+<label class="option"><input type="radio" name="q7"><span>−6</span></label>
+<div class="answer">Correct Answer: 24. Subtracting a negative means adding its positive.</div>
+</div>
+
+<div class="question">
+<h3>Q8. What is −4 + (−11) + 7?</h3>
+<label class="option"><input type="radio" name="q8"><span>14</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q8"><span>−8</span></label>
+<label class="option"><input type="radio" name="q8"><span>8</span></label>
+<label class="option"><input type="radio" name="q8"><span>−22</span></label>
+<div class="answer">Correct Answer: −8.</div>
+</div>
+
+<div class="question">
+<h3>Q9. Which number is farthest from zero?</h3>
+<label class="option"><input type="radio" name="q9"><span>−12</span></label>
+<label class="option"><input type="radio" name="q9"><span>9</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q9"><span>−15</span></label>
+<label class="option"><input type="radio" name="q9"><span>13</span></label>
+<div class="answer">Correct Answer: −15, because its distance from zero is 15.</div>
+</div>
+
+<div class="question">
+<h3>Q10. What is the value of 6 × (−5) + 8?</h3>
+<label class="option"><input type="radio" name="q10"><span>−38</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q10"><span>−22</span></label>
+<label class="option"><input type="radio" name="q10"><span>22</span></label>
+<label class="option"><input type="radio" name="q10"><span>38</span></label>
+<div class="answer">Correct Answer: −22.</div>
+</div>
+
+<div class="question">
+<h3>Q11. Which expression is equal to −36?</h3>
+<label class="correct option"><input class="correct" type="radio" name="q11"><span>(−9) × 4</span></label>
+<label class="option"><input type="radio" name="q11"><span>(−9) × (−4)</span></label>
+<label class="option"><input type="radio" name="q11"><span>36 ÷ (−9)</span></label>
+<label class="option"><input type="radio" name="q11"><span>−36 ÷ (−1)</span></label>
+<div class="answer">Correct Answer: (−9) × 4 = −36.</div>
+</div>
+
+<div class="question">
+<h3>Q12. A temperature changes from −6°C to 4°C. By how many degrees did it increase?</h3>
+<label class="option"><input type="radio" name="q12"><span>2°C</span></label>
+<label class="option"><input type="radio" name="q12"><span>6°C</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q12"><span>10°C</span></label>
+<label class="option"><input type="radio" name="q12"><span>−10°C</span></label>
+<div class="answer">Correct Answer: 10°C.</div>
+</div>
+
+<div class="question">
+<h3>Q13. If a × (−1) = −27, then a equals:</h3>
+<label class="option"><input type="radio" name="q13"><span>−27</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q13"><span>27</span></label>
+<label class="option"><input type="radio" name="q13"><span>−1</span></label>
+<label class="option"><input type="radio" name="q13"><span>1</span></label>
+<div class="answer">Correct Answer: 27.</div>
+</div>
+
+<div class="question">
+<h3>Q14. What is the value of [−24 ÷ (−6)] − 9?</h3>
+<label class="option"><input type="radio" name="q14"><span>−13</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q14"><span>−5</span></label>
+<label class="option"><input type="radio" name="q14"><span>5</span></label>
+<label class="option"><input type="radio" name="q14"><span>13</span></label>
+<div class="answer">Correct Answer: −5. −24 ÷ −6 = 4, and 4 − 9 = −5.</div>
+</div>
+
+<div class="question">
+<h3>Q15. Which integer must be added to −28 to obtain zero?</h3>
+<label class="option"><input type="radio" name="q15"><span>−28</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q15"><span>28</span></label>
+<label class="option"><input type="radio" name="q15"><span>0</span></label>
+<label class="option"><input type="radio" name="q15"><span>−1</span></label>
+<div class="answer">Correct Answer: 28.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+TRUE FALSE
+===================================================== -->
+
+<div class="section">
+<h2>Section B — True / False</h2>
+
+<div class="question">
+<h3>Q16. The sum of two negative integers is always negative.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q16"><span>True</span></label>
+<label class="option"><input type="radio" name="q16"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q17. The difference of two positive integers is always positive.</h3>
+<label class="option"><input type="radio" name="q17"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q17"><span>False</span></label>
+<div class="answer">Correct Answer: False. For example, 5 − 9 = −4.</div>
+</div>
+
+<div class="question">
+<h3>Q18. Multiplying an integer by zero always gives zero.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q18"><span>True</span></label>
+<label class="option"><input type="radio" name="q18"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q19. The product of a positive and a negative integer is positive.</h3>
+<label class="option"><input type="radio" name="q19"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q19"><span>False</span></label>
+<div class="answer">Correct Answer: False. The product is negative.</div>
+</div>
+
+<div class="question">
+<h3>Q20. Every integer has an additive inverse.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q20"><span>True</span></label>
+<label class="option"><input type="radio" name="q20"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q21. −17 is greater than −9.</h3>
+<label class="option"><input type="radio" name="q21"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q21"><span>False</span></label>
+<div class="answer">Correct Answer: False. −9 is greater because it is closer to zero.</div>
+</div>
+
+<div class="question">
+<h3>Q22. Dividing a negative integer by a negative integer gives a positive result when the divisor is non-zero.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q22"><span>True</span></label>
+<label class="option"><input type="radio" name="q22"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q23. Subtracting an integer is equivalent to adding its additive inverse.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q23"><span>True</span></label>
+<label class="option"><input type="radio" name="q23"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q24. The additive inverse of zero is 1.</h3>
+<label class="option"><input type="radio" name="q24"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q24"><span>False</span></label>
+<div class="answer">Correct Answer: False. The additive inverse of 0 is 0.</div>
+</div>
+
+<div class="question">
+<h3>Q25. Integer multiplication is commutative.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q25"><span>True</span></label>
+<label class="option"><input type="radio" name="q25"><span>False</span></label>
+<div class="answer">Correct Answer: True. For integers a and b, a × b = b × a.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+ASSERTION REASON
+===================================================== -->
+
+<div class="section">
+<h2>Section C — Assertion & Reasoning</h2>
+
+<p>
+<strong>A:</strong> Both A and R are true, and R explains A.<br>
+<strong>B:</strong> Both A and R are true, but R does not explain A.<br>
+<strong>C:</strong> A is true, but R is false.<br>
+<strong>D:</strong> A is false, but R is true.
+</p>
+
+<div class="question">
+<h3>
+Q26. Assertion: (−12) + 12 = 0.<br>
+Reason: Every integer and its additive inverse have sum zero.
+</h3>
+<label class="correct option"><input class="correct" type="radio" name="q26"><span>A</span></label>
+<label class="option"><input type="radio" name="q26"><span>B</span></label>
+<label class="option"><input type="radio" name="q26"><span>C</span></label>
+<label class="option"><input type="radio" name="q26"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>
+Q27. Assertion: (−5) × (−8) is positive.<br>
+Reason: The product of two negative integers is positive.
+</h3>
+<label class="correct option"><input class="correct" type="radio" name="q27"><span>A</span></label>
+<label class="option"><input type="radio" name="q27"><span>B</span></label>
+<label class="option"><input type="radio" name="q27"><span>C</span></label>
+<label class="option"><input type="radio" name="q27"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>
+Q28. Assertion: −15 is greater than −8.<br>
+Reason: On the number line, numbers farther left are smaller.
+</h3>
+<label class="option"><input type="radio" name="q28"><span>A</span></label>
+<label class="option"><input type="radio" name="q28"><span>B</span></label>
+<label class="option"><input type="radio" name="q28"><span>C</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q28"><span>D</span></label>
+<div class="answer">Correct Answer: D. The assertion is false, while the reason is true.</div>
+</div>
+
+<div class="question">
+<h3>
+Q29. Assertion: 24 ÷ (−6) = −4.<br>
+Reason: A positive integer divided by a negative integer gives a negative quotient.
+</h3>
+<label class="correct option"><input class="correct" type="radio" name="q29"><span>A</span></label>
+<label class="option"><input type="radio" name="q29"><span>B</span></label>
+<label class="option"><input type="radio" name="q29"><span>C</span></label>
+<label class="option"><input type="radio" name="q29"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>
+Q30. Assertion: −9 − (−4) = −13.<br>
+Reason: Subtracting a negative integer means adding its opposite.
+</h3>
+<label class="option"><input type="radio" name="q30"><span>A</span></label>
+<label class="option"><input type="radio" name="q30"><span>B</span></label>
+<label class="option"><input type="radio" name="q30"><span>C</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q30"><span>D</span></label>
+<div class="answer">Correct Answer: D. The assertion is false because −9 − (−4) = −9 + 4 = −5. The reason is true.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+FILL
+===================================================== -->
+
+<div class="section">
+<h2>Section D — Fill in the Blanks</h2>
+
+<div class="question">
+<h3>Q31. The additive inverse of 46 is ______.</h3>
+<label class="option"><input type="radio" name="q31"><span>46</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q31"><span>−46</span></label>
+<label class="option"><input type="radio" name="q31"><span>0</span></label>
+<label class="option"><input type="radio" name="q31"><span>1</span></label>
+<div class="answer">Correct Answer: −46.</div>
+</div>
+
+<div class="question">
+<h3>Q32. (−13) + (−7) = ______.</h3>
+<label class="option"><input type="radio" name="q32"><span>20</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q32"><span>−20</span></label>
+<label class="option"><input type="radio" name="q32"><span>−6</span></label>
+<label class="option"><input type="radio" name="q32"><span>6</span></label>
+<div class="answer">Correct Answer: −20.</div>
+</div>
+
+<div class="question">
+<h3>Q33. (−11) × 9 = ______.</h3>
+<label class="option"><input type="radio" name="q33"><span>99</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q33"><span>−99</span></label>
+<label class="option"><input type="radio" name="q33"><span>−20</span></label>
+<label class="option"><input type="radio" name="q33"><span>20</span></label>
+<div class="answer">Correct Answer: −99.</div>
+</div>
+
+<div class="question">
+<h3>Q34. 84 ÷ (−12) = ______.</h3>
+<label class="option"><input type="radio" name="q34"><span>7</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q34"><span>−7</span></label>
+<label class="option"><input type="radio" name="q34"><span>−72</span></label>
+<label class="option"><input type="radio" name="q34"><span>72</span></label>
+<div class="answer">Correct Answer: −7.</div>
+</div>
+
+<div class="question">
+<h3>Q35. If x + (−18) = 7, then x = ______.</h3>
+<label class="option"><input type="radio" name="q35"><span>−25</span></label>
+<label class="option"><input type="radio" name="q35"><span>11</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q35"><span>25</span></label>
+<label class="option"><input type="radio" name="q35"><span>−11</span></label>
+<div class="answer">Correct Answer: 25.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+MATCH
+===================================================== -->
+
+<div class="section">
+<h2>Section E — Match the Following</h2>
+
+<div class="question">
+<h3>Q36. Match each expression with its value.</h3>
+
+<div class="match-row">
+(−8) + 3 →
+<select>
+<option>Select</option>
+<option>−5</option>
+<option>5</option>
+<option>−11</option>
+<option>11</option>
+</select>
+</div>
+
+<div class="match-row">
+12 + (−7) →
+<select>
+<option>Select</option>
+<option>−5</option>
+<option>5</option>
+<option>−11</option>
+<option>11</option>
+</select>
+</div>
+
+<div class="match-row">
+(−4) + (−7) →
+<select>
+<option>Select</option>
+<option>−5</option>
+<option>5</option>
+<option>−11</option>
+<option>11</option>
+</select>
+</div>
+
+<div class="match-row">
+15 − 4 →
+<select>
+<option>Select</option>
+<option>−5</option>
+<option>5</option>
+<option>−11</option>
+<option>11</option>
+</select>
+</div>
+
+<p class="small">Answers: −5, 5, −11, 11.</p>
+</div>
+
+
+<div class="question">
+<h3>Q37. Match each multiplication with its sign.</h3>
+
+<div class="match-row">
+(−6) × (−2) →
+<select>
+<option>Select</option>
+<option>Positive</option>
+<option>Negative</option>
+<option>Zero</option>
+<option>Cannot determine</option>
+</select>
+</div>
+
+<div class="match-row">
+7 × (−3) →
+<select>
+<option>Select</option>
+<option>Positive</option>
+<option>Negative</option>
+<option>Zero</option>
+<option>Cannot determine</option>
+</select>
+</div>
+
+<div class="match-row">
+(−9) × 0 →
+<select>
+<option>Select</option>
+<option>Positive</option>
+<option>Negative</option>
+<option>Zero</option>
+<option>Cannot determine</option>
+</select>
+</div>
+
+<div class="match-row">
+8 × 5 →
+<select>
+<option>Select</option>
+<option>Positive</option>
+<option>Negative</option>
+<option>Zero</option>
+<option>Cannot determine</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q38. Match the situation with the appropriate integer.</h3>
+
+<div class="match-row">
+Loss of ₹25 →
+<select>
+<option>Select</option>
+<option>−25</option>
+<option>25</option>
+<option>0</option>
+<option>−5</option>
+</select>
+</div>
+
+<div class="match-row">
+Gain of ₹40 →
+<select>
+<option>Select</option>
+<option>−25</option>
+<option>25</option>
+<option>40</option>
+<option>−40</option>
+</select>
+</div>
+
+<div class="match-row">
+Temperature 6°C below zero →
+<select>
+<option>Select</option>
+<option>6</option>
+<option>−6</option>
+<option>0</option>
+<option>−12</option>
+</select>
+</div>
+
+<div class="match-row">
+Temperature 9°C above zero →
+<select>
+<option>Select</option>
+<option>−9</option>
+<option>0</option>
+<option>9</option>
+<option>−18</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q39. Match the integer with its additive inverse.</h3>
+
+<div class="match-row">
+17 →
+<select>
+<option>Select</option>
+<option>−17</option>
+<option>17</option>
+<option>0</option>
+<option>1</option>
+</select>
+</div>
+
+<div class="match-row">
+−23 →
+<select>
+<option>Select</option>
+<option>−23</option>
+<option>23</option>
+<option>0</option>
+<option>−1</option>
+</select>
+</div>
+
+<div class="match-row">
+−31 →
+<select>
+<option>Select</option>
+<option>31</option>
+<option>−31</option>
+<option>0</option>
+<option>1</option>
+</select>
+</div>
+
+<div class="match-row">
+0 →
+<select>
+<option>Select</option>
+<option>−1</option>
+<option>1</option>
+<option>0</option>
+<option>10</option>
+</select>
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q40. Match the expression with the correct operation rule.</h3>
+
+<div class="match-row">
+a − (−b) →
+<select>
+<option>Select</option>
+<option>a + b</option>
+<option>a − b</option>
+<option>−a + b</option>
+<option>a × b</option>
+</select>
+</div>
+
+<div class="match-row">
+(−a) × (−b) →
+<select>
+<option>Select</option>
+<option>−ab</option>
+<option>ab</option>
+<option>a + b</option>
+<option>a − b</option>
+</select>
+</div>
+
+<div class="match-row">
+a × 0 →
+<select>
+<option>Select</option>
+<option>a</option>
+<option>−a</option>
+<option>0</option>
+<option>1</option>
+</select>
+</div>
+
+<div class="match-row">
+a + 0 →
+<select>
+<option>Select</option>
+<option>0</option>
+<option>−a</option>
+<option>a</option>
+<option>1</option>
+</select>
+</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+DRAG STYLE
+===================================================== -->
+
+<div class="section">
+<h2>Section F — Drag & Drop Style</h2>
+
+<div class="question">
+<h3>Q41. Place −14 on the number-line category.</h3>
+<label class="option"><input class="correct" type="radio" name="q41"><span>Left of zero</span></label>
+<label class="option"><input type="radio" name="q41"><span>Right of zero</span></label>
+<label class="option"><input type="radio" name="q41"><span>Exactly at zero</span></label>
+<label class="option"><input type="radio" name="q41"><span>Between 0 and 1</span></label>
+<div class="answer">Correct placement: Left of zero.</div>
+</div>
+
+<div class="question">
+<h3>Q42. Place the result of (−6) × (−9).</h3>
+<label class="option"><input class="correct" type="radio" name="q42"><span>Positive integer</span></label>
+<label class="option"><input type="radio" name="q42"><span>Negative integer</span></label>
+<label class="option"><input type="radio" name="q42"><span>Zero</span></label>
+<label class="option"><input type="radio" name="q42"><span>Fraction</span></label>
+<div class="answer">Correct placement: Positive integer. The result is 54.</div>
+</div>
+
+<div class="question">
+<h3>Q43. Place 18 ÷ (−3) in the correct result box.</h3>
+<label class="option"><input type="radio" name="q43"><span>6</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q43"><span>−6</span></label>
+<label class="option"><input type="radio" name="q43"><span>−21</span></label>
+<label class="option"><input type="radio" name="q43"><span>21</span></label>
+<div class="answer">Correct placement: −6.</div>
+</div>
+
+<div class="question">
+<h3>Q44. Place −7 − (−12) into the correct box.</h3>
+<label class="option"><input type="radio" name="q44"><span>−19</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q44"><span>5</span></label>
+<label class="option"><input type="radio" name="q44"><span>−5</span></label>
+<label class="option"><input type="radio" name="q44"><span>19</span></label>
+<div class="answer">Correct placement: 5.</div>
+</div>
+
+<div class="question">
+<h3>Q45. Place the number that is the additive inverse of −36.</h3>
+<label class="option"><input type="radio" name="q45"><span>−36</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q45"><span>36</span></label>
+<label class="option"><input type="radio" name="q45"><span>0</span></label>
+<label class="option"><input type="radio" name="q45"><span>−1</span></label>
+<div class="answer">Correct placement: 36.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+HOTS
+===================================================== -->
+
+<div class="section">
+<h2>Section G — HOTS / Higher Order Thinking</h2>
+
+<div class="question">
+<h3>Q46. A submarine is at −120 m. It rises 45 m and then descends 30 m. What is its final position?</h3>
+<label class="option"><input type="radio" name="q46"><span>−45 m</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q46"><span>−105 m</span></label>
+<label class="option"><input type="radio" name="q46"><span>−135 m</span></label>
+<label class="option"><input type="radio" name="q46"><span>105 m</span></label>
+<div class="answer">Correct Answer: −105 m. −120 + 45 − 30 = −105.</div>
+</div>
+
+<div class="question">
+<h3>Q47. A player gains 18 points in one round, loses 25 in the next and gains 12 in the third. What is the net change?</h3>
+<label class="option"><input type="radio" name="q47"><span>55 points</span></label>
+<label class="option"><input type="radio" name="q47"><span>−55 points</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q47"><span>5 points</span></label>
+<label class="option"><input type="radio" name="q47"><span>−5 points</span></label>
+<div class="answer">Correct Answer: 5 points. 18 − 25 + 12 = 5.</div>
+</div>
+
+<div class="question">
+<h3>Q48. Without calculating every expression, which has the greatest value?</h3>
+<label class="option"><input type="radio" name="q48"><span>−18 + 4</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q48"><span>−6 + 15</span></label>
+<label class="option"><input type="radio" name="q48"><span>−20 + 10</span></label>
+<label class="option"><input type="radio" name="q48"><span>−7 − 2</span></label>
+<div class="answer">Correct Answer: −6 + 15 = 9, the greatest value.</div>
+</div>
+
+<div class="question">
+<h3>Q49. Find the integer x if x − (−13) = −4.</h3>
+<label class="option"><input type="radio" name="q49"><span>−17</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q49"><span>−17</span></label>
+<label class="option"><input type="radio" name="q49"><span>9</span></label>
+<label class="option"><input type="radio" name="q49"><span>17</span></label>
+<div class="answer">Correct Answer: −17. x + 13 = −4, so x = −17.</div>
+</div>
+
+<div class="question">
+<h3>Q50. Three consecutive integers have a sum of −18. What is the middle integer?</h3>
+<label class="option"><input type="radio" name="q50"><span>−8</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q50"><span>−6</span></label>
+<label class="option"><input type="radio" name="q50"><span>−5</span></label>
+<label class="option"><input type="radio" name="q50"><span>6</span></label>
+<div class="answer">Correct Answer: −6. The integers are −7, −6 and −5.</div>
+</div>
+
+<div class="question">
+<h3>Q51. A bank account has a balance of −₹450. A deposit of ₹700 is made, followed by a withdrawal of ₹325. What is the new balance?</h3>
+<label class="option"><input type="radio" name="q51"><span>−₹75</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q51"><span>−₹75</span></label>
+<label class="option"><input type="radio" name="q51"><span>₹75</span></label>
+<label class="option"><input type="radio" name="q51"><span>−₹1475</span></label>
+<div class="answer">Correct Answer: −₹75. −450 + 700 − 325 = −75.</div>
+</div>
+
+<div class="question">
+<h3>Q52. If the product of two integers is −72 and one integer is −8, what is the other integer?</h3>
+<label class="option"><input type="radio" name="q52"><span>−9</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q52"><span>9</span></label>
+<label class="option"><input type="radio" name="q52"><span>64</span></label>
+<label class="option"><input type="radio" name="q52"><span>−64</span></label>
+<div class="answer">Correct Answer: 9. (−8) × 9 = −72.</div>
+</div>
+
+<div class="question">
+<h3>Q53. A temperature is −3°C at 6 a.m. It falls by 8°C, then rises by 15°C. What is the final temperature?</h3>
+<label class="option"><input type="radio" name="q53"><span>−26°C</span></label>
+<label class="option"><input type="radio" name="q53"><span>−4°C</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q53"><span>4°C</span></label>
+<label class="option"><input type="radio" name="q53"><span>20°C</span></label>
+<div class="answer">Correct Answer: 4°C. −3 − 8 + 15 = 4.</div>
+</div>
+
+<div class="question">
+<h3>Q54. Which statement explains why −5 × 7 and 5 × (−7) have the same value?</h3>
+<label class="option"><input type="radio" name="q54"><span>Both products are positive</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q54"><span>Each has exactly one negative factor</span></label>
+<label class="option"><input type="radio" name="q54"><span>Negative signs disappear during multiplication</span></label>
+<label class="option"><input type="radio" name="q54"><span>The factors are both zero</span></label>
+<div class="answer">Correct Answer: Each has exactly one negative factor, so both products are −35.</div>
+</div>
+
+<div class="question">
+<h3>Q55. An elevator starts at floor −2. It goes up 7 floors, down 4 floors, and then up 3 floors. At which floor does it stop?</h3>
+<label class="option"><input type="radio" name="q55"><span>2</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q55"><span>4</span></label>
+<label class="option"><input type="radio" name="q55"><span>6</span></label>
+<label class="option"><input type="radio" name="q55"><span>8</span></label>
+<div class="answer">Correct Answer: Floor 4. −2 + 7 − 4 + 3 = 4.</div>
+</div>
+
+</div>
+
+
+<!-- =====================================================
+SCORE
+===================================================== -->
+
+<section class="score-card">
+<h2>🏆 Your Final Score</h2>
+
+<div class="score-number"></div>
+
+<p>Correct Answers out of 55</p>
+
+<button type="reset" class="reset-btn">
+Reset Test
+</button>
+</section>
+
+</form>
+
+<div style="text-align:center;margin-top:25px;">
+<a href="index.html" class="back-btn">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+Class 7 Mathematics • Ganita Prakash Part 2 • Chapter 10 — Operations with Integers
+</footer>
+
+</body>
+</html>

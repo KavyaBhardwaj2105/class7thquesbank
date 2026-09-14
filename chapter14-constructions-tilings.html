@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Constructions and Tilings</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#101828;
+    font-weight:700;
+    line-height:1.6;
+}
+
+header{
+    background:#101c3d;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:8px 0;
+    color:#dbe4ff;
+}
+
+.container{
+    max-width:1050px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.info,.question{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.info{
+    padding:20px;
+    margin-bottom:22px;
+}
+
+.section-title{
+    background:#101c3d;
+    color:#fff;
+    padding:15px 18px;
+    border-radius:12px;
+    margin-top:30px;
+    font-size:21px;
+}
+
+.question{
+    margin:16px 0;
+    padding:20px;
+    border-left:5px solid #243b73;
+}
+
+.question h3{
+    margin-top:0;
+}
+
+.option{
+    display:block;
+    padding:10px 13px;
+    margin:8px 0;
+    border:1px solid #ccd5e1;
+    border-radius:9px;
+    cursor:pointer;
+    background:#fafcff;
+}
+
+.option:hover{
+    background:#edf3ff;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+    transform:scale(1.1);
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:12px;
+    border-radius:9px;
+    background:#e8f7ed;
+    border:1px solid #9bd2ac;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+/* ================= SCORE ================= */
+
+.quiz{
+    counter-reset:score;
+}
+
+.question:not(.match):has(.correct:checked){
+    counter-increment:score;
+}
+
+/* Each matching task = 1 mark */
+.match36:has(.m36a.correct:checked):has(.m36b.correct:checked):has(.m36c.correct:checked):has(.m36d.correct:checked){
+    counter-increment:score;
+}
+
+.match37:has(.m37a.correct:checked):has(.m37b.correct:checked):has(.m37c.correct:checked):has(.m37d.correct:checked){
+    counter-increment:score;
+}
+
+.match38:has(.m38a.correct:checked):has(.m38b.correct:checked):has(.m38c.correct:checked):has(.m38d.correct:checked){
+    counter-increment:score;
+}
+
+.match39:has(.m39a.correct:checked):has(.m39b.correct:checked):has(.m39c.correct:checked):has(.m39d.correct:checked){
+    counter-increment:score;
+}
+
+.match40:has(.m40a.correct:checked):has(.m40b.correct:checked):has(.m40c.correct:checked):has(.m40d.correct:checked){
+    counter-increment:score;
+}
+
+.score-card{
+    margin-top:35px;
+    background:#101c3d;
+    color:#fff;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.score-number{
+    font-size:40px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.score-note{
+    color:#dce5ff;
+    font-size:14px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:12px;
+}
+
+th,td{
+    border:1px solid #ccd5e1;
+    padding:10px;
+    text-align:center;
+    vertical-align:top;
+}
+
+th{
+    background:#e8edf6;
+}
+
+.note{
+    background:#fff8dc;
+    border-left:5px solid #e1b400;
+    padding:12px 15px;
+    border-radius:9px;
+}
+
+.nav{
+    text-align:center;
+    margin:30px 0;
+}
+
+.nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    background:#243b73;
+    padding:12px 22px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Class 7 Mathematics</h1>
+<p>Ganita Prakash Part 2 • Chapter 14: Constructions and Tilings</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+<h2>📐 Chapter 14 — Constructions and Tilings</h2>
+
+<p>
+This chapter develops geometric construction skills and explores how
+shapes can fit together to cover a surface without gaps or overlaps.
+It connects geometric constructions with symmetry, angles, polygons,
+regular shapes and tiling patterns.
+</p>
+
+<div class="note">
+<b>55 Questions:</b>
+15 MCQs + 10 True/False + 5 Assertion & Reasoning +
+5 Fill in the Blanks + 5 Match the Following +
+5 Drag & Drop Style + 10 HOTS.
+</div>
+</div>
+
+<form class="quiz">
+
+<!-- =====================================================
+MCQ 1-15
+===================================================== -->
+
+<div class="section-title">Section A — Multiple Choice Questions (15)</div>
+
+<div class="question">
+<h3>1. Which instrument is primarily used to draw a circle with a specified radius?</h3>
+
+<label class="option">
+<input type="radio" name="q1"> Ruler
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q1"> Compass
+</label>
+
+<label class="option">
+<input type="radio" name="q1"> Protractor
+</label>
+
+<label class="option">
+<input type="radio" name="q1"> Set square
+</label>
+
+<div class="answer">Correct Answer: Compass</div>
+</div>
+
+
+<div class="question">
+<h3>2. Which instrument is most directly used to measure an angle?</h3>
+
+<label class="option">
+<input type="radio" name="q2"> Compass
+</label>
+
+<label class="option">
+<input type="radio" name="q2"> Divider
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q2"> Protractor
+</label>
+
+<label class="option">
+<input type="radio" name="q2"> Ruler
+</label>
+
+<div class="answer">Correct Answer: Protractor</div>
+</div>
+
+
+<div class="question">
+<h3>3. To construct the perpendicular bisector of a line segment, the compass should be opened to a distance:</h3>
+
+<label class="option">
+<input type="radio" name="q3"> Less than half the segment
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q3"> Greater than half the segment
+</label>
+
+<label class="option">
+<input type="radio" name="q3"> Exactly equal to zero
+</label>
+
+<label class="option">
+<input type="radio" name="q3"> Equal to the whole segment only
+</label>
+
+<div class="answer">
+Correct Answer: Greater than half the segment. This allows arcs from both endpoints to intersect.
+</div>
+</div>
+
+
+<div class="question">
+<h3>4. A perpendicular bisector divides a line segment into:</h3>
+
+<label class="option">
+<input type="radio" name="q4"> Two unequal parts at any angle
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q4"> Two equal parts at right angles
+</label>
+
+<label class="option">
+<input type="radio" name="q4"> Three equal parts
+</label>
+
+<label class="option">
+<input type="radio" name="q4"> Two parallel parts
+</label>
+
+<div class="answer">
+Correct Answer: Two equal parts at right angles.
+</div>
+</div>
+
+
+<div class="question">
+<h3>5. Which polygon can tile a plane by repeating congruent copies without gaps or overlaps?</h3>
+
+<label class="option">
+<input type="radio" name="q5"> Circle
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q5"> Square
+</label>
+
+<label class="option">
+<input type="radio" name="q5"> Semicircle alone
+</label>
+
+<label class="option">
+<input type="radio" name="q5"> Oval
+</label>
+
+<div class="answer">
+Correct Answer: Square
+</div>
+</div>
+
+
+<div class="question">
+<h3>6. The angle formed by two perpendicular lines is:</h3>
+
+<label class="option">
+<input type="radio" name="q6"> 45°
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q6"> 90°
+</label>
+
+<label class="option">
+<input type="radio" name="q6"> 120°
+</label>
+
+<label class="option">
+<input type="radio" name="q6"> 180°
+</label>
+
+<div class="answer">Correct Answer: 90°</div>
+</div>
+
+
+<div class="question">
+<h3>7. Which regular polygon can tile the plane by itself?</h3>
+
+<label class="option">
+<input type="radio" name="q7"> Regular pentagon
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q7"> Equilateral triangle
+</label>
+
+<label class="option">
+<input type="radio" name="q7"> Regular octagon
+</label>
+
+<label class="option">
+<input type="radio" name="q7"> Regular decagon
+</label>
+
+<div class="answer">
+Correct Answer: Equilateral triangle.
+</div>
+</div>
+
+
+<div class="question">
+<h3>8. What must happen at every meeting point in a proper tiling?</h3>
+
+<label class="option">
+<input type="radio" name="q8"> The angles must add to 90°
+</label>
+
+<label class="option">
+<input type="radio" name="q8"> The angles must add to 180°
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q8"> The angles around the point must add to 360°
+</label>
+
+<label class="option">
+<input type="radio" name="q8"> The angles must add to 270°
+</label>
+
+<div class="answer">
+Correct Answer: The angles around the point must add to 360°.
+</div>
+</div>
+
+
+<div class="question">
+<h3>9. A regular hexagon has each interior angle equal to:</h3>
+
+<label class="option">
+<input type="radio" name="q9"> 90°
+</label>
+
+<label class="option">
+<input type="radio" name="q9"> 108°
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q9"> 120°
+</label>
+
+<label class="option">
+<input type="radio" name="q9"> 135°
+</label>
+
+<div class="answer">
+Correct Answer: 120°
+</div>
+</div>
+
+
+<div class="question">
+<h3>10. Which condition is essential for a collection of shapes to form a tiling?</h3>
+
+<label class="option">
+<input type="radio" name="q10"> Shapes must always overlap
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q10"> There must be no gaps or overlaps
+</label>
+
+<label class="option">
+<input type="radio" name="q10"> Every shape must be circular
+</label>
+
+<label class="option">
+<input type="radio" name="q10"> All shapes must have different sizes
+</label>
+
+<div class="answer">
+Correct Answer: There must be no gaps or overlaps.
+</div>
+</div>
+
+
+<div class="question">
+<h3>11. Which construction creates a line through a point that is perpendicular to a given line?</h3>
+
+<label class="option">
+<input type="radio" name="q11"> Drawing any random line
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q11"> Perpendicular construction
+</label>
+
+<label class="option">
+<input type="radio" name="q11"> Measuring only the length
+</label>
+
+<label class="option">
+<input type="radio" name="q11"> Constructing a circle only
+</label>
+
+<div class="answer">
+Correct Answer: Perpendicular construction.
+</div>
+</div>
+
+
+<div class="question">
+<h3>12. Which pair of regular polygons cannot individually tile the plane by repeating just one type?</h3>
+
+<label class="option">
+<input type="radio" name="q12"> Equilateral triangles
+</label>
+
+<label class="option">
+<input type="radio" name="q12"> Squares
+</label>
+
+<label class="option">
+<input class="correct" type="radio" name="q12"> Regular pentagons
+</label>
+
+<label class="option">
+<input type="radio" name="q12"> Regular hexagons
+</label>
+
+<div class="answer">
+Correct Answer: Regular pentagons.
+</div>
+</div>
+
+
+<div class="question">
+<h3>13. If a point is equidistant from the two endpoints of a segment, it lies on the:</h3>
+
+<label class="option">
+<input type="radio" name="q13"> Given segment only
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q13"> Perpendicular bisector of the segment
+</label>
+
+<label class="option">
+<input type="radio" name="q13"> Parallel line only
+</label>
+
+<label class="option">
+<input type="radio" name="q13"> Exterior of every circle
+</label>
+
+<div class="answer">
+Correct Answer: Perpendicular bisector of the segment.
+</div>
+</div>
+
+
+<div class="question">
+<h3>14. A regular triangle has each interior angle equal to:</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q14"> 60°
+</label>
+
+<label class="option">
+<input type="radio" name="q14"> 90°
+</label>
+
+<label class="option">
+<input type="radio" name="q14"> 120°
+</label>
+
+<label class="option">
+<input type="radio" name="q14"> 45°
+</label>
+
+<div class="answer">Correct Answer: 60°</div>
+</div>
+
+
+<div class="question">
+<h3>15. Why is a circle not able to tile a plane by itself using congruent circles?</h3>
+
+<label class="option">
+<input type="radio" name="q15"> A circle has no centre
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q15"> Gaps remain between circles
+</label>
+
+<label class="option">
+<input type="radio" name="q15"> Circles have no radius
+</label>
+
+<label class="option">
+<input type="radio" name="q15"> Circles cannot be drawn repeatedly
+</label>
+
+<div class="answer">
+Correct Answer: Gaps remain between circles.
+</div>
+</div>
+
+
+<!-- =====================================================
+TRUE FALSE 16-25
+===================================================== -->
+
+<div class="section-title">Section B — True / False (10)</div>
+
+<div class="question">
+<h3>16. A compass can be used to copy a length accurately.</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q16"> True
+</label>
+
+<label class="option">
+<input type="radio" name="q16"> False
+</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>17. The perpendicular bisector of a segment passes through its midpoint.</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q17"> True
+</label>
+
+<label class="option">
+<input type="radio" name="q17"> False
+</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>18. Two perpendicular lines meet at an angle of 60°.</h3>
+
+<label class="option">
+<input type="radio" name="q18"> True
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q18"> False
+</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+
+<div class="question">
+<h3>19. A proper tiling can contain gaps between neighbouring tiles.</h3>
+
+<label class="option">
+<input type="radio" name="q19"> True
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q19"> False
+</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+
+<div class="question">
+<h3>20. Equilateral triangles can form a tiling without gaps.</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q20"> True
+</label>
+
+<label class="option">
+<input type="radio" name="q20"> False
+</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>21. A regular hexagon has six equal sides and six equal angles.</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q21"> True
+</label>
+
+<label class="option">
+<input type="radio" name="q21"> False
+</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>22. The angles around a single point add up to 180°.</h3>
+
+<label class="option">
+<input type="radio" name="q22"> True
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q22"> False
+</label>
+
+<div class="answer">Correct Answer: False. They add up to 360°.</div>
+</div>
+
+
+<div class="question">
+<h3>23. A ruler alone can draw a perfect circle of any radius.</h3>
+
+<label class="option">
+<input type="radio" name="q23"> True
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q23"> False
+</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+
+<div class="question">
+<h3>24. A point on the perpendicular bisector of a segment is equidistant from its endpoints.</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q24"> True
+</label>
+
+<label class="option">
+<input type="radio" name="q24"> False
+</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<div class="question">
+<h3>25. Regular pentagons can tile a plane by themselves without gaps or overlaps.</h3>
+
+<label class="option">
+<input type="radio" name="q25"> True
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q25"> False
+</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+
+<!-- =====================================================
+ASSERTION REASON 26-30
+===================================================== -->
+
+<div class="section-title">Section C — Assertion & Reasoning (5)</div>
+
+<div class="info">
+<p><b>A:</b> Both Assertion and Reason are true, and Reason correctly explains Assertion.</p>
+<p><b>B:</b> Both are true, but Reason does not correctly explain Assertion.</p>
+<p><b>C:</b> Assertion is true, but Reason is false.</p>
+<p><b>D:</b> Assertion is false, but Reason is true.</p>
+</div>
+
+
+<div class="question">
+<h3>
+26. Assertion: The perpendicular bisector of a segment passes through its midpoint.<br>
+Reason: A perpendicular bisector divides a segment into two equal parts.
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q26"> A
+</label>
+
+<label class="option"><input type="radio" name="q26"> B</label>
+<label class="option"><input type="radio" name="q26"> C</label>
+<label class="option"><input type="radio" name="q26"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+27. Assertion: A square can tile a plane.<br>
+Reason: Four right angles around a meeting point add to 360°.
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q27"> A
+</label>
+
+<label class="option"><input type="radio" name="q27"> B</label>
+<label class="option"><input type="radio" name="q27"> C</label>
+<label class="option"><input type="radio" name="q27"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+28. Assertion: Regular pentagons cannot form a simple edge-to-edge tiling by themselves.<br>
+Reason: Five regular pentagons meeting at one point would require 540° of angle.
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q28"> A
+</label>
+
+<label class="option"><input type="radio" name="q28"> B</label>
+<label class="option"><input type="radio" name="q28"> C</label>
+<label class="option"><input type="radio" name="q28"> D</label>
+
+<div class="answer">
+Correct Answer: A. A regular pentagon has 108° at each vertex, and 5 × 108° = 540°, which is more than 360°.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+29. Assertion: A compass is useful in geometric constructions.<br>
+Reason: A compass can transfer a length from one location to another.
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q29"> A
+</label>
+
+<label class="option"><input type="radio" name="q29"> B</label>
+<label class="option"><input type="radio" name="q29"> C</label>
+<label class="option"><input type="radio" name="q29"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<div class="question">
+<h3>
+30. Assertion: Every polygon can tile a plane using congruent copies of itself.<br>
+Reason: Some polygons leave unavoidable gaps when repeated in a simple identical pattern.
+</h3>
+
+<label class="option"><input type="radio" name="q30"> A</label>
+<label class="option"><input type="radio" name="q30"> B</label>
+<label class="correct option"><input class="correct" type="radio" name="q30"> C</label>
+<label class="option"><input type="radio" name="q30"> D</label>
+
+<div class="answer">
+Correct Answer: C. The Assertion is false, while the Reason is true.
+</div>
+</div>
+
+
+<!-- =====================================================
+FILL BLANKS 31-35
+===================================================== -->
+
+<div class="section-title">Section D — Fill in the Blanks (5)</div>
+
+
+<div class="question">
+<h3>31. The instrument used to draw arcs during a perpendicular-bisector construction is a ______.</h3>
+
+<label class="option"><input type="radio" name="q31"> Protractor</label>
+<label class="correct option"><input class="correct" type="radio" name="q31"> Compass</label>
+<label class="option"><input type="radio" name="q31"> Ruler</label>
+<label class="option"><input type="radio" name="q31"> Set square</label>
+
+<div class="answer">Correct Answer: Compass</div>
+</div>
+
+
+<div class="question">
+<h3>32. A line that cuts another line at 90° is called a ______ line to it.</h3>
+
+<label class="option"><input type="radio" name="q32"> Parallel</label>
+<label class="correct option"><input class="correct" type="radio" name="q32"> Perpendicular</label>
+<label class="option"><input type="radio" name="q32"> Curved</label>
+<label class="option"><input type="radio" name="q32"> Oblique</label>
+
+<div class="answer">Correct Answer: Perpendicular</div>
+</div>
+
+
+<div class="question">
+<h3>33. A repeated arrangement of shapes covering a surface without gaps or overlaps is called a ______.</h3>
+
+<label class="option"><input type="radio" name="q33"> Reflection</label>
+<label class="correct option"><input class="correct" type="radio" name="q33"> Tiling</label>
+<label class="option"><input type="radio" name="q33"> Rotation only</label>
+<label class="option"><input type="radio" name="q33"> Measurement</label>
+
+<div class="answer">Correct Answer: Tiling</div>
+</div>
+
+
+<div class="question">
+<h3>34. A square has ______ right angles.</h3>
+
+<label class="option"><input type="radio" name="q34"> 2</label>
+<label class="option"><input type="radio" name="q34"> 3</label>
+<label class="correct option"><input class="correct" type="radio" name="q34"> 4</label>
+<label class="option"><input type="radio" name="q34"> 5</label>
+
+<div class="answer">Correct Answer: 4</div>
+</div>
+
+
+<div class="question">
+<h3>35. Angles around a point have a total measure of ______ degrees.</h3>
+
+<label class="option"><input type="radio" name="q35"> 90</label>
+<label class="option"><input type="radio" name="q35"> 180</label>
+<label class="correct option"><input class="correct" type="radio" name="q35"> 360</label>
+<label class="option"><input type="radio" name="q35"> 540</label>
+
+<div class="answer">Correct Answer: 360</div>
+</div>
+
+
+<!-- =====================================================
+MATCH 36-40
+===================================================== -->
+
+<div class="section-title">Section E — Match the Following (5)</div>
+
+
+<div class="question match match36">
+<h3>36. Match each construction tool with its main use.</h3>
+
+<table>
+<tr>
+<th>Tool</th>
+<th>Choose the correct use</th>
+</tr>
+
+<tr>
+<td>Compass</td>
+<td>
+<label><input class="m36a correct" type="radio" name="m36a"> Draw arcs / transfer lengths</label>
+<label><input type="radio" name="m36a"> Measure temperature</label>
+<label><input type="radio" name="m36a"> Draw only vertical lines</label>
+<label><input type="radio" name="m36a"> Calculate area</label>
+</td>
+</tr>
+
+<tr>
+<td>Protractor</td>
+<td>
+<label><input class="m36b correct" type="radio" name="m36b"> Measure angles</label>
+<label><input type="radio" name="m36b"> Draw circles</label>
+<label><input type="radio" name="m36b"> Copy mass</label>
+<label><input type="radio" name="m36b"> Find perimeter automatically</label>
+</td>
+</tr>
+
+<tr>
+<td>Ruler</td>
+<td>
+<label><input class="m36c correct" type="radio" name="m36c"> Draw straight lines / measure length</label>
+<label><input type="radio" name="m36c"> Draw circular arcs only</label>
+<label><input type="radio" name="m36c"> Measure angles only</label>
+<label><input type="radio" name="m36c"> Find symmetry automatically</label>
+</td>
+</tr>
+
+<tr>
+<td>Divider</td>
+<td>
+<label><input class="m36d correct" type="radio" name="m36d"> Compare or transfer distances</label>
+<label><input type="radio" name="m36d"> Measure angles</label>
+<label><input type="radio" name="m36d"> Draw a right angle automatically</label>
+<label><input type="radio" name="m36d"> Draw polygons without points</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: Compass→arcs/transfer lengths;
+Protractor→angles; Ruler→straight lines/length;
+Divider→compare or transfer distances.
+</div>
+</div>
+
+
+<div class="question match match37">
+<h3>37. Match each polygon with a suitable property.</h3>
+
+<table>
+<tr><th>Polygon</th><th>Property</th></tr>
+
+<tr>
+<td>Equilateral triangle</td>
+<td>
+<label><input class="m37a correct" type="radio" name="m37a"> Three equal sides</label>
+<label><input type="radio" name="m37a"> Four right angles</label>
+<label><input type="radio" name="m37a"> Six equal sides</label>
+<label><input type="radio" name="m37a"> Five equal sides</label>
+</td>
+</tr>
+
+<tr>
+<td>Square</td>
+<td>
+<label><input class="m37b correct" type="radio" name="m37b"> Four equal sides and four right angles</label>
+<label><input type="radio" name="m37b"> Three sides</label>
+<label><input type="radio" name="m37b"> Six sides only</label>
+<label><input type="radio" name="m37b"> No equal sides</label>
+</td>
+</tr>
+
+<tr>
+<td>Regular pentagon</td>
+<td>
+<label><input class="m37c correct" type="radio" name="m37c"> Five equal sides and angles</label>
+<label><input type="radio" name="m37c"> Four equal sides</label>
+<label><input type="radio" name="m37c"> Three equal sides</label>
+<label><input type="radio" name="m37c"> Two sides</label>
+</td>
+</tr>
+
+<tr>
+<td>Regular hexagon</td>
+<td>
+<label><input class="m37d correct" type="radio" name="m37d"> Six equal sides and angles</label>
+<label><input type="radio" name="m37d"> Five sides only</label>
+<label><input type="radio" name="m37d"> Four right angles</label>
+<label><input type="radio" name="m37d"> Three sides</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: Equilateral triangle→3 equal sides;
+Square→4 equal sides and right angles;
+Pentagon→5 equal sides and angles;
+Hexagon→6 equal sides and angles.
+</div>
+</div>
+
+
+<div class="question match match38">
+<h3>38. Match each regular polygon with its interior angle.</h3>
+
+<table>
+<tr><th>Polygon</th><th>Interior angle</th></tr>
+
+<tr>
+<td>Equilateral triangle</td>
+<td>
+<label><input class="m38a correct" type="radio" name="m38a"> 60°</label>
+<label><input type="radio" name="m38a"> 90°</label>
+<label><input type="radio" name="m38a"> 108°</label>
+<label><input type="radio" name="m38a"> 120°</label>
+</td>
+</tr>
+
+<tr>
+<td>Square</td>
+<td>
+<label><input class="m38b correct" type="radio" name="m38b"> 90°</label>
+<label><input type="radio" name="m38b"> 60°</label>
+<label><input type="radio" name="m38b"> 108°</label>
+<label><input type="radio" name="m38b"> 120°</label>
+</td>
+</tr>
+
+<tr>
+<td>Regular pentagon</td>
+<td>
+<label><input class="m38c correct" type="radio" name="m38c"> 108°</label>
+<label><input type="radio" name="m38c"> 60°</label>
+<label><input type="radio" name="m38c"> 90°</label>
+<label><input type="radio" name="m38c"> 120°</label>
+</td>
+</tr>
+
+<tr>
+<td>Regular hexagon</td>
+<td>
+<label><input class="m38d correct" type="radio" name="m38d"> 120°</label>
+<label><input type="radio" name="m38d"> 90°</label>
+<label><input type="radio" name="m38d"> 108°</label>
+<label><input type="radio" name="m38d"> 60°</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: Triangle→60°; Square→90°;
+Pentagon→108°; Hexagon→120°.
+</div>
+</div>
+
+
+<div class="question match match39">
+<h3>39. Match the construction with its purpose.</h3>
+
+<table>
+<tr><th>Construction</th><th>Purpose</th></tr>
+
+<tr>
+<td>Perpendicular bisector</td>
+<td>
+<label><input class="m39a correct" type="radio" name="m39a"> Finds midpoint and creates a perpendicular line</label>
+<label><input type="radio" name="m39a"> Finds only circumference</label>
+<label><input type="radio" name="m39a"> Draws a random curve</label>
+<label><input type="radio" name="m39a"> Measures mass</label>
+</td>
+</tr>
+
+<tr>
+<td>Circle construction</td>
+<td>
+<label><input class="m39b correct" type="radio" name="m39b"> Creates points at a fixed distance from a centre</label>
+<label><input type="radio" name="m39b"> Finds only a midpoint</label>
+<label><input type="radio" name="m39b"> Measures an angle</label>
+<label><input type="radio" name="m39b"> Creates parallel numbers</label>
+</td>
+</tr>
+
+<tr>
+<td>Angle measurement</td>
+<td>
+<label><input class="m39c correct" type="radio" name="m39c"> Determines the size of an angle</label>
+<label><input type="radio" name="m39c"> Finds the midpoint automatically</label>
+<label><input type="radio" name="m39c"> Draws a circle</label>
+<label><input type="radio" name="m39c"> Counts polygon sides</label>
+</td>
+</tr>
+
+<tr>
+<td>Length transfer</td>
+<td>
+<label><input class="m39d correct" type="radio" name="m39d"> Reproduces a given distance elsewhere</label>
+<label><input type="radio" name="m39d"> Changes an angle to 90°</label>
+<label><input type="radio" name="m39d"> Removes a line</label>
+<label><input type="radio" name="m39d"> Creates an outlier</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches shown above.
+</div>
+</div>
+
+
+<div class="question match match40">
+<h3>40. Match the tiling pattern with the reason it works.</h3>
+
+<table>
+<tr><th>Pattern</th><th>Reason</th></tr>
+
+<tr>
+<td>Equilateral triangles</td>
+<td>
+<label><input class="m40a correct" type="radio" name="m40a"> 6 × 60° = 360°</label>
+<label><input type="radio" name="m40a"> 3 × 90° = 180°</label>
+<label><input type="radio" name="m40a"> 5 × 108° = 360°</label>
+<label><input type="radio" name="m40a"> 2 × 120° = 180°</label>
+</td>
+</tr>
+
+<tr>
+<td>Squares</td>
+<td>
+<label><input class="m40b correct" type="radio" name="m40b"> 4 × 90° = 360°</label>
+<label><input type="radio" name="m40b"> 3 × 60° = 90°</label>
+<label><input type="radio" name="m40b"> 5 × 90° = 360°</label>
+<label><input type="radio" name="m40b"> 2 × 180° = 270°</label>
+</td>
+</tr>
+
+<tr>
+<td>Regular hexagons</td>
+<td>
+<label><input class="m40c correct" type="radio" name="m40c"> 3 × 120° = 360°</label>
+<label><input type="radio" name="m40c"> 4 × 120° = 180°</label>
+<label><input type="radio" name="m40c"> 5 × 60° = 360°</label>
+<label><input type="radio" name="m40c"> 2 × 90° = 360°</label>
+</td>
+</tr>
+
+<tr>
+<td>Circles</td>
+<td>
+<label><input class="m40d correct" type="radio" name="m40d"> Congruent circles leave gaps between them</label>
+<label><input type="radio" name="m40d"> Their angles always total 360°</label>
+<label><input type="radio" name="m40d"> They have four vertices</label>
+<label><input type="radio" name="m40d"> They are polygons</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: triangles→6×60°;
+squares→4×90°; hexagons→3×120°;
+circles→gaps remain between congruent circles.
+</div>
+</div>
+
+
+<!-- =====================================================
+DRAG DROP STYLE 41-45
+===================================================== -->
+
+<div class="section-title">Section F — Drag & Drop Style (5)</div>
+
+<div class="info">
+<p>
+<b>CSS-only interaction:</b> choose the option you would drag into
+the answer area. The correct answer is revealed after selection.
+</p>
+</div>
+
+
+<div class="question">
+<h3>41. Drag the correct instrument for drawing an arc of fixed radius.</h3>
+
+<label class="option"><input type="radio" name="q41"> Ruler</label>
+<label class="correct option"><input class="correct" type="radio" name="q41"> Compass</label>
+<label class="option"><input type="radio" name="q41"> Protractor</label>
+<label class="option"><input type="radio" name="q41"> Set square</label>
+
+<div class="answer">Correct Answer: Compass</div>
+</div>
+
+
+<div class="question">
+<h3>42. Drag the angle required for perpendicular lines.</h3>
+
+<label class="option"><input type="radio" name="q42"> 45°</label>
+<label class="correct option"><input class="correct" type="radio" name="q42"> 90°</label>
+<label class="option"><input type="radio" name="q42"> 120°</label>
+<label class="option"><input type="radio" name="q42"> 180°</label>
+
+<div class="answer">Correct Answer: 90°</div>
+</div>
+
+
+<div class="question">
+<h3>43. Drag the shape that can tile a floor by itself.</h3>
+
+<label class="option"><input type="radio" name="q43"> Circle</label>
+<label class="option"><input type="radio" name="q43"> Regular pentagon</label>
+<label class="correct option"><input class="correct" type="radio" name="q43"> Regular hexagon</label>
+<label class="option"><input type="radio" name="q43"> Oval</label>
+
+<div class="answer">Correct Answer: Regular hexagon</div>
+</div>
+
+
+<div class="question">
+<h3>44. Drag the angle of a regular pentagon.</h3>
+
+<label class="option"><input type="radio" name="q44"> 60°</label>
+<label class="option"><input type="radio" name="q44"> 90°</label>
+<label class="correct option"><input class="correct" type="radio" name="q44"> 108°</label>
+<label class="option"><input type="radio" name="q44"> 120°</label>
+
+<div class="answer">Correct Answer: 108°</div>
+</div>
+
+
+<div class="question">
+<h3>45. Drag the geometric object whose points are all at the same distance from its centre.</h3>
+
+<label class="option"><input type="radio" name="q45"> Square</label>
+<label class="correct option"><input class="correct" type="radio" name="q45"> Circle</label>
+<label class="option"><input type="radio" name="q45"> Triangle</label>
+<label class="option"><input type="radio" name="q45"> Pentagon</label>
+
+<div class="answer">Correct Answer: Circle</div>
+</div>
+
+
+<!-- =====================================================
+HOTS 46-55
+===================================================== -->
+
+<div class="section-title">Section G — HOTS / Higher Order Thinking (10)</div>
+
+
+<div class="question">
+<h3>
+46. A regular hexagon has six angles of 120°. Three hexagons meet
+at one vertex. Explain why this arrangement can tile the plane.
+</h3>
+
+<label class="option">
+<input type="radio" name="q46">
+3 × 90° = 270°, so a gap remains.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q46">
+3 × 120° = 360°, so the angles exactly fill the space around the vertex.
+</label>
+
+<label class="option">
+<input type="radio" name="q46">
+6 × 120° = 360°.
+</label>
+
+<label class="option">
+<input type="radio" name="q46">
+2 × 120° = 360°.
+</label>
+
+<div class="answer">
+Correct Answer: 3 × 120° = 360°.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+47. A student constructs a perpendicular bisector but opens the
+compass to less than half the segment length. What problem will occur?
+</h3>
+
+<label class="option">
+<input type="radio" name="q47">
+The midpoint becomes two different points.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q47">
+The arcs from the two endpoints may fail to intersect.
+</label>
+
+<label class="option">
+<input type="radio" name="q47">
+The segment becomes longer.
+</label>
+
+<label class="option">
+<input type="radio" name="q47">
+The angle automatically becomes 180°.
+</label>
+
+<div class="answer">
+Correct Answer: The arcs may fail to intersect, so the construction cannot be completed properly.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+48. Can regular pentagons tile the plane by themselves in the usual
+edge-to-edge manner? Use their interior angle to decide.
+</h3>
+
+<label class="option">
+<input type="radio" name="q48">
+Yes, because 5 × 108° = 360°.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q48">
+No, because 3 × 108° = 324°, leaving a 36° gap.
+</label>
+
+<label class="option">
+<input type="radio" name="q48">
+Yes, because 4 × 108° = 360°.
+</label>
+
+<label class="option">
+<input type="radio" name="q48">
+No, because a pentagon has no angles.
+</label>
+
+<div class="answer">
+Correct Answer: No. Three pentagons give 324°, leaving 36°; four give more than 360°.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+49. A square tile is replaced by an identical square tile whose side
+length is doubled. What happens to the angle at each corner?
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q49">
+It remains 90°.
+</label>
+
+<label class="option">
+<input type="radio" name="q49">
+It becomes 180°.
+</label>
+
+<label class="option">
+<input type="radio" name="q49">
+It becomes 45°.
+</label>
+
+<label class="option">
+<input type="radio" name="q49">
+It becomes 120°.
+</label>
+
+<div class="answer">
+Correct Answer: It remains 90°. Changing side length does not change the angles of a square.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+50. A point P is equidistant from A and B. A student claims that P
+must be the midpoint of AB. Is the claim correct?
+</h3>
+
+<label class="option">
+<input type="radio" name="q50">
+Yes, every equidistant point is the midpoint.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q50">
+No. P can be any point on the perpendicular bisector of AB.
+</label>
+
+<label class="option">
+<input type="radio" name="q50">
+Yes, provided AB is horizontal.
+</label>
+
+<label class="option">
+<input type="radio" name="q50">
+No, because P cannot exist.
+</label>
+
+<div class="answer">
+Correct Answer: No. Every point on the perpendicular bisector is equidistant from A and B.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+51. A regular polygon has an interior angle of 120°. Which polygon is it?
+</h3>
+
+<label class="option">
+<input type="radio" name="q51"> Regular triangle</label>
+<label class="option">
+<input type="radio" name="q51"> Square</label>
+<label class="correct option">
+<input class="correct" type="radio" name="q51"> Regular hexagon
+</label>
+<label class="option">
+<input type="radio" name="q51"> Regular pentagon</label>
+
+<div class="answer">
+Correct Answer: Regular hexagon.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+52. A designer wants a floor pattern made only from one type of
+regular polygon. The polygon must have an interior angle that divides
+360° exactly. Which option is suitable?
+</h3>
+
+<label class="option">
+<input type="radio" name="q52"> Regular pentagon, 108°</label>
+<label class="correct option">
+<input class="correct" type="radio" name="q52"> Regular hexagon, 120°</label>
+<label class="option">
+<input type="radio" name="q52"> Regular heptagon, 128 4/7°</label>
+<label class="option">
+<input type="radio" name="q52"> Regular decagon, 144°</label>
+
+<div class="answer">
+Correct Answer: Regular hexagon, because 360 ÷ 120 = 3.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+53. Two circles of the same radius touch externally. A third identical
+circle is placed between them so that it touches both. Why can this
+process not create a gap-free tiling using only these circles?
+</h3>
+
+<label class="option">
+<input type="radio" name="q53">
+Because circles have no radius.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q53">
+Because curved boundaries leave uncovered gaps between groups of circles.
+</label>
+
+<label class="option">
+<input type="radio" name="q53">
+Because circles have four vertices.
+</label>
+
+<label class="option">
+<input type="radio" name="q53">
+Because circles cannot touch one another.
+</label>
+
+<div class="answer">
+Correct Answer: Curved boundaries leave gaps between groups of congruent circles.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+54. A student wants to construct a segment equal in length to a given
+segment AB without measuring its numerical length. Which method is best?
+</h3>
+
+<label class="option">
+<input type="radio" name="q54">
+Estimate the length visually.
+</label>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q54">
+Use a compass to transfer the length AB.
+</label>
+
+<label class="option">
+<input type="radio" name="q54">
+Use only a protractor.
+</label>
+
+<label class="option">
+<input type="radio" name="q54">
+Draw a circle randomly.
+</label>
+
+<div class="answer">
+Correct Answer: Use a compass to transfer the length AB.
+</div>
+</div>
+
+
+<div class="question">
+<h3>
+55. Three different regular polygons meet at one point:
+an equilateral triangle, a square and a regular hexagon.
+Their angles are 60°, 90° and 120°. What is special about this combination?
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q55">
+Their angles add to 270°, so a 90° gap remains.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+Their angles add to 360°, so there is no gap.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+Their angles add to 180°.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+Their angles add to 540°.
+</label>
+
+<div class="answer">
+Correct Answer: 60° + 90° + 120° = 270°, so a 90° gap remains.
+</div>
+</div>
+
+
+<!-- =====================================================
+SCORE CARD
+===================================================== -->
+
+<div class="score-card">
+
+<h2>🏆 Chapter 14 Score</h2>
+
+<div class="score-number"></div>
+
+<p>Correct answers out of 55</p>
+
+<p class="score-note">
+Score updates automatically using HTML + CSS.
+</p>
+
+</div>
+
+</form>
+
+<div class="nav">
+<a href="index.html">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+Class 7 Mathematics • Ganita Prakash Part 2 • Chapter 14
+</footer>
+
+</body>
+</html>

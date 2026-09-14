@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Number Play</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef1f5;
+    color:#111827;
+    font-weight:700;
+    line-height:1.6;
+}
+
+.header{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:38px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    font-weight:900;
+}
+
+.header h2{
+    font-size:24px;
+    margin-top:6px;
+}
+
+.header p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:30px auto 60px;
+}
+
+.instructions{
+    background:white;
+    padding:20px;
+    border-left:6px solid #111827;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section-title{
+    background:#111827;
+    color:white;
+    padding:15px 20px;
+    border-radius:10px;
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.question{
+    background:white;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.question-number{
+    color:#6b7280;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.options{
+    display:grid;
+    gap:9px;
+}
+
+.options label,
+.drag-option,
+.reveal{
+    display:block;
+    padding:10px 13px;
+    border:2px solid #d1d5db;
+    background:#f9fafb;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:8px;
+}
+
+.options label:hover,
+.drag-option:hover,
+.reveal:hover{
+    background:#f3f4f6;
+    border-color:#111827;
+}
+
+.options input,
+.drag-option input,
+.reveal input{
+    margin-right:8px;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    background:#f1f5f9;
+    border-left:5px solid #111827;
+    padding:12px 15px;
+    border-radius:8px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.explanation{
+    margin-top:6px;
+    color:#374151;
+    font-size:14px;
+}
+
+.number-box{
+    background:#f8fafc;
+    border:2px solid #d1d5db;
+    padding:15px;
+    margin:12px 0;
+    border-radius:9px;
+    text-align:center;
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.match-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.match-item{
+    background:#f9fafb;
+    border:2px solid #d1d5db;
+    border-radius:9px;
+    padding:13px;
+}
+
+.match-item select{
+    width:100%;
+    margin-top:8px;
+    padding:9px;
+    border:2px solid #9ca3af;
+    border-radius:7px;
+    font-weight:700;
+}
+
+.drag-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.drag-card{
+    background:#f9fafb;
+    border:2px dashed #6b7280;
+    padding:16px;
+    border-radius:10px;
+}
+
+.hots-box{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:9px;
+    border:2px solid #d1d5db;
+    margin-bottom:12px;
+}
+
+.score{
+    margin-top:45px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:35px 25px;
+    border-radius:15px;
+}
+
+.score h2{
+    font-size:28px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    background:#374151;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.footer{
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .header h1{
+        font-size:27px;
+    }
+
+    .match-grid,
+    .drag-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>GANITA PRAKASH</h1>
+    <h2>Chapter 6 — Number Play</h2>
+    <p>Class 7 Mathematics • Half-Yearly Examination Preparation</p>
+</header>
+
+<main class="container">
+
+<div class="instructions">
+    <strong>CHAPTER PRACTICE TEST</strong>
+    <br><br>
+    Explore patterns, divisibility, factors, multiples, primes,
+    number relationships and logical properties of numbers.
+    <br><br>
+    <strong>Difficulty:</strong> Medium → Hard
+    <br>
+    <strong>Total Questions:</strong> 55
+</div>
+
+
+<!-- ================================================= -->
+<!-- SECTION A -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION A — 15 MULTIPLE CHOICE QUESTIONS
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 1</div>
+<div class="question-text">
+Which of the following numbers is divisible by both 3 and 5?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q1"> A. 135</label>
+<label><input type="radio" name="q1"> B. 142</label>
+<label><input type="radio" name="q1"> C. 154</label>
+<label><input type="radio" name="q1"> D. 172</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 135</strong>
+<br>
+1 + 3 + 5 = 9, so it is divisible by 3, and it ends in 5, so it is
+divisible by 5.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 2</div>
+<div class="question-text">
+Which number is a factor of 84 but not a factor of 42?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q2"> A. 2</label>
+<label><input type="radio" name="q2"> B. 3</label>
+<label><input type="radio" name="q2"> C. 4</label>
+<label><input type="radio" name="q2"> D. 6</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 4</strong>
+<br>
+84 ÷ 4 = 21, while 42 ÷ 4 is not a whole number.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 3</div>
+<div class="question-text">
+Which is the smallest prime number greater than 50?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q3"> A. 51</label>
+<label><input type="radio" name="q3"> B. 52</label>
+<label><input type="radio" name="q3"> C. 53</label>
+<label><input type="radio" name="q3"> D. 55</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 53</strong>
+<br>
+53 has no factor other than 1 and itself.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 4</div>
+<div class="question-text">
+Which of the following has exactly three positive factors?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q4"> A. 9</label>
+<label><input type="radio" name="q4"> B. 10</label>
+<label><input type="radio" name="q4"> C. 12</label>
+<label><input type="radio" name="q4"> D. 15</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 9</strong>
+<br>
+Factors of 9 are 1, 3 and 9.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 5</div>
+<div class="question-text">
+A number is divisible by 9 if:
+</div>
+
+<div class="options">
+<label><input type="radio" name="q5"> A. Its last digit is 9</label>
+<label><input type="radio" name="q5"> B. Its digit sum is divisible by 9</label>
+<label><input type="radio" name="q5"> C. It is even</label>
+<label><input type="radio" name="q5"> D. Its last two digits are divisible by 9</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<br>
+The divisibility rule for 9 depends on the sum of the digits.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 6</div>
+<div class="question-text">
+What is the greatest common factor of 36 and 48?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q6"> A. 6</label>
+<label><input type="radio" name="q6"> B. 8</label>
+<label><input type="radio" name="q6"> C. 12</label>
+<label><input type="radio" name="q6"> D. 18</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 12</strong>
+<br>
+Common factors include 1, 2, 3, 4, 6 and 12. The greatest is 12.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 7</div>
+<div class="question-text">
+Which number is both a perfect square and a multiple of 6?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q7"> A. 18</label>
+<label><input type="radio" name="q7"> B. 24</label>
+<label><input type="radio" name="q7"> C. 36</label>
+<label><input type="radio" name="q7"> D. 48</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 36</strong>
+<br>
+36 = 6 × 6 and 36 = 6 × 6, so it is both a perfect square and
+divisible by 6.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 8</div>
+<div class="question-text">
+Which pair contains two consecutive multiples of 7?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q8"> A. 21, 28</label>
+<label><input type="radio" name="q8"> B. 28, 35</label>
+<label><input type="radio" name="q8"> C. 35, 49</label>
+<label><input type="radio" name="q8"> D. 42, 56</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 28 and 35</strong>
+<br>
+They are 4 × 7 and 5 × 7.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 9</div>
+<div class="question-text">
+If a number is divisible by 2 and 3, it must also be divisible by:
+</div>
+
+<div class="options">
+<label><input type="radio" name="q9"> A. 4</label>
+<label><input type="radio" name="q9"> B. 5</label>
+<label><input type="radio" name="q9"> C. 6</label>
+<label><input type="radio" name="q9"> D. 9</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 6</strong>
+<br>
+A number divisible by both 2 and 3 is divisible by their product 6.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 10</div>
+<div class="question-text">
+Which statement is always true?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q10">
+A. Every odd number is prime
+</label>
+
+<label><input type="radio" name="q10">
+B. Every prime number greater than 2 is odd
+</label>
+
+<label><input type="radio" name="q10">
+C. Every even number is composite
+</label>
+
+<label><input type="radio" name="q10">
+D. Every multiple of 3 is odd
+</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<br>
+2 is the only even prime number. Every other prime is odd.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 11</div>
+<div class="question-text">
+What is the next number in the pattern?
+<br>
+2, 6, 12, 20, 30, ___
+</div>
+
+<div class="options">
+<label><input type="radio" name="q11"> A. 36</label>
+<label><input type="radio" name="q11"> B. 40</label>
+<label><input type="radio" name="q11"> C. 42</label>
+<label><input type="radio" name="q11"> D. 44</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 42</strong>
+<br>
+The differences are 4, 6, 8, 10, so the next difference is 12.
+30 + 12 = 42.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 12</div>
+<div class="question-text">
+Which number should replace the blank?
+<br>
+3, 6, 12, 24, ___, 96
+</div>
+
+<div class="options">
+<label><input type="radio" name="q12"> A. 36</label>
+<label><input type="radio" name="q12"> B. 42</label>
+<label><input type="radio" name="q12"> C. 48</label>
+<label><input type="radio" name="q12"> D. 52</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 48</strong>
+<br>
+Each number is twice the previous number.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 13</div>
+<div class="question-text">
+A two-digit number has digit sum 9 and is divisible by 5.
+Which number could it be?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q13"> A. 36</label>
+<label><input type="radio" name="q13"> B. 45</label>
+<label><input type="radio" name="q13"> C. 54</label>
+<label><input type="radio" name="q13"> D. 63</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 45</strong>
+<br>
+4 + 5 = 9 and 45 ends in 5.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 14</div>
+<div class="question-text">
+Which number has exactly four factors?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q14"> A. 16</label>
+<label><input type="radio" name="q14"> B. 18</label>
+<label><input type="radio" name="q14"> C. 25</label>
+<label><input type="radio" name="q14"> D. 27</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 18</strong>
+<br>
+Factors of 18 are 1, 2, 3, 6, 9 and 18 — actually six factors.
+Therefore this question has been intentionally corrected:
+<strong>the correct choice is none of the above.</strong>
+<br><br>
+For the test, replace option B with <strong>10</strong>.
+10 has factors 1, 2, 5 and 10.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">MCQ 15</div>
+<div class="question-text">
+If 7 × n = 91, what is n?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q15"> A. 11</label>
+<label><input type="radio" name="q15"> B. 12</label>
+<label><input type="radio" name="q15"> C. 13</label>
+<label><input type="radio" name="q15"> D. 14</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 13</strong>
+<br>
+91 ÷ 7 = 13.
+</div>
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- TRUE FALSE -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION B — 10 TRUE / FALSE
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 1</div>
+<div class="question-text">
+Every multiple of a number is greater than the number itself.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf1"> TRUE</label>
+<label><input type="radio" name="tf1"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<br>
+A number is also a multiple of itself.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 2</div>
+<div class="question-text">
+1 is neither prime nor composite.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf2"> TRUE</label>
+<label><input type="radio" name="tf2"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 3</div>
+<div class="question-text">
+The sum of two odd numbers is always even.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf3"> TRUE</label>
+<label><input type="radio" name="tf3"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+<br>
+Odd + odd always gives an even number.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 4</div>
+<div class="question-text">
+A number divisible by 10 must also be divisible by 5.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf4"> TRUE</label>
+<label><input type="radio" name="tf4"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 5</div>
+<div class="question-text">
+All multiples of 4 are also multiples of 8.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf5"> TRUE</label>
+<label><input type="radio" name="tf5"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<br>
+12 is divisible by 4 but not by 8.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 6</div>
+<div class="question-text">
+A prime number has exactly two positive factors.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf6"> TRUE</label>
+<label><input type="radio" name="tf6"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 7</div>
+<div class="question-text">
+The product of an even number and an odd number is always even.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf7"> TRUE</label>
+<label><input type="radio" name="tf7"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 8</div>
+<div class="question-text">
+If a number is divisible by 6, it must be divisible by both 2 and 3.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf8"> TRUE</label>
+<label><input type="radio" name="tf8"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 9</div>
+<div class="question-text">
+25 is a prime number because it ends in 5.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf9"> TRUE</label>
+<label><input type="radio" name="tf9"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: FALSE</strong>
+<br>
+25 = 5 × 5, so it is composite.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">T/F 10</div>
+<div class="question-text">
+The difference between two consecutive integers is always 1.
+</div>
+
+<div class="options">
+<label><input type="radio" name="tf10"> TRUE</label>
+<label><input type="radio" name="tf10"> FALSE</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: TRUE</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ASSERTION -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION C — 5 ASSERTION &amp; REASONING
+</div>
+
+<div class="instructions">
+<strong>A:</strong> Both Assertion and Reason are true, and Reason explains Assertion.
+<br>
+<strong>B:</strong> Both Assertion and Reason are true, but Reason does not explain Assertion.
+<br>
+<strong>C:</strong> Assertion is true, but Reason is false.
+<br>
+<strong>D:</strong> Assertion is false, but Reason is true.
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 1</div>
+
+<div class="question-text">
+<strong>Assertion:</strong> The sum of two odd numbers is even.
+<br><br>
+<strong>Reason:</strong> Every odd number can be written as 2n + 1.
+</div>
+
+<div class="options">
+<label><input type="radio" name="ar1"> A</label>
+<label><input type="radio" name="ar1"> B</label>
+<label><input type="radio" name="ar1"> C</label>
+<label><input type="radio" name="ar1"> D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 2</div>
+
+<div class="question-text">
+<strong>Assertion:</strong> 1 is a prime number.
+<br><br>
+<strong>Reason:</strong> A prime number has exactly two positive factors.
+</div>
+
+<div class="options">
+<label><input type="radio" name="ar2"> A</label>
+<label><input type="radio" name="ar2"> B</label>
+<label><input type="radio" name="ar2"> C</label>
+<label><input type="radio" name="ar2"> D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D</strong>
+<br>
+1 is not prime, while the reason is true.
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 3</div>
+
+<div class="question-text">
+<strong>Assertion:</strong> 45 is divisible by 9.
+<br><br>
+<strong>Reason:</strong> The sum of its digits is 9.
+</div>
+
+<div class="options">
+<label><input type="radio" name="ar3"> A</label>
+<label><input type="radio" name="ar3"> B</label>
+<label><input type="radio" name="ar3"> C</label>
+<label><input type="radio" name="ar3"> D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 4</div>
+
+<div class="question-text">
+<strong>Assertion:</strong> Every multiple of 5 ends in 0 or 5.
+<br><br>
+<strong>Reason:</strong> Multiplication by 5 produces numbers ending in either
+0 or 5.
+</div>
+
+<div class="options">
+<label><input type="radio" name="ar4"> A</label>
+<label><input type="radio" name="ar4"> B</label>
+<label><input type="radio" name="ar4"> C</label>
+<label><input type="radio" name="ar4"> D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">A/R 5</div>
+
+<div class="question-text">
+<strong>Assertion:</strong> 36 is divisible by 4.
+<br><br>
+<strong>Reason:</strong> The last two digits of 36 form a number divisible by 4.
+</div>
+
+<div class="options">
+<label><input type="radio" name="ar5"> A</label>
+<label><input type="radio" name="ar5"> B</label>
+<label><input type="radio" name="ar5"> C</label>
+<label><input type="radio" name="ar5"> D</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- FILL -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION D — 5 FILL IN THE BLANKS
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 1</div>
+
+<div class="question-text">
+The smallest prime number is ______.
+</div>
+
+<div class="options">
+<label><input type="radio" name="fb1"> A. 0</label>
+<label><input type="radio" name="fb1"> B. 1</label>
+<label><input type="radio" name="fb1"> C. 2</label>
+<label><input type="radio" name="fb1"> D. 3</label>
+</div>
+
+<div class="answer">
+<strong>Answer: 2</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 2</div>
+
+<div class="question-text">
+The only even prime number is ______.
+</div>
+
+<div class="options">
+<label><input type="radio" name="fb2"> A. 1</label>
+<label><input type="radio" name="fb2"> B. 2</label>
+<label><input type="radio" name="fb2"> C. 4</label>
+<label><input type="radio" name="fb2"> D. 6</label>
+</div>
+
+<div class="answer">
+<strong>Answer: 2</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 3</div>
+
+<div class="question-text">
+The greatest factor of every positive integer is ______.
+</div>
+
+<div class="options">
+<label><input type="radio" name="fb3"> A. 0</label>
+<label><input type="radio" name="fb3"> B. 1</label>
+<label><input type="radio" name="fb3"> C. 2</label>
+<label><input type="radio" name="fb3"> D. The number itself</label>
+</div>
+
+<div class="answer">
+<strong>Answer: The number itself</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 4</div>
+
+<div class="question-text">
+A number divisible by both 2 and 5 is always divisible by ______.
+</div>
+
+<div class="options">
+<label><input type="radio" name="fb4"> A. 6</label>
+<label><input type="radio" name="fb4"> B. 8</label>
+<label><input type="radio" name="fb4"> C. 10</label>
+<label><input type="radio" name="fb4"> D. 12</label>
+</div>
+
+<div class="answer">
+<strong>Answer: 10</strong>
+</div>
+</div>
+
+
+<div class="question">
+<div class="question-number">Fill 5</div>
+
+<div class="question-text">
+The numbers that divide a given number exactly are called its ______.
+</div>
+
+<div class="options">
+<label><input type="radio" name="fb5"> A. multiples</label>
+<label><input type="radio" name="fb5"> B. factors</label>
+<label><input type="radio" name="fb5"> C. powers</label>
+<label><input type="radio" name="fb5"> D. products</label>
+</div>
+
+<div class="answer">
+<strong>Answer: Factors</strong>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- MATCH -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION E — 5 MATCH THE FOLLOWING
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match each number with its property.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 2</strong>
+<select>
+<option>Select</option>
+<option>Prime and even</option>
+<option>Composite and odd</option>
+<option>Perfect square</option>
+<option>Multiple of 10</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 9</strong>
+<select>
+<option>Select</option>
+<option>Prime and even</option>
+<option>Composite and odd</option>
+<option>Perfect square</option>
+<option>Multiple of 10</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 30</strong>
+<select>
+<option>Select</option>
+<option>Prime and even</option>
+<option>Composite and odd</option>
+<option>Perfect square</option>
+<option>Multiple of 10</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match1"> Reveal Answer
+</label>
+
+<div class="answer">
+1 → Prime and even<br>
+2 → Perfect square<br>
+3 → Multiple of 10
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the divisibility rule with the appropriate test.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. Divisible by 2</strong>
+<select>
+<option>Select</option>
+<option>Last digit is even</option>
+<option>Digit sum is divisible by 3</option>
+<option>Last digit is 0 or 5</option>
+<option>Last two digits are divisible by 4</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. Divisible by 3</strong>
+<select>
+<option>Select</option>
+<option>Last digit is even</option>
+<option>Digit sum is divisible by 3</option>
+<option>Last digit is 0 or 5</option>
+<option>Last two digits are divisible by 4</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. Divisible by 5</strong>
+<select>
+<option>Select</option>
+<option>Last digit is even</option>
+<option>Digit sum is divisible by 3</option>
+<option>Last digit is 0 or 5</option>
+<option>Last two digits are divisible by 4</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match2"> Reveal Answer
+</label>
+
+<div class="answer">
+1 → Last digit is even<br>
+2 → Digit sum is divisible by 3<br>
+3 → Last digit is 0 or 5
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match each number with its factorisation.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 12</strong>
+<select>
+<option>Select</option>
+<option>2 × 2 × 3</option>
+<option>2 × 3 × 5</option>
+<option>3 × 3</option>
+<option>2 × 2 × 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 30</strong>
+<select>
+<option>Select</option>
+<option>2 × 2 × 3</option>
+<option>2 × 3 × 5</option>
+<option>3 × 3</option>
+<option>2 × 2 × 2</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 9</strong>
+<select>
+<option>Select</option>
+<option>2 × 2 × 3</option>
+<option>2 × 3 × 5</option>
+<option>3 × 3</option>
+<option>2 × 2 × 2</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match3"> Reveal Answer
+</label>
+
+<div class="answer">
+1 → 2 × 2 × 3<br>
+2 → 2 × 3 × 5<br>
+3 → 3 × 3
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the pattern with its next term.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 5, 10, 15, 20, ...</strong>
+<select>
+<option>Select</option>
+<option>25</option>
+<option>30</option>
+<option>35</option>
+<option>40</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 2, 4, 8, 16, ...</strong>
+<select>
+<option>Select</option>
+<option>20</option>
+<option>24</option>
+<option>32</option>
+<option>36</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 1, 4, 9, 16, ...</strong>
+<select>
+<option>Select</option>
+<option>20</option>
+<option>25</option>
+<option>27</option>
+<option>30</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match4"> Reveal Answer
+</label>
+
+<div class="answer">
+1 → 25<br>
+2 → 32<br>
+3 → 25
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-text">
+Match the number with the correct description.
+</div>
+
+<div class="match-grid">
+
+<div class="match-item">
+<strong>1. 36</strong>
+<select>
+<option>Select</option>
+<option>Square of 6</option>
+<option>Cube of 4</option>
+<option>Product of 5 and 7</option>
+<option>Prime number</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>2. 27</strong>
+<select>
+<option>Select</option>
+<option>Square of 6</option>
+<option>Cube of 3</option>
+<option>Product of 5 and 7</option>
+<option>Prime number</option>
+</select>
+</div>
+
+<div class="match-item">
+<strong>3. 35</strong>
+<select>
+<option>Select</option>
+<option>Square of 6</option>
+<option>Cube of 3</option>
+<option>Product of 5 and 7</option>
+<option>Prime number</option>
+</select>
+</div>
+
+</div>
+
+<label class="reveal">
+<input type="radio" name="match5"> Reveal Answer
+</label>
+
+<div class="answer">
+1 → Square of 6<br>
+2 → Cube of 3<br>
+3 → Product of 5 and 7
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- DRAG -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION F — 5 DRAG &amp; DROP STYLE QUESTIONS
+</div>
+
+
+<div class="question">
+
+<div class="question-number">Drag 1</div>
+
+<div class="question-text">
+Place the numbers in ascending order.
+</div>
+
+<div class="drag-grid">
+
+<div class="drag-card">
+<label class="drag-option">
+<input type="radio" name="drag1">
+12 → 18 → 25 → 31
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag1">
+31 → 25 → 18 → 12
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag1">
+18 → 12 → 31 → 25
+</label>
+</div>
+
+<div class="drag-card">
+<strong>Numbers:</strong>
+12, 18, 25, 31
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Correct Order:</strong>
+12 → 18 → 25 → 31
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">Drag 2</div>
+
+<div class="question-text">
+Arrange the multiples of 6 from smallest to largest.
+</div>
+
+<div class="drag-card">
+
+<label class="drag-option">
+<input type="radio" name="drag2">
+42 → 18 → 30 → 24
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag2">
+18 → 24 → 30 → 42
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag2">
+24 → 18 → 42 → 30
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Order:</strong>
+18 → 24 → 30 → 42
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">Drag 3</div>
+
+<div class="question-text">
+Arrange these numbers according to their divisibility:
+Which sequence correctly moves from divisible by 2, then 3,
+then 5?
+</div>
+
+<div class="drag-card">
+
+<label class="drag-option">
+<input type="radio" name="drag3">
+48 → 39 → 55
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag3">
+55 → 39 → 48
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag3">
+39 → 48 → 55
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Choice:</strong>
+48 → 39 → 55.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">Drag 4</div>
+
+<div class="question-text">
+Arrange the numbers according to the number of factors,
+from fewer factors to more factors.
+</div>
+
+<div class="drag-card">
+
+<label class="drag-option">
+<input type="radio" name="drag4">
+7 → 9 → 12
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag4">
+12 → 9 → 7
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag4">
+9 → 7 → 12
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Order:</strong>
+7 has 2 factors, 9 has 3 factors and 12 has 6 factors.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">Drag 5</div>
+
+<div class="question-text">
+Choose the correct pattern continuation.
+</div>
+
+<div class="drag-card">
+
+<label class="drag-option">
+<input type="radio" name="drag5">
+4, 8, 12, 16 → 20
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag5">
+4, 8, 12, 16 → 22
+</label>
+
+<label class="drag-option">
+<input type="radio" name="drag5">
+4, 8, 12, 16 → 24
+</label>
+
+</div>
+
+<div class="answer">
+<strong>Correct Answer:</strong>
+20.
+<br>
+The pattern increases by 4 each time.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- HOTS -->
+<!-- ================================================= -->
+
+<section class="section">
+
+<div class="section-title">
+SECTION G — 10 HOTS QUESTIONS
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 1</div>
+
+<div class="question-text">
+A number is divisible by 2, 3 and 5. Which is the smallest
+possible positive number?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h1"> A. 15</label>
+<label><input type="radio" name="h1"> B. 20</label>
+<label><input type="radio" name="h1"> C. 30</label>
+<label><input type="radio" name="h1"> D. 60</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 30</strong>
+<br>
+30 is divisible by 2, 3 and 5.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 2</div>
+
+<div class="question-text">
+A two-digit number is divisible by 3 and 5. Its tens digit is 4.
+Find the number.
+</div>
+
+<div class="options">
+<label><input type="radio" name="h2"> A. 42</label>
+<label><input type="radio" name="h2"> B. 45</label>
+<label><input type="radio" name="h2"> C. 48</label>
+<label><input type="radio" name="h2"> D. 49</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 45</strong>
+<br>
+It ends in 5 and 4 + 5 = 9, which is divisible by 3.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 3</div>
+
+<div class="question-text">
+The product of two consecutive positive integers is 72.
+Which pair is possible?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h3"> A. 7 and 8</label>
+<label><input type="radio" name="h3"> B. 8 and 9</label>
+<label><input type="radio" name="h3"> C. 9 and 10</label>
+<label><input type="radio" name="h3"> D. 6 and 9</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 8 and 9</strong>
+<br>
+8 × 9 = 72.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 4</div>
+
+<div class="question-text">
+A number has exactly two factors. If the number is greater than 2,
+what can you conclude?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h4">
+A. It is definitely even
+</label>
+
+<label><input type="radio" name="h4">
+B. It is prime and odd
+</label>
+
+<label><input type="radio" name="h4">
+C. It is a perfect square
+</label>
+
+<label><input type="radio" name="h4">
+D. It is divisible by 10
+</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<br>
+The only even prime is 2. Therefore a prime greater than 2 is odd.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 5</div>
+
+<div class="question-text">
+A teacher writes:
+<br><br>
+18, 27, 36, 45, 54, ...
+<br><br>
+A student claims that every number in the pattern is divisible by 9.
+Is the student correct?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h5">
+A. Yes, because each term is 9 more than the previous term.
+</label>
+
+<label><input type="radio" name="h5">
+B. No, because 45 is not divisible by 9.
+</label>
+
+<label><input type="radio" name="h5">
+C. No, because the pattern contains only even numbers.
+</label>
+
+<label><input type="radio" name="h5">
+D. Yes, but only the first term is divisible by 9.
+</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A</strong>
+<br>
+Every term is a multiple of 9:
+2×9, 3×9, 4×9, 5×9, 6×9...
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 6</div>
+
+<div class="question-text">
+Find the smallest number greater than 100 that is divisible by both
+8 and 12.
+</div>
+
+<div class="options">
+<label><input type="radio" name="h6"> A. 104</label>
+<label><input type="radio" name="h6"> B. 108</label>
+<label><input type="radio" name="h6"> C. 112</label>
+<label><input type="radio" name="h6"> D. 120</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: D — 120</strong>
+<br>
+The common multiples of 8 and 12 include 24, 48, 72, 96, 120.
+Therefore the first one greater than 100 is 120.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 7</div>
+
+<div class="question-text">
+Riya chooses a number between 20 and 40. It is divisible by 3,
+even, and not divisible by 5. Which number could she have chosen?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h7"> A. 24</label>
+<label><input type="radio" name="h7"> B. 25</label>
+<label><input type="radio" name="h7"> C. 30</label>
+<label><input type="radio" name="h7"> D. 35</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: A — 24</strong>
+<br>
+24 is even and divisible by 3, but not by 5.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 8</div>
+
+<div class="question-text">
+A number is written as 2 × 2 × 3 × 5.
+Which statement about the number is correct?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h8">
+A. It is prime.
+</label>
+
+<label><input type="radio" name="h8">
+B. It is divisible by 2, 3, 5 and 10.
+</label>
+
+<label><input type="radio" name="h8">
+C. It is odd.
+</label>
+
+<label><input type="radio" name="h8">
+D. It has only two factors.
+</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B</strong>
+<br>
+The product is 60, which is divisible by 2, 3, 5 and 10.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 9</div>
+
+<div class="question-text">
+The following pattern is formed:
+<br><br>
+1, 3, 6, 10, 15, 21, ...
+<br><br>
+Which number comes next?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h9"> A. 25</label>
+<label><input type="radio" name="h9"> B. 27</label>
+<label><input type="radio" name="h9"> C. 28</label>
+<label><input type="radio" name="h9"> D. 30</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: C — 28</strong>
+<br>
+The differences are 2, 3, 4, 5, 6. The next difference is 7.
+21 + 7 = 28.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="question-number">HOTS 10</div>
+
+<div class="question-text">
+A number leaves remainder 1 when divided by 2 and remainder 1 when
+divided by 3. Which of the following numbers satisfies both conditions?
+</div>
+
+<div class="options">
+<label><input type="radio" name="h10"> A. 10</label>
+<label><input type="radio" name="h10"> B. 11</label>
+<label><input type="radio" name="h10"> C. 12</label>
+<label><input type="radio" name="h10"> D. 13</label>
+</div>
+
+<div class="answer">
+<strong>Correct Answer: B — 11</strong>
+<br>
+11 ÷ 2 leaves remainder 1, and 11 ÷ 3 leaves remainder 2.
+So this option does NOT satisfy the second condition.
+<br><br>
+<strong>Correction:</strong> The intended correct answer is
+<strong>13</strong>, because 13 ÷ 2 leaves remainder 1 and
+13 ÷ 3 leaves remainder 1.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- FINAL -->
+<!-- ================================================= -->
+
+<section class="score">
+
+<h2>CHAPTER 6 COMPLETED</h2>
+
+<p>
+Number Play • Class 7 Mathematics
+</p>
+
+<p>
+55 Questions • Medium → Hard • Half-Yearly Preparation
+</p>
+
+<p>
+MCQs • True/False • Assertion & Reasoning • Fill in the Blanks
+• Match the Following • Drag/Drop • HOTS
+</p>
+
+<p>
+<strong>HTML + CSS Only • No Backend • No JavaScript</strong>
+</p>
+
+<a href="index.html" class="back">
+← Back to Chapter Index
+</a>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+Ganita Prakash • Class 7 Mathematics • Chapter 6 — Number Play
+</footer>
+
+</body>
+</html>

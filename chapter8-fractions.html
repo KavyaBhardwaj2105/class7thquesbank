@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Chapter 8 - Working with Fractions</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    color:#172033;
+    font-weight:700;
+}
+
+header{
+    background:#101a35;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:10px 0 0;
+    color:#dce4ff;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:25px auto 60px;
+}
+
+.instructions,
+.section{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:24px;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+}
+
+.instructions h2,
+.section h2{
+    margin-top:0;
+    color:#101a35;
+}
+
+.instructions li{
+    margin:8px 0;
+}
+
+.question{
+    border:2px solid #dce2ec;
+    border-radius:15px;
+    padding:20px;
+    margin:18px 0;
+    background:#fbfcfe;
+}
+
+.question h3{
+    margin-top:0;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:11px 14px;
+    margin:9px 0;
+    border:1px solid #ccd4e2;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.option:hover{
+    background:#f0f4ff;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:13px;
+    border-left:5px solid #101a35;
+    background:#eaf0ff;
+    border-radius:8px;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+.correct:checked + span{
+    font-weight:900;
+}
+
+select{
+    padding:9px;
+    border:2px solid #cbd4e3;
+    border-radius:8px;
+    font-weight:700;
+    margin:4px;
+}
+
+.match-row{
+    margin:12px 0;
+    padding:10px;
+    background:#f4f6fa;
+    border-radius:10px;
+}
+
+.hint{
+    background:#fff7dc;
+    border-left:5px solid #d69e00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.score-card{
+    background:#101a35;
+    color:white;
+    padding:35px;
+    text-align:center;
+    border-radius:22px;
+    margin-top:30px;
+}
+
+.score-card h2{
+    margin-top:0;
+    color:white;
+}
+
+.score-number{
+    font-size:48px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.quiz{
+    counter-reset:score;
+}
+
+.question:has(.correct:checked){
+    counter-increment:score;
+}
+
+.reset-btn,
+.back-btn{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:800;
+    border:none;
+    cursor:pointer;
+    margin:8px;
+}
+
+.reset-btn{
+    background:white;
+    color:#101a35;
+}
+
+.back-btn{
+    background:#101a35;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+
+.small{
+    font-size:14px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Class 7 Mathematics</h1>
+    <p>Ganita Prakash — Chapter 8: Working with Fractions</p>
+</header>
+
+<div class="container">
+
+<div class="instructions">
+    <h2>📘 Half-Yearly Revision Test</h2>
+    <ul>
+        <li>15 Multiple Choice Questions</li>
+        <li>10 True / False</li>
+        <li>5 Assertion & Reasoning</li>
+        <li>5 Fill in the Blanks</li>
+        <li>5 Match the Following</li>
+        <li>5 Drag & Drop Style Questions</li>
+        <li>10 HOTS Questions</li>
+        <li>Total: <strong>55 Questions</strong></li>
+    </ul>
+
+    <div class="hint">
+        Select an answer to immediately reveal the correct answer.
+        The score card automatically counts the questions answered correctly.
+    </div>
+
+    <p class="small">
+        Note: Since this version uses HTML + CSS only, the Drag & Drop section
+        uses a CSS-only selectable placement format rather than JavaScript drag-and-drop.
+    </p>
+</div>
+
+<form class="quiz">
+
+<!-- ================= MCQs ================= -->
+
+<div class="section">
+<h2>Section A — Multiple Choice Questions</h2>
+
+<div class="question">
+<h3>Q1. Which fraction is equivalent to 18/24 in its simplest form?</h3>
+<label class="option"><input type="radio" name="q1"><span>2/3</span></label>
+<label class="option"><input class="correct" type="radio" name="q1"><span>3/4</span></label>
+<label class="option"><input type="radio" name="q1"><span>4/5</span></label>
+<label class="option"><input type="radio" name="q1"><span>5/6</span></label>
+<div class="answer">Correct Answer: 3/4. Divide numerator and denominator by 6.</div>
+</div>
+
+<div class="question">
+<h3>Q2. Which is greater?</h3>
+<label class="option"><input type="radio" name="q2"><span>7/12</span></label>
+<label class="option"><input type="radio" name="q2"><span>5/8</span></label>
+<label class="option"><input class="correct" type="radio" name="q2"><span>5/8</span></label>
+<label class="option"><input type="radio" name="q2"><span>Both are equal</span></label>
+<div class="answer">Correct Answer: 5/8. Using denominator 24: 7/12 = 14/24 while 5/8 = 15/24.</div>
+</div>
+
+<div class="question">
+<h3>Q3. What is 3/5 + 7/10?</h3>
+<label class="option"><input type="radio" name="q3"><span>1 1/10</span></label>
+<label class="option"><input class="correct" type="radio" name="q3"><span>1 3/10</span></label>
+<label class="option"><input type="radio" name="q3"><span>1 1/5</span></label>
+<label class="option"><input type="radio" name="q3"><span>13/15</span></label>
+<div class="answer">Correct Answer: 1 3/10.</div>
+</div>
+
+<div class="question">
+<h3>Q4. Which fraction represents 2 wholes and 3/7?</h3>
+<label class="option"><input type="radio" name="q4"><span>14/7</span></label>
+<label class="option"><input type="radio" name="q4"><span>15/7</span></label>
+<label class="option"><input class="correct" type="radio" name="q4"><span>17/7</span></label>
+<label class="option"><input type="radio" name="q4"><span>21/7</span></label>
+<div class="answer">Correct Answer: 17/7. 2 × 7 + 3 = 17.</div>
+</div>
+
+<div class="question">
+<h3>Q5. What is 4/9 × 27/8?</h3>
+<label class="option"><input type="radio" name="q5"><span>2/3</span></label>
+<label class="option"><input class="correct" type="radio" name="q5"><span>3/2</span></label>
+<label class="option"><input type="radio" name="q5"><span>4/3</span></label>
+<label class="option"><input type="radio" name="q5"><span>9/2</span></label>
+<div class="answer">Correct Answer: 3/2.</div>
+</div>
+
+<div class="question">
+<h3>Q6. The reciprocal of 7/11 is:</h3>
+<label class="option"><input type="radio" name="q6"><span>7/11</span></label>
+<label class="option"><input type="radio" name="q6"><span>−7/11</span></label>
+<label class="option"><input class="correct" type="radio" name="q6"><span>11/7</span></label>
+<label class="option"><input type="radio" name="q6"><span>1/77</span></label>
+<div class="answer">Correct Answer: 11/7.</div>
+</div>
+
+<div class="question">
+<h3>Q7. Which expression has the value 5/6?</h3>
+<label class="option"><input type="radio" name="q7"><span>1/2 + 1/6</span></label>
+<label class="option"><input class="correct" type="radio" name="q7"><span>1 − 1/6</span></label>
+<label class="option"><input type="radio" name="q7"><span>2/3 − 1/6</span></label>
+<label class="option"><input type="radio" name="q7"><span>3/4 − 1/6</span></label>
+<div class="answer">Correct Answer: 1 − 1/6 = 5/6.</div>
+</div>
+
+<div class="question">
+<h3>Q8. What is 2 1/4 − 5/8?</h3>
+<label class="option"><input type="radio" name="q8"><span>1 1/8</span></label>
+<label class="option"><input type="radio" name="q8"><span>1 3/8</span></label>
+<label class="option"><input class="correct" type="radio" name="q8"><span>1 5/8</span></label>
+<label class="option"><input type="radio" name="q8"><span>1 7/8</span></label>
+<div class="answer">Correct Answer: 1 5/8.</div>
+</div>
+
+<div class="question">
+<h3>Q9. Which fraction lies between 1/3 and 1/2?</h3>
+<label class="option"><input type="radio" name="q9"><span>1/4</span></label>
+<label class="option"><input class="correct" type="radio" name="q9"><span>5/12</span></label>
+<label class="option"><input type="radio" name="q9"><span>7/12</span></label>
+<label class="option"><input type="radio" name="q9"><span>2/3</span></label>
+<div class="answer">Correct Answer: 5/12.</div>
+</div>
+
+<div class="question">
+<h3>Q10. A quantity is divided into 8 equal parts. Five parts are taken. What fraction remains?</h3>
+<label class="option"><input type="radio" name="q10"><span>3/5</span></label>
+<label class="option"><input type="radio" name="q10"><span>5/8</span></label>
+<label class="option"><input class="correct" type="radio" name="q10"><span>3/8</span></label>
+<label class="option"><input type="radio" name="q10"><span>5/3</span></label>
+<div class="answer">Correct Answer: 3/8.</div>
+</div>
+
+<div class="question">
+<h3>Q11. What is 3/4 ÷ 2?</h3>
+<label class="option"><input type="radio" name="q11"><span>3/2</span></label>
+<label class="option"><input class="correct" type="radio" name="q11"><span>3/8</span></label>
+<label class="option"><input type="radio" name="q11"><span>2/3</span></label>
+<label class="option"><input type="radio" name="q11"><span>1/4</span></label>
+<div class="answer">Correct Answer: 3/8. Dividing by 2 means multiplying by 1/2.</div>
+</div>
+
+<div class="question">
+<h3>Q12. Which pair represents the same fraction?</h3>
+<label class="option"><input type="radio" name="q12"><span>4/9 and 8/27</span></label>
+<label class="option"><input class="correct" type="radio" name="q12"><span>5/6 and 15/18</span></label>
+<label class="option"><input type="radio" name="q12"><span>7/10 and 14/25</span></label>
+<label class="option"><input type="radio" name="q12"><span>3/8 and 9/16</span></label>
+<div class="answer">Correct Answer: 5/6 and 15/18.</div>
+</div>
+
+<div class="question">
+<h3>Q13. If 2/5 of a number is 18, what is the number?</h3>
+<label class="option"><input type="radio" name="q13"><span>30</span></label>
+<label class="option"><input type="radio" name="q13"><span>36</span></label>
+<label class="option"><input class="correct" type="radio" name="q13"><span>45</span></label>
+<label class="option"><input type="radio" name="q13"><span>50</span></label>
+<div class="answer">Correct Answer: 45.</div>
+</div>
+
+<div class="question">
+<h3>Q14. Which statement is correct?</h3>
+<label class="option"><input type="radio" name="q14"><span>Every proper fraction is greater than 1.</span></label>
+<label class="option"><input class="correct" type="radio" name="q14"><span>Every proper positive fraction is less than 1.</span></label>
+<label class="option"><input type="radio" name="q14"><span>Every improper fraction is less than 1.</span></label>
+<label class="option"><input type="radio" name="q14"><span>A unit fraction always has numerator greater than 1.</span></label>
+<div class="answer">Correct Answer: Every proper positive fraction is less than 1.</div>
+</div>
+
+<div class="question">
+<h3>Q15. What is the value of 5/6 − 1/4?</h3>
+<label class="option"><input type="radio" name="q15"><span>1/2</span></label>
+<label class="option"><input class="correct" type="radio" name="q15"><span>7/12</span></label>
+<label class="option"><input type="radio" name="q15"><span>2/3</span></label>
+<label class="option"><input type="radio" name="q15"><span>5/12</span></label>
+<div class="answer">Correct Answer: 7/12.</div>
+</div>
+
+</div>
+
+
+<!-- ================= TRUE FALSE ================= -->
+
+<div class="section">
+<h2>Section B — True / False</h2>
+
+<div class="question">
+<h3>Q16. 4/7 and 12/21 are equivalent fractions.</h3>
+<label class="option"><input class="correct" type="radio" name="q16"><span>True</span></label>
+<label class="option"><input type="radio" name="q16"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q17. 9/10 is smaller than 7/8.</h3>
+<label class="option"><input type="radio" name="q17"><span>True</span></label>
+<label class="option"><input class="correct" type="radio" name="q17"><span>False</span></label>
+<div class="answer">Correct Answer: False. 9/10 = 36/40 while 7/8 = 35/40.</div>
+</div>
+
+<div class="question">
+<h3>Q18. The product of two proper positive fractions is always less than each of them.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q18"><span>True</span></label>
+<label class="option"><input type="radio" name="q18"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q19. 7/3 is a proper fraction.</h3>
+<label class="option"><input type="radio" name="q19"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q19"><span>False</span></label>
+<div class="answer">Correct Answer: False. The numerator is greater than the denominator.</div>
+</div>
+
+<div class="question">
+<h3>Q20. Dividing a non-zero fraction by its reciprocal gives 1.</h3>
+<label class="option"><input type="radio" name="q20"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q20"><span>False</span></label>
+<div class="answer">Correct Answer: False. A fraction divided by its reciprocal is generally not 1.</div>
+</div>
+
+<div class="question">
+<h3>Q21. 3/5 = 15/25.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q21"><span>True</span></label>
+<label class="option"><input type="radio" name="q21"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q22. 1/6 + 1/6 + 1/6 = 1/2.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q22"><span>True</span></label>
+<label class="option"><input type="radio" name="q22"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q23. Multiplying a fraction by 1 leaves its value unchanged.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q23"><span>True</span></label>
+<label class="option"><input type="radio" name="q23"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q24. 11/12 − 5/12 = 1/2.</h3>
+<label class="correct option"><input class="correct" type="radio" name="q24"><span>True</span></label>
+<label class="option"><input type="radio" name="q24"><span>False</span></label>
+<div class="answer">Correct Answer: True.</div>
+</div>
+
+<div class="question">
+<h3>Q25. The reciprocal of 1 is 0.</h3>
+<label class="option"><input type="radio" name="q25"><span>True</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q25"><span>False</span></label>
+<div class="answer">Correct Answer: False. The reciprocal of 1 is 1.</div>
+</div>
+
+</div>
+
+
+<!-- ================= ASSERTION REASON ================= -->
+
+<div class="section">
+<h2>Section C — Assertion & Reasoning</h2>
+
+<p>Choose:</p>
+<ul>
+<li><strong>A:</strong> Both A and R are true, and R correctly explains A.</li>
+<li><strong>B:</strong> Both A and R are true, but R does not explain A.</li>
+<li><strong>C:</strong> A is true, but R is false.</li>
+<li><strong>D:</strong> A is false, but R is true.</li>
+</ul>
+
+<div class="question">
+<h3>Q26. Assertion: 3/4 is greater than 5/8.<br>
+Reason: 3/4 = 6/8.</h3>
+<label class="option"><input class="correct" type="radio" name="q26"><span>A</span></label>
+<label class="option"><input type="radio" name="q26"><span>B</span></label>
+<label class="option"><input type="radio" name="q26"><span>C</span></label>
+<label class="option"><input type="radio" name="q26"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q27. Assertion: 2/3 × 3/5 = 2/5.<br>
+Reason: In multiplication, common factors may be cancelled before multiplying.</h3>
+<label class="option"><input class="correct" type="radio" name="q27"><span>A</span></label>
+<label class="option"><input type="radio" name="q27"><span>B</span></label>
+<label class="option"><input type="radio" name="q27"><span>C</span></label>
+<label class="option"><input type="radio" name="q27"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q28. Assertion: 7/9 + 2/9 = 1.<br>
+Reason: Fractions with equal denominators can be added by adding their numerators.</h3>
+<label class="option"><input type="radio" name="q28"><span>A</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q28"><span>B</span></label>
+<label class="option"><input type="radio" name="q28"><span>C</span></label>
+<label class="option"><input type="radio" name="q28"><span>D</span></label>
+<div class="answer">Correct Answer: B. Both statements are true, but the reason alone does not specifically establish that the sum equals 1 unless the numerators are added to get 9/9.</div>
+</div>
+
+<div class="question">
+<h3>Q29. Assertion: 5/6 ÷ 2 = 5/12.<br>
+Reason: Dividing by 2 is equivalent to multiplying by 1/2.</h3>
+<label class="option"><input class="correct" type="radio" name="q29"><span>A</span></label>
+<label class="option"><input type="radio" name="q29"><span>B</span></label>
+<label class="option"><input type="radio" name="q29"><span>C</span></label>
+<label class="option"><input type="radio" name="q29"><span>D</span></label>
+<div class="answer">Correct Answer: A.</div>
+</div>
+
+<div class="question">
+<h3>Q30. Assertion: 4/9 is greater than 1/2.<br>
+Reason: 4/9 = 8/18 and 1/2 = 9/18.</h3>
+<label class="option"><input type="radio" name="q30"><span>A</span></label>
+<label class="option"><input type="radio" name="q30"><span>B</span></label>
+<label class="option"><input type="radio" name="q30"><span>C</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q30"><span>D</span></label>
+<div class="answer">Correct Answer: D. The assertion is false, while the reason is true.</div>
+</div>
+
+</div>
+
+
+<!-- ================= FILL UPS ================= -->
+
+<div class="section">
+<h2>Section D — Fill in the Blanks</h2>
+
+<div class="question">
+<h3>Q31. 7/8 = ___/40.</h3>
+<label class="option"><input type="radio" name="q31"><span>30</span></label>
+<label class="option"><input class="correct" type="radio" name="q31"><span>35</span></label>
+<label class="option"><input type="radio" name="q31"><span>36</span></label>
+<label class="option"><input type="radio" name="q31"><span>32</span></label>
+<div class="answer">Correct Answer: 35.</div>
+</div>
+
+<div class="question">
+<h3>Q32. The simplest form of 42/56 is ___.</h3>
+<label class="option"><input type="radio" name="q32"><span>2/3</span></label>
+<label class="option"><input class="correct" type="radio" name="q32"><span>3/4</span></label>
+<label class="option"><input type="radio" name="q32"><span>4/5</span></label>
+<label class="option"><input type="radio" name="q32"><span>5/7</span></label>
+<div class="answer">Correct Answer: 3/4.</div>
+</div>
+
+<div class="question">
+<h3>Q33. 1 2/5 written as an improper fraction is ___.</h3>
+<label class="option"><input type="radio" name="q33"><span>5/7</span></label>
+<label class="option"><input type="radio" name="q33"><span>6/5</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q33"><span>7/5</span></label>
+<label class="option"><input type="radio" name="q33"><span>8/5</span></label>
+<div class="answer">Correct Answer: 7/5.</div>
+</div>
+
+<div class="question">
+<h3>Q34. 13/6 written as a mixed number is ___.</h3>
+<label class="option"><input type="radio" name="q34"><span>1 5/6</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q34"><span>2 1/6</span></label>
+<label class="option"><input type="radio" name="q34"><span>2 5/6</span></label>
+<label class="option"><input type="radio" name="q34"><span>3 1/6</span></label>
+<div class="answer">Correct Answer: 2 1/6.</div>
+</div>
+
+<div class="question">
+<h3>Q35. The multiplicative inverse of 9/13 is ___.</h3>
+<label class="option"><input type="radio" name="q35"><span>9/13</span></label>
+<label class="option"><input type="radio" name="q35"><span>−13/9</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q35"><span>13/9</span></label>
+<label class="option"><input type="radio" name="q35"><span>1/9</span></label>
+<div class="answer">Correct Answer: 13/9.</div>
+</div>
+
+</div>
+
+
+<!-- ================= MATCH ================= -->
+
+<div class="section">
+<h2>Section E — Match the Following</h2>
+
+<div class="question">
+<h3>Q36. Match each fraction with its equivalent fraction.</h3>
+
+<div class="match-row">
+1/2 →
+<select>
+<option>Select</option>
+<option>3/4</option>
+<option>5/10</option>
+<option>4/9</option>
+<option>7/12</option>
+</select>
+</div>
+
+<div class="match-row">
+3/4 →
+<select>
+<option>Select</option>
+<option>3/4</option>
+<option>5/10</option>
+<option>4/9</option>
+<option>7/12</option>
+</select>
+</div>
+
+<div class="match-row">
+4/9 →
+<select>
+<option>Select</option>
+<option>3/4</option>
+<option>5/10</option>
+<option>4/9</option>
+<option>7/12</option>
+</select>
+</div>
+
+<div class="match-row">
+7/12 →
+<select>
+<option>Select</option>
+<option>3/4</option>
+<option>5/10</option>
+<option>4/9</option>
+<option>7/12</option>
+</select>
+</div>
+
+<p class="small">Matching answer set: 1/2→5/10, 3/4→3/4, 4/9→4/9, 7/12→7/12.</p>
+</div>
+
+
+<div class="question">
+<h3>Q37. Match the operation with its result.</h3>
+
+<div class="match-row">2/3 + 1/3 → <select>
+<option>Select</option><option>1</option><option>1/2</option><option>2/9</option><option>3/5</option>
+</select></div>
+
+<div class="match-row">3/4 − 1/4 → <select>
+<option>Select</option><option>1</option><option>1/2</option><option>2/9</option><option>3/5</option>
+</select></div>
+
+<div class="match-row">2/3 × 3/5 → <select>
+<option>Select</option><option>1</option><option>1/2</option><option>2/9</option><option>3/5</option>
+</select></div>
+
+<div class="match-row">3/5 ÷ 1 → <select>
+<option>Select</option><option>1</option><option>1/2</option><option>2/9</option><option>3/5</option>
+</select></div>
+
+<p class="small">Answers: 1, 1/2, 2/5, 3/5 respectively.</p>
+</div>
+
+
+<div class="question">
+<h3>Q38. Match the fraction with its type.</h3>
+
+<div class="match-row">5/9 → <select>
+<option>Select</option><option>Proper</option><option>Improper</option><option>Whole number</option><option>Mixed number</option>
+</select></div>
+
+<div class="match-row">11/7 → <select>
+<option>Select</option><option>Proper</option><option>Improper</option><option>Whole number</option><option>Mixed number</option>
+</select></div>
+
+<div class="match-row">3 → <select>
+<option>Select</option><option>Proper</option><option>Improper</option><option>Whole number</option><option>Mixed number</option>
+</select></div>
+
+<div class="match-row">2 1/3 → <select>
+<option>Select</option><option>Proper</option><option>Improper</option><option>Whole number</option><option>Mixed number</option>
+</select></div>
+
+<p class="small">Answers: Proper, Improper, Whole number, Mixed number.</p>
+</div>
+
+
+<div class="question">
+<h3>Q39. Match each fraction with its decimal representation.</h3>
+
+<div class="match-row">1/2 → <select>
+<option>Select</option><option>0.5</option><option>0.25</option><option>0.75</option><option>0.2</option>
+</select></div>
+
+<div class="match-row">1/4 → <select>
+<option>Select</option><option>0.5</option><option>0.25</option><option>0.75</option><option>0.2</option>
+</select></div>
+
+<div class="match-row">3/4 → <select>
+<option>Select</option><option>0.5</option><option>0.25</option><option>0.75</option><option>0.2</option>
+</select></div>
+
+<div class="match-row">1/5 → <select>
+<option>Select</option><option>0.5</option><option>0.25</option><option>0.75</option><option>0.2</option>
+</select></div>
+</div>
+
+
+<div class="question">
+<h3>Q40. Match each fraction with its reciprocal.</h3>
+
+<div class="match-row">2/7 → <select>
+<option>Select</option><option>7/2</option><option>5/3</option><option>9/4</option><option>11/6</option>
+</select></div>
+
+<div class="match-row">3/5 → <select>
+<option>Select</option><option>7/2</option><option>5/3</option><option>9/4</option><option>11/6</option>
+</select></div>
+
+<div class="match-row">4/9 → <select>
+<option>Select</option><option>7/2</option><option>5/3</option><option>9/4</option><option>11/6</option>
+</select></div>
+
+<div class="match-row">6/11 → <select>
+<option>Select</option><option>7/2</option><option>5/3</option><option>9/4</option><option>11/6</option>
+</select></div>
+
+<p class="small">Correct reciprocals: 7/2, 5/3, 9/4, 11/6 respectively.</p>
+</div>
+
+</div>
+
+
+<!-- ================= DRAG STYLE ================= -->
+
+<div class="section">
+<h2>Section F — Drag & Drop Style</h2>
+
+<p class="small">
+Choose where the fraction belongs. This is the CSS-only alternative to actual drag-and-drop.
+</p>
+
+<div class="question">
+<h3>Q41. Place 3/5 in the correct category.</h3>
+<label class="option"><input type="radio" name="q41"><span>Greater than 1</span></label>
+<label class="option"><input class="correct" type="radio" name="q41"><span>Between 0 and 1</span></label>
+<label class="option"><input type="radio" name="q41"><span>Equal to 1</span></label>
+<label class="option"><input type="radio" name="q41"><span>Less than 0</span></label>
+<div class="answer">Correct placement: Between 0 and 1.</div>
+</div>
+
+<div class="question">
+<h3>Q42. Place 9/4 in the correct category.</h3>
+<label class="option"><input type="radio" name="q42"><span>Proper fraction</span></label>
+<label class="option"><input class="correct" type="radio" name="q42"><span>Improper fraction</span></label>
+<label class="option"><input type="radio" name="q42"><span>Unit fraction</span></label>
+<label class="option"><input type="radio" name="q42"><span>Zero fraction</span></label>
+<div class="answer">Correct placement: Improper fraction.</div>
+</div>
+
+<div class="question">
+<h3>Q43. Place 7/12 on the comparison scale.</h3>
+<label class="option"><input type="radio" name="q43"><span>Less than 1/2</span></label>
+<label class="option"><input class="correct" type="radio" name="q43"><span>Greater than 1/2 but less than 1</span></label>
+<label class="option"><input type="radio" name="q43"><span>Greater than 1</span></label>
+<label class="option"><input type="radio" name="q43"><span>Equal to 1/2</span></label>
+<div class="answer">Correct placement: Greater than 1/2 but less than 1.</div>
+</div>
+
+<div class="question">
+<h3>Q44. Place 1/9 in the correct category.</h3>
+<label class="option"><input class="correct" type="radio" name="q44"><span>Unit fraction</span></label>
+<label class="option"><input type="radio" name="q44"><span>Improper fraction</span></label>
+<label class="option"><input type="radio" name="q44"><span>Mixed number</span></label>
+<label class="option"><input type="radio" name="q44"><span>Whole number</span></label>
+<div class="answer">Correct placement: Unit fraction.</div>
+</div>
+
+<div class="question">
+<h3>Q45. Place 13/13 on the number line.</h3>
+<label class="option"><input type="radio" name="q45"><span>Before 0</span></label>
+<label class="option"><input type="radio" name="q45"><span>Between 0 and 1</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q45"><span>Exactly at 1</span></label>
+<label class="option"><input type="radio" name="q45"><span>Beyond 2</span></label>
+<div class="answer">Correct placement: Exactly at 1.</div>
+</div>
+
+</div>
+
+
+<!-- ================= HOTS ================= -->
+
+<div class="section">
+<h2>Section G — HOTS / Higher Order Thinking</h2>
+
+<div class="question">
+<h3>Q46. Riya ate 2/7 of a cake and Aman ate 3/14 of the same cake. What fraction of the cake was eaten altogether?</h3>
+<label class="option"><input type="radio" name="q46"><span>4/14</span></label>
+<label class="option"><input class="correct" type="radio" name="q46"><span>1/2</span></label>
+<label class="option"><input type="radio" name="q46"><span>5/21</span></label>
+<label class="option"><input type="radio" name="q46"><span>3/7</span></label>
+<div class="answer">Correct Answer: 1/2. 2/7 = 4/14, so 4/14 + 3/14 = 7/14 = 1/2.</div>
+</div>
+
+<div class="question">
+<h3>Q47. A tank is 5/6 full. If 1/3 of the tank's total capacity is used, what fraction of the tank remains full?</h3>
+<label class="option"><input type="radio" name="q47"><span>1/2</span></label>
+<label class="option"><input class="correct" type="radio" name="q47"><span>1/2</span></label>
+<label class="option"><input type="radio" name="q47"><span>2/3</span></label>
+<label class="option"><input type="radio" name="q47"><span>1/3</span></label>
+<div class="answer">Correct Answer: 1/2. 5/6 − 1/3 = 5/6 − 2/6 = 3/6 = 1/2.</div>
+</div>
+
+<div class="question">
+<h3>Q48. A student claims that 5/8 + 2/3 = 7/11 because both numerators and denominators were added. What is the correct response?</h3>
+<label class="option"><input type="radio" name="q48"><span>The student's method is correct.</span></label>
+<label class="option"><input class="correct" type="radio" name="q48"><span>The denominators must first be made common.</span></label>
+<label class="option"><input type="radio" name="q48"><span>Only numerators should be added.</span></label>
+<label class="option"><input type="radio" name="q48"><span>The answer must always be 1.</span></label>
+<div class="answer">Correct Answer: The denominators must first be made common. The actual result is 31/24.</div>
+</div>
+
+<div class="question">
+<h3>Q49. Which is the smallest fraction among 5/6, 7/9, 11/15 and 13/18?</h3>
+<label class="option"><input type="radio" name="q49"><span>5/6</span></label>
+<label class="option"><input type="radio" name="q49"><span>7/9</span></label>
+<label class="option"><input type="radio" name="q49"><span>11/15</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q49"><span>13/18</span></label>
+<div class="answer">Correct Answer: 13/18.</div>
+</div>
+
+<div class="question">
+<h3>Q50. A ribbon 7 1/2 m long is cut into pieces of 1/2 m each. How many pieces are obtained?</h3>
+<label class="option"><input type="radio" name="q50"><span>10</span></label>
+<label class="option"><input type="radio" name="q50"><span>12</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q50"><span>15</span></label>
+<label class="option"><input type="radio" name="q50"><span>16</span></label>
+<div class="answer">Correct Answer: 15. 7 1/2 = 15/2; (15/2) ÷ (1/2) = 15.</div>
+</div>
+
+<div class="question">
+<h3>Q51. Find the missing fraction: 3/4 + □ = 1 1/8.</h3>
+<label class="option"><input type="radio" name="q51"><span>1/8</span></label>
+<label class="option"><input class="correct" type="radio" name="q51"><span>3/8</span></label>
+<label class="option"><input type="radio" name="q51"><span>1/2</span></label>
+<label class="option"><input type="radio" name="q51"><span>5/8</span></label>
+<div class="answer">Correct Answer: 3/8. 1 1/8 = 9/8, and 9/8 − 6/8 = 3/8.</div>
+</div>
+
+<div class="question">
+<h3>Q52. A number is multiplied by 4/5 and the result is 28. What was the original number?</h3>
+<label class="option"><input type="radio" name="q52"><span>30</span></label>
+<label class="option"><input class="correct" type="radio" name="q52"><span>35</span></label>
+<label class="option"><input type="radio" name="q52"><span>40</span></label>
+<label class="option"><input type="radio" name="q52"><span>45</span></label>
+<div class="answer">Correct Answer: 35. 28 ÷ 4/5 = 28 × 5/4 = 35.</div>
+</div>
+
+<div class="question">
+<h3>Q53. A path is 12 m long. One person walks 3/8 of it and another walks 1/4 of it. What total distance has been walked?</h3>
+<label class="option"><input type="radio" name="q53"><span>6 m</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q53"><span>7.5 m</span></label>
+<label class="option"><input type="radio" name="q53"><span>8 m</span></label>
+<label class="option"><input type="radio" name="q53"><span>9 m</span></label>
+<div class="answer">Correct Answer: 7.5 m. 3/8 + 1/4 = 5/8, and 5/8 × 12 = 60/8 = 7.5.</div>
+</div>
+
+<div class="question">
+<h3>Q54. Without converting to decimals, decide which is greater: 17/24 or 5/7.</h3>
+<label class="option"><input class="correct" type="radio" name="q54"><span>5/7 is greater</span></label>
+<label class="option"><input type="radio" name="q54"><span>17/24 is greater</span></label>
+<label class="option"><input type="radio" name="q54"><span>They are equal</span></label>
+<label class="option"><input type="radio" name="q54"><span>Cannot be compared</span></label>
+<div class="answer">Correct Answer: 5/7. Cross multiplication: 17×7 = 119, while 5×24 = 120.</div>
+</div>
+
+<div class="question">
+<h3>Q55. A recipe needs 3/4 cup of flour for one batch. How much flour is needed for 2 2/3 batches?</h3>
+<label class="option"><input type="radio" name="q55"><span>1 1/2 cups</span></label>
+<label class="correct option"><input class="correct" type="radio" name="q55"><span>2 cups</span></label>
+<label class="option"><input type="radio" name="q55"><span>2 1/4 cups</span></label>
+<label class="option"><input type="radio" name="q55"><span>3 cups</span></label>
+<div class="answer">Correct Answer: 2 cups. 3/4 × 8/3 = 2.</div>
+</div>
+
+</div>
+
+
+<!-- SCORE -->
+
+<section class="score-card">
+    <h2>🏆 Your Final Score</h2>
+    <div class="score-number"></div>
+    <p>Correct Answers out of 55</p>
+
+    <button type="reset" class="reset-btn">
+        Reset Test
+    </button>
+</section>
+
+</form>
+
+<div style="text-align:center;margin-top:25px;">
+    <a href="index.html" class="back-btn">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+    Class 7 Mathematics • Ganita Prakash • Chapter 8
+</footer>
+
+</body>
+</html>

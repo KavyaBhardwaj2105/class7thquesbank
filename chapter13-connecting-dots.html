@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7 Mathematics | Connecting the Dots</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#101828;
+    font-weight:700;
+    line-height:1.6;
+}
+
+header{
+    background:#101c3d;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+header h1{margin:0;font-size:32px}
+header p{margin:8px 0;color:#dbe4ff}
+
+.container{
+    max-width:1050px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.info,.question{
+    background:white;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.info{
+    padding:20px;
+    margin-bottom:22px;
+}
+
+.section-title{
+    background:#101c3d;
+    color:white;
+    padding:15px 18px;
+    border-radius:12px;
+    margin-top:30px;
+    font-size:21px;
+}
+
+.question{
+    margin:16px 0;
+    padding:20px;
+    border-left:5px solid #243b73;
+}
+
+.question h3{margin-top:0}
+
+.option{
+    display:block;
+    padding:10px 13px;
+    margin:8px 0;
+    border:1px solid #ccd5e1;
+    border-radius:9px;
+    cursor:pointer;
+    background:#fafcff;
+}
+
+.option:hover{background:#edf3ff}
+
+input[type="radio"]{
+    margin-right:10px;
+    transform:scale(1.1);
+}
+
+.answer{
+    display:none;
+    margin-top:14px;
+    padding:12px;
+    border-radius:9px;
+    background:#e8f7ed;
+    border:1px solid #9bd2ac;
+}
+
+.question:has(input:checked) .answer{
+    display:block;
+}
+
+/* SCORE */
+
+.quiz{counter-reset:score}
+
+.question:not(.match):has(.correct:checked){
+    counter-increment:score;
+}
+
+.match36:has(.m36a.correct:checked):has(.m36b.correct:checked):has(.m36c.correct:checked):has(.m36d.correct:checked){
+    counter-increment:score;
+}
+
+.match37:has(.m37a.correct:checked):has(.m37b.correct:checked):has(.m37c.correct:checked):has(.m37d.correct:checked){
+    counter-increment:score;
+}
+
+.match38:has(.m38a.correct:checked):has(.m38b.correct:checked):has(.m38c.correct:checked):has(.m38d.correct:checked){
+    counter-increment:score;
+}
+
+.match39:has(.m39a.correct:checked):has(.m39b.correct:checked):has(.m39c.correct:checked):has(.m39d.correct:checked){
+    counter-increment:score;
+}
+
+.match40:has(.m40a.correct:checked):has(.m40b.correct:checked):has(.m40c.correct:checked):has(.m40d.correct:checked){
+    counter-increment:score;
+}
+
+.score-card{
+    margin-top:35px;
+    background:#101c3d;
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.score-number{
+    font-size:40px;
+    margin:15px 0;
+}
+
+.score-number::after{
+    content:counter(score) " / 55";
+}
+
+.score-note{
+    color:#dce5ff;
+    font-size:14px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:12px;
+}
+
+th,td{
+    border:1px solid #ccd5e1;
+    padding:10px;
+    text-align:center;
+}
+
+th{background:#e8edf6}
+
+.bar{
+    display:inline-block;
+    width:30px;
+    margin:2px;
+    background:#243b73;
+    color:white;
+    border-radius:4px 4px 0 0;
+    text-align:center;
+}
+
+.note{
+    background:#fff8dc;
+    border-left:5px solid #e1b400;
+    padding:12px 15px;
+    border-radius:9px;
+}
+
+.nav{
+    text-align:center;
+    margin:30px 0;
+}
+
+.nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#243b73;
+    padding:12px 22px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#596579;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Class 7 Mathematics</h1>
+<p>Ganita Prakash Part 2 • Chapter 13: Connecting the Dots…</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+<h2>📊 Chapter 13 — Connecting the Dots…</h2>
+
+<p>
+This chapter focuses on statistical questions and statements,
+data collection, representative values, mean, median, outliers,
+dot plots, variability and data visualisation.
+</p>
+
+<div class="note">
+<b>55 Questions:</b> 15 MCQs + 10 True/False + 5 Assertion & Reasoning
++ 5 Fill in the Blanks + 5 Match the Following
++ 5 Drag & Drop Style + 10 HOTS.
+</div>
+</div>
+
+<form class="quiz">
+
+<!-- =====================================================
+SECTION A — MCQs 1-15
+===================================================== -->
+
+<div class="section-title">Section A — Multiple Choice Questions (15)</div>
+
+<div class="question">
+<h3>1. Which of the following is a statistical question?</h3>
+
+<label class="option"><input type="radio" name="q1"> What is Riya's height?</label>
+<label class="option"><input type="radio" name="q1"> How many books are on this table?</label>
+<label class="correct option"><input class="correct" type="radio" name="q1"> What are the heights of students in Class 7?</label>
+<label class="option"><input type="radio" name="q1"> What is today's date?</label>
+
+<div class="answer">
+Correct Answer: What are the heights of students in Class 7?
+</div>
+</div>
+
+<div class="question">
+<h3>2. Find the mean of 6, 8, 10, 12 and 14.</h3>
+
+<label class="option"><input type="radio" name="q2"> 8</label>
+<label class="correct option"><input class="correct" type="radio" name="q2"> 10</label>
+<label class="option"><input type="radio" name="q2"> 11</label>
+<label class="option"><input type="radio" name="q2"> 12</label>
+
+<div class="answer">Correct Answer: 10</div>
+</div>
+
+<div class="question">
+<h3>3. Find the median of 4, 9, 7, 12, 6.</h3>
+
+<label class="option"><input type="radio" name="q3"> 6</label>
+<label class="correct option"><input class="correct" type="radio" name="q3"> 7</label>
+<label class="option"><input type="radio" name="q3"> 9</label>
+<label class="option"><input type="radio" name="q3"> 12</label>
+
+<div class="answer">
+Arrange: 4, 6, 7, 9, 12. Median = 7.
+</div>
+</div>
+
+<div class="question">
+<h3>4. Which value is most likely to be strongly affected by an extremely large outlier?</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q4"> Mean</label>
+<label class="option"><input type="radio" name="q4"> Median</label>
+<label class="option"><input type="radio" name="q4"> Minimum</label>
+<label class="option"><input type="radio" name="q4"> Maximum</label>
+
+<div class="answer">Correct Answer: Mean</div>
+</div>
+
+<div class="question">
+<h3>5. The data 3, 5, 5, 6, 8 contains which repeated value?</h3>
+
+<label class="option"><input type="radio" name="q5"> 3</label>
+<label class="correct option"><input class="correct" type="radio" name="q5"> 5</label>
+<label class="option"><input type="radio" name="q5"> 6</label>
+<label class="option"><input type="radio" name="q5"> 8</label>
+
+<div class="answer">Correct Answer: 5</div>
+</div>
+
+<div class="question">
+<h3>6. If the mean of 8 observations is 12, what is their total?</h3>
+
+<label class="option"><input type="radio" name="q6"> 20</label>
+<label class="option"><input type="radio" name="q6"> 84</label>
+<label class="correct option"><input class="correct" type="radio" name="q6"> 96</label>
+<label class="option"><input type="radio" name="q6"> 108</label>
+
+<div class="answer">Correct Answer: 96</div>
+</div>
+
+<div class="question">
+<h3>7. Which is the median of 11, 4, 9, 6, 15, 8, 3?</h3>
+
+<label class="option"><input type="radio" name="q7"> 6</label>
+<label class="correct option"><input class="correct" type="radio" name="q7"> 8</label>
+<label class="option"><input type="radio" name="q7"> 9</label>
+<label class="option"><input type="radio" name="q7"> 11</label>
+
+<div class="answer">
+Ordered data: 3, 4, 6, 8, 9, 11, 15. Median = 8.
+</div>
+</div>
+
+<div class="question">
+<h3>8. What is the mean of 5, 5, 5 and 9?</h3>
+
+<label class="option"><input type="radio" name="q8"> 5</label>
+<label class="correct option"><input class="correct" type="radio" name="q8"> 6</label>
+<label class="option"><input type="radio" name="q8"> 7</label>
+<label class="option"><input type="radio" name="q8"> 8</label>
+
+<div class="answer">Correct Answer: 6</div>
+</div>
+
+<div class="question">
+<h3>9. In a dot plot, several dots above the same number indicate:</h3>
+
+<label class="option"><input type="radio" name="q9"> Different scales</label>
+<label class="correct option"><input class="correct" type="radio" name="q9"> Repeated occurrences of that value</label>
+<label class="option"><input type="radio" name="q9"> Missing data</label>
+<label class="option"><input type="radio" name="q9"> An outlier automatically</label>
+
+<div class="answer">
+Correct Answer: Repeated occurrences of that value.
+</div>
+</div>
+
+<div class="question">
+<h3>10. Which data set has the greatest variability?</h3>
+
+<label class="option"><input type="radio" name="q10"> 8, 9, 10, 9, 8</label>
+<label class="option"><input type="radio" name="q10"> 20, 21, 20, 21, 20</label>
+<label class="correct option"><input class="correct" type="radio" name="q10"> 2, 10, 18, 26, 34</label>
+<label class="option"><input type="radio" name="q10"> 14, 15, 14, 15, 14</label>
+
+<div class="answer">
+Correct Answer: 2, 10, 18, 26, 34.
+</div>
+</div>
+
+<div class="question">
+<h3>11. The data 7, 8, 8, 9, 10 has mean:</h3>
+
+<label class="option"><input type="radio" name="q11"> 7.5</label>
+<label class="correct option"><input class="correct" type="radio" name="q11"> 8.4</label>
+<label class="option"><input type="radio" name="q11"> 8.8</label>
+<label class="option"><input type="radio" name="q11"> 9.2</label>
+
+<div class="answer">
+Mean = (7+8+8+9+10)/5 = 42/5 = 8.4.
+</div>
+</div>
+
+<div class="question">
+<h3>12. Which value is the median of 2, 4, 6, 8, 10, 12?</h3>
+
+<label class="option"><input type="radio" name="q12"> 6</label>
+<label class="correct option"><input class="correct" type="radio" name="q12"> 7</label>
+<label class="option"><input type="radio" name="q12"> 8</label>
+<label class="option"><input type="radio" name="q12"> 9</label>
+
+<div class="answer">
+For six values, median = average of 3rd and 4th:
+(6+8)/2 = 7.
+</div>
+</div>
+
+<div class="question">
+<h3>13. A data set has values 4, 5, 5, 6, 40. Which measure better represents a typical observation?</h3>
+
+<label class="option"><input type="radio" name="q13"> Mean</label>
+<label class="correct option"><input class="correct" type="radio" name="q13"> Median</label>
+<label class="option"><input type="radio" name="q13"> Maximum</label>
+<label class="option"><input type="radio" name="q13"> Range</label>
+
+<div class="answer">
+Correct Answer: Median. The value 40 is an extreme outlier.
+</div>
+</div>
+
+<div class="question">
+<h3>14. If every observation in a data set increases by 3, the mean:</h3>
+
+<label class="option"><input type="radio" name="q14"> Decreases by 3</label>
+<label class="correct option"><input class="correct" type="radio" name="q14"> Increases by 3</label>
+<label class="option"><input type="radio" name="q14"> Remains unchanged</label>
+<label class="option"><input type="radio" name="q14"> Becomes zero</label>
+
+<div class="answer">
+Correct Answer: Increases by 3.
+</div>
+</div>
+
+<div class="question">
+<h3>15. Which graph is especially useful for displaying how frequently individual values occur?</h3>
+
+<label class="option"><input type="radio" name="q15"> Pie chart only</label>
+<label class="correct option"><input class="correct" type="radio" name="q15"> Dot plot</label>
+<label class="option"><input type="radio" name="q15"> Number line without marks</label>
+<label class="option"><input type="radio" name="q15"> Compass diagram</label>
+
+<div class="answer">Correct Answer: Dot plot</div>
+</div>
+
+
+<!-- =====================================================
+TRUE FALSE
+===================================================== -->
+
+<div class="section-title">Section B — True / False (10)</div>
+
+<div class="question">
+<h3>16. A statistical question generally expects variability in the answers.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q16"> True</label>
+<label class="option"><input type="radio" name="q16"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>17. The mean always has to be one of the observations in the data set.</h3>
+
+<label class="option"><input type="radio" name="q17"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q17"> False</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+<div class="question">
+<h3>18. The median requires the data to be arranged in order.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q18"> True</label>
+<label class="option"><input type="radio" name="q18"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>19. An outlier can pull the mean towards itself.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q19"> True</label>
+<label class="option"><input type="radio" name="q19"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>20. A dot plot can show repeated values using stacked dots.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q20"> True</label>
+<label class="option"><input type="radio" name="q20"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>21. The median of 2, 5, 7, 9, 12 is 7.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q21"> True</label>
+<label class="option"><input type="radio" name="q21"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>22. If all observations are identical, their variability is very large.</h3>
+
+<label class="option"><input type="radio" name="q22"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q22"> False</label>
+
+<div class="answer">Correct Answer: False</div>
+</div>
+
+<div class="question">
+<h3>23. The mean of 10 and 20 is 15.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q23"> True</label>
+<label class="option"><input type="radio" name="q23"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+<div class="question">
+<h3>24. For an even number of observations, the median is always one of the observations.</h3>
+
+<label class="option"><input type="radio" name="q24"> True</label>
+<label class="correct option"><input class="correct" type="radio" name="q24"> False</label>
+
+<div class="answer">
+Correct Answer: False. It is the average of the two middle observations.
+</div>
+</div>
+
+<div class="question">
+<h3>25. Two data sets can have the same mean but different variability.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q25"> True</label>
+<label class="option"><input type="radio" name="q25"> False</label>
+
+<div class="answer">Correct Answer: True</div>
+</div>
+
+
+<!-- =====================================================
+ASSERTION REASON
+===================================================== -->
+
+<div class="section-title">Section C — Assertion & Reasoning (5)</div>
+
+<div class="info">
+<p><b>A:</b> Both A and R are true, and R correctly explains A.</p>
+<p><b>B:</b> Both A and R are true, but R does not explain A.</p>
+<p><b>C:</b> A is true, but R is false.</p>
+<p><b>D:</b> A is false, but R is true.</p>
+</div>
+
+<div class="question">
+<h3>
+26. Assertion: The mean of 4, 6 and 8 is 6.<br>
+Reason: Their sum is 18 and there are 3 observations.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q26"> A</label>
+<label class="option"><input type="radio" name="q26"> B</label>
+<label class="option"><input type="radio" name="q26"> C</label>
+<label class="option"><input type="radio" name="q26"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+<div class="question">
+<h3>
+27. Assertion: The median is 8 for 3, 6, 8, 10, 15.<br>
+Reason: The data has five observations.
+</h3>
+
+<label class="option"><input type="radio" name="q27"> A</label>
+<label class="correct option"><input class="correct" type="radio" name="q27"> B</label>
+<label class="option"><input type="radio" name="q27"> C</label>
+<label class="option"><input type="radio" name="q27"> D</label>
+
+<div class="answer">
+Correct Answer: B. Both are true, but having five observations alone does not explain why the median is 8.
+</div>
+</div>
+
+<div class="question">
+<h3>
+28. Assertion: An extreme outlier can change the mean considerably.<br>
+Reason: The mean uses every observation in its calculation.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q28"> A</label>
+<label class="option"><input type="radio" name="q28"> B</label>
+<label class="option"><input type="radio" name="q28"> C</label>
+<label class="option"><input type="radio" name="q28"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+<div class="question">
+<h3>
+29. Assertion: The median of 5, 7, 9, 11 is 8.<br>
+Reason: For an even number of observations, the median is the average of the two middle values.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q29"> A</label>
+<label class="option"><input type="radio" name="q29"> B</label>
+<label class="option"><input type="radio" name="q29"> C</label>
+<label class="option"><input type="radio" name="q29"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+<div class="question">
+<h3>
+30. Assertion: The mean of 5, 5, 5, 5 is 5.<br>
+Reason: All observations have the same value.
+</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q30"> A</label>
+<label class="option"><input type="radio" name="q30"> B</label>
+<label class="option"><input type="radio" name="q30"> C</label>
+<label class="option"><input type="radio" name="q30"> D</label>
+
+<div class="answer">Correct Answer: A</div>
+</div>
+
+
+<!-- =====================================================
+FILL IN THE BLANKS
+===================================================== -->
+
+<div class="section-title">Section D — Fill in the Blanks (5)</div>
+
+<div class="question">
+<h3>31. The ______ is found by adding all observations and dividing by their number.</h3>
+
+<label class="option"><input type="radio" name="q31"> Median</label>
+<label class="correct option"><input class="correct" type="radio" name="q31"> Mean</label>
+<label class="option"><input type="radio" name="q31"> Range</label>
+<label class="option"><input type="radio" name="q31"> Mode</label>
+
+<div class="answer">Correct Answer: Mean</div>
+</div>
+
+<div class="question">
+<h3>32. The middle value after arranging data is called the ______.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q32"> Median</label>
+<label class="option"><input type="radio" name="q32"> Mean</label>
+<label class="option"><input type="radio" name="q32"> Total</label>
+<label class="option"><input type="radio" name="q32"> Maximum</label>
+
+<div class="answer">Correct Answer: Median</div>
+</div>
+
+<div class="question">
+<h3>33. An unusually high or low observation is called an ______.</h3>
+
+<label class="option"><input type="radio" name="q33"> Average</label>
+<label class="correct option"><input class="correct" type="radio" name="q33"> Outlier</label>
+<label class="option"><input type="radio" name="q33"> Axis</label>
+<label class="option"><input type="radio" name="q33"> Interval</label>
+
+<div class="answer">Correct Answer: Outlier</div>
+</div>
+
+<div class="question">
+<h3>34. A graph that uses dots to show individual observations is called a ______ plot.</h3>
+
+<label class="correct option"><input class="correct" type="radio" name="q34"> Dot</label>
+<label class="option"><input type="radio" name="q34"> Circle</label>
+<label class="option"><input type="radio" name="q34"> Line</label>
+<label class="option"><input type="radio" name="q34"> Sector</label>
+
+<div class="answer">Correct Answer: Dot</div>
+</div>
+
+<div class="question">
+<h3>35. The extent to which observations differ from one another is called ______.</h3>
+
+<label class="option"><input type="radio" name="q35"> Similarity</label>
+<label class="correct option"><input class="correct" type="radio" name="q35"> Variability</label>
+<label class="option"><input type="radio" name="q35"> Frequency only</label>
+<label class="option"><input type="radio" name="q35"> Prediction</label>
+
+<div class="answer">Correct Answer: Variability</div>
+</div>
+
+
+<!-- =====================================================
+MATCHING
+===================================================== -->
+
+<div class="section-title">Section E — Match the Following (5)</div>
+
+<div class="question match match36">
+<h3>36. Match each data set with its mean.</h3>
+
+<table>
+<tr><th>Data</th><th>Mean</th></tr>
+
+<tr>
+<td>2, 4, 6</td>
+<td>
+<label><input class="m36a correct" type="radio" name="m36a"> 4</label>
+<label><input type="radio" name="m36a"> 3</label>
+<label><input type="radio" name="m36a"> 5</label>
+<label><input type="radio" name="m36a"> 6</label>
+</td>
+</tr>
+
+<tr>
+<td>5, 7, 9</td>
+<td>
+<label><input class="m36b correct" type="radio" name="m36b"> 7</label>
+<label><input type="radio" name="m36b"> 6</label>
+<label><input type="radio" name="m36b"> 8</label>
+<label><input type="radio" name="m36b"> 9</label>
+</td>
+</tr>
+
+<tr>
+<td>10, 12, 14, 16</td>
+<td>
+<label><input class="m36c correct" type="radio" name="m36c"> 13</label>
+<label><input type="radio" name="m36c"> 12</label>
+<label><input type="radio" name="m36c"> 14</label>
+<label><input type="radio" name="m36c"> 15</label>
+</td>
+</tr>
+
+<tr>
+<td>3, 6, 9, 12, 15</td>
+<td>
+<label><input class="m36d correct" type="radio" name="m36d"> 9</label>
+<label><input type="radio" name="m36d"> 8</label>
+<label><input type="radio" name="m36d"> 10</label>
+<label><input type="radio" name="m36d"> 12</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: 2,4,6→4; 5,7,9→7; 10,12,14,16→13; 3,6,9,12,15→9.
+</div>
+</div>
+
+
+<div class="question match match37">
+<h3>37. Match each data set with its median.</h3>
+
+<table>
+<tr><th>Data</th><th>Median</th></tr>
+
+<tr>
+<td>3, 5, 7, 9, 11</td>
+<td>
+<label><input class="m37a correct" type="radio" name="m37a"> 7</label>
+<label><input type="radio" name="m37a"> 5</label>
+<label><input type="radio" name="m37a"> 9</label>
+<label><input type="radio" name="m37a"> 11</label>
+</td>
+</tr>
+
+<tr>
+<td>2, 4, 6, 8</td>
+<td>
+<label><input class="m37b correct" type="radio" name="m37b"> 5</label>
+<label><input type="radio" name="m37b"> 4</label>
+<label><input type="radio" name="m37b"> 6</label>
+<label><input type="radio" name="m37b"> 7</label>
+</td>
+</tr>
+
+<tr>
+<td>1, 4, 6, 7, 10, 12</td>
+<td>
+<label><input class="m37c correct" type="radio" name="m37c"> 6.5</label>
+<label><input type="radio" name="m37c"> 6</label>
+<label><input type="radio" name="m37c"> 7</label>
+<label><input type="radio" name="m37c"> 8.5</label>
+</td>
+</tr>
+
+<tr>
+<td>8, 9, 12, 14, 17</td>
+<td>
+<label><input class="m37d correct" type="radio" name="m37d"> 12</label>
+<label><input type="radio" name="m37d"> 9</label>
+<label><input type="radio" name="m37d"> 14</label>
+<label><input type="radio" name="m37d"> 13</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: first→7, second→5, third→6.5, fourth→12.
+</div>
+</div>
+
+
+<div class="question match match38">
+<h3>38. Match the statistical term with its meaning.</h3>
+
+<table>
+<tr><th>Term</th><th>Meaning</th></tr>
+
+<tr>
+<td>Mean</td>
+<td>
+<label><input class="m38a correct" type="radio" name="m38a"> Sum ÷ number of observations</label>
+<label><input type="radio" name="m38a"> Middle observation only</label>
+<label><input type="radio" name="m38a"> Largest observation</label>
+<label><input type="radio" name="m38a"> Smallest observation</label>
+</td>
+</tr>
+
+<tr>
+<td>Median</td>
+<td>
+<label><input class="m38b correct" type="radio" name="m38b"> Middle value after ordering</label>
+<label><input type="radio" name="m38b"> Sum of values</label>
+<label><input type="radio" name="m38b"> Largest value</label>
+<label><input type="radio" name="m38b"> Difference of values</label>
+</td>
+</tr>
+
+<tr>
+<td>Outlier</td>
+<td>
+<label><input class="m38c correct" type="radio" name="m38c"> Unusually distant observation</label>
+<label><input type="radio" name="m38c"> Middle value</label>
+<label><input type="radio" name="m38c"> Average</label>
+<label><input type="radio" name="m38c"> Repeated value only</label>
+</td>
+</tr>
+
+<tr>
+<td>Variability</td>
+<td>
+<label><input class="m38d correct" type="radio" name="m38d"> How much observations differ</label>
+<label><input type="radio" name="m38d"> Number of observations only</label>
+<label><input type="radio" name="m38d"> Highest observation</label>
+<label><input type="radio" name="m38d"> Graph title</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: Mean→sum divided by number; Median→middle value;
+Outlier→unusually distant observation; Variability→how much observations differ.
+</div>
+</div>
+
+
+<div class="question match match39">
+<h3>39. Match each situation with the better representative value.</h3>
+
+<table>
+<tr><th>Situation</th><th>Better choice</th></tr>
+
+<tr>
+<td>Scores: 8, 9, 10, 9, 11</td>
+<td>
+<label><input class="m39a correct" type="radio" name="m39a"> Mean</label>
+<label><input type="radio" name="m39a"> Median only</label>
+<label><input type="radio" name="m39a"> Maximum only</label>
+<label><input type="radio" name="m39a"> Minimum only</label>
+</td>
+</tr>
+
+<tr>
+<td>Income data containing one extremely high income</td>
+<td>
+<label><input class="m39b correct" type="radio" name="m39b"> Median</label>
+<label><input type="radio" name="m39b"> Mean only</label>
+<label><input type="radio" name="m39b"> Maximum</label>
+<label><input type="radio" name="m39b"> Total</label>
+</td>
+</tr>
+
+<tr>
+<td>Five identical measurements</td>
+<td>
+<label><input class="m39c correct" type="radio" name="m39c"> Either mean or median</label>
+<label><input type="radio" name="m39c"> Maximum only</label>
+<label><input type="radio" name="m39c"> Minimum only</label>
+<label><input type="radio" name="m39c"> Neither</label>
+</td>
+</tr>
+
+<tr>
+<td>Ordered data with an extreme low value</td>
+<td>
+<label><input class="m39d correct" type="radio" name="m39d"> Median is often more resistant</label>
+<label><input type="radio" name="m39d"> Mean must be unchanged</label>
+<label><input type="radio" name="m39d"> Maximum is always best</label>
+<label><input type="radio" name="m39d"> Minimum is always best</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: regular balanced data→mean; extreme outlier→median;
+identical values→either; extreme low value→median is often more resistant.
+</div>
+</div>
+
+
+<div class="question match match40">
+<h3>40. Match each data description with the correct conclusion.</h3>
+
+<table>
+<tr><th>Description</th><th>Conclusion</th></tr>
+
+<tr>
+<td>All dots in a dot plot are close together</td>
+<td>
+<label><input class="m40a correct" type="radio" name="m40a"> Low variability</label>
+<label><input type="radio" name="m40a"> High variability</label>
+<label><input type="radio" name="m40a"> No observations</label>
+<label><input type="radio" name="m40a"> Guaranteed outlier</label>
+</td>
+</tr>
+
+<tr>
+<td>Dots are spread widely across the number line</td>
+<td>
+<label><input class="m40b correct" type="radio" name="m40b"> Greater variability</label>
+<label><input type="radio" name="m40b"> No variability</label>
+<label><input type="radio" name="m40b"> Only one value</label>
+<label><input type="radio" name="m40b"> Mean must be zero</label>
+</td>
+</tr>
+
+<tr>
+<td>One observation lies far away from the others</td>
+<td>
+<label><input class="m40c correct" type="radio" name="m40c"> Possible outlier</label>
+<label><input type="radio" name="m40c"> Median</label>
+<label><input type="radio" name="m40c"> Mean automatically</label>
+<label><input type="radio" name="m40c"> Scale</label>
+</td>
+</tr>
+
+<tr>
+<td>Two data sets have equal means but different spread</td>
+<td>
+<label><input class="m40d correct" type="radio" name="m40d"> Their variability may differ</label>
+<label><input type="radio" name="m40d"> They must be identical</label>
+<label><input type="radio" name="m40d"> Their medians must differ</label>
+<label><input type="radio" name="m40d"> Both have no outliers</label>
+</td>
+</tr>
+</table>
+
+<div class="answer">
+Correct matches: close dots→low variability; spread dots→greater variability;
+far observation→possible outlier; same mean→variability may differ.
+</div>
+</div>
+
+
+<!-- =====================================================
+DRAG DROP STYLE
+===================================================== -->
+
+<div class="section-title">Section F — Drag & Drop Style (5)</div>
+
+<div class="info">
+<p>
+CSS-only simulation: choose the option that you would drag into the answer box.
+</p>
+</div>
+
+<div class="question">
+<h3>41. Drag the mean of 4, 8, 12, 16 into the box.</h3>
+
+<label class="option"><input type="radio" name="q41"> 8</label>
+<label class="correct option"><input class="correct" type="radio" name="q41"> 10</label>
+<label class="option"><input type="radio" name="q41"> 12</label>
+<label class="option"><input type="radio" name="q41"> 14</label>
+
+<div class="answer">Correct Answer: 10</div>
+</div>
+
+<div class="question">
+<h3>42. Drag the median of 5, 7, 9, 11, 13.</h3>
+
+<label class="option"><input type="radio" name="q42"> 7</label>
+<label class="correct option"><input class="correct" type="radio" name="q42"> 9</label>
+<label class="option"><input type="radio" name="q42"> 11</label>
+<label class="option"><input type="radio" name="q42"> 13</label>
+
+<div class="answer">Correct Answer: 9</div>
+</div>
+
+<div class="question">
+<h3>43. Drag the data set with the greatest spread.</h3>
+
+<label class="option"><input type="radio" name="q43"> 10, 11, 10, 11</label>
+<label class="option"><input type="radio" name="q43"> 20, 21, 20, 21</label>
+<label class="correct option"><input class="correct" type="radio" name="q43"> 2, 8, 15, 25</label>
+<label class="option"><input type="radio" name="q43"> 6, 7, 6, 7</label>
+
+<div class="answer">Correct Answer: 2, 8, 15, 25</div>
+</div>
+
+<div class="question">
+<h3>44. Drag the possible outlier from this data: 12, 13, 11, 14, 12, 45.</h3>
+
+<label class="option"><input type="radio" name="q44"> 11</label>
+<label class="option"><input type="radio" name="q44"> 12</label>
+<label class="option"><input type="radio" name="q44"> 14</label>
+<label class="correct option"><input class="correct" type="radio" name="q44"> 45</label>
+
+<div class="answer">Correct Answer: 45</div>
+</div>
+
+<div class="question">
+<h3>45. Drag the statistical question.</h3>
+
+<label class="option"><input type="radio" name="q45"> What is Aman’s age?</label>
+<label class="correct option"><input class="correct" type="radio" name="q45"> What are the ages of students in Class 7?</label>
+<label class="option"><input type="radio" name="q45"> What day is today?</label>
+<label class="option"><input type="radio" name="q45"> How many fingers are on one hand?</label>
+
+<div class="answer">
+Correct Answer: What are the ages of students in Class 7?
+</div>
+</div>
+
+
+<!-- =====================================================
+HOTS
+===================================================== -->
+
+<div class="section-title">Section G — HOTS / Higher Order Thinking (10)</div>
+
+<div class="question">
+<h3>
+46. Five students scored 12, 15, 18, 20 and 25 marks.
+What is their average score?
+</h3>
+
+<label class="option"><input type="radio" name="q46"> 16</label>
+<label class="correct option"><input class="correct" type="radio" name="q46"> 18</label>
+<label class="option"><input type="radio" name="q46"> 19</label>
+<label class="option"><input type="radio" name="q46"> 20</label>
+
+<div class="answer">
+Mean = (12+15+18+20+25)/5 = 90/5 = 18.
+</div>
+</div>
+
+<div class="question">
+<h3>
+47. The mean of four numbers is 15. Three of the numbers are
+10, 14 and 18. What is the fourth number?
+</h3>
+
+<label class="option"><input type="radio" name="q47"> 16</label>
+<label class="correct option"><input class="correct" type="radio" name="q47"> 18</label>
+<label class="option"><input type="radio" name="q47"> 20</label>
+<label class="option"><input type="radio" name="q47"> 22</label>
+
+<div class="answer">
+Total required = 4×15 = 60.
+Known total = 10+14+18 = 42.
+Fourth number = 60−42 = 18.
+</div>
+</div>
+
+<div class="question">
+<h3>
+48. The scores of a player are 18, 20, 19, 21 and 70.
+Which measure gives a more representative idea of the usual score?
+</h3>
+
+<label class="option"><input type="radio" name="q48"> Mean</label>
+<label class="correct option"><input class="correct" type="radio" name="q48"> Median</label>
+<label class="option"><input type="radio" name="q48"> Maximum</label>
+<label class="option"><input type="radio" name="q48"> Total</label>
+
+<div class="answer">
+Correct Answer: Median. 70 is an extreme value compared with the other scores.
+</div>
+</div>
+
+<div class="question">
+<h3>
+49. Two classes have the following test-score averages:
+Class A = 18, Class B = 18.
+Can we conclude that their students performed identically?
+</h3>
+
+<label class="option"><input type="radio" name="q49"> Yes, because equal means guarantee identical data.</label>
+<label class="correct option"><input class="correct" type="radio" name="q49"> No, because different data sets can have the same mean.</label>
+<label class="option"><input type="radio" name="q49"> Yes, because every student must have scored 18.</label>
+<label class="option"><input type="radio" name="q49"> No, because means cannot be equal.</label>
+
+<div class="answer">
+Correct Answer: No. Different data sets can have the same mean.
+</div>
+</div>
+
+<div class="question">
+<h3>
+50. A data set is 4, 6, 8, 10, 12. If 20 is added to the set,
+what happens to the mean?
+</h3>
+
+<label class="option"><input type="radio" name="q50"> It stays 8.</label>
+<label class="correct option"><input class="correct" type="radio" name="q50"> It increases.</label>
+<label class="option"><input type="radio" name="q50"> It becomes 20.</label>
+<label class="option"><input type="radio" name="q50"> It becomes zero.</label>
+
+<div class="answer">
+Original mean = 8. New mean = (4+6+8+10+12+20)/6 = 60/6 = 10.
+So the mean increases.
+</div>
+</div>
+
+<div class="question">
+<h3>
+51. A teacher records the number of books read by students:
+2, 3, 3, 4, 4, 4, 5, 5.
+What is the median?
+</h3>
+
+<label class="option"><input type="radio" name="q51"> 3</label>
+<label class="correct option"><input class="correct" type="radio" name="q51"> 4</label>
+<label class="option"><input type="radio" name="q51"> 4.5</label>
+<label class="option"><input type="radio" name="q51"> 5</label>
+
+<div class="answer">
+There are 8 observations. Middle values are 4 and 4.
+Median = (4+4)/2 = 4.
+</div>
+</div>
+
+<div class="question">
+<h3>
+52. Data set A is 10, 10, 10, 10, 10.
+Data set B is 2, 6, 10, 14, 18.
+Both have mean 10. Which statement is correct?
+</h3>
+
+<label class="option"><input type="radio" name="q52"> Both have the same variability.</label>
+<label class="correct option"><input class="correct" type="radio" name="q52"> B has greater variability.</label>
+<label class="option"><input type="radio" name="q52"> A has greater variability.</label>
+<label class="option"><input type="radio" name="q52"> Neither has a mean.</label>
+
+<div class="answer">
+Correct Answer: B has greater variability because its observations are spread out.
+</div>
+</div>
+
+<div class="question">
+<h3>
+53. A dot plot shows 2 dots at 3, 5 dots at 4 and 3 dots at 5.
+How many observations are there altogether?
+</h3>
+
+<label class="option"><input type="radio" name="q53"> 8</label>
+<label class="correct option"><input class="correct" type="radio" name="q53"> 10</label>
+<label class="option"><input type="radio" name="q53"> 12</label>
+<label class="option"><input type="radio" name="q53"> 15</label>
+
+<div class="answer">
+Total observations = 2 + 5 + 3 = 10.
+</div>
+</div>
+
+<div class="question">
+<h3>
+54. A data set has mean 12. If every value is reduced by 5,
+what will the new mean be?
+</h3>
+
+<label class="option"><input type="radio" name="q54"> 5</label>
+<label class="correct option"><input class="correct" type="radio" name="q54"> 7</label>
+<label class="option"><input type="radio" name="q54"> 12</label>
+<label class="option"><input type="radio" name="q54"> 17</label>
+
+<div class="answer">
+New mean = 12 − 5 = 7.
+</div>
+</div>
+
+<div class="question">
+<h3>
+55. A school records the travel time of students to school:
+15, 16, 15, 17, 16, 15, 60 minutes.
+What is the best reason for examining the median as well as the mean?
+</h3>
+
+<label class="correct option">
+<input class="correct" type="radio" name="q55">
+The 60-minute value may be an outlier and can pull the mean upward.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+The median is always larger than the mean.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+The mean can never be calculated.
+</label>
+
+<label class="option">
+<input type="radio" name="q55">
+The 60-minute value must be removed automatically.
+</label>
+
+<div class="answer">
+Correct Answer: The 60-minute value may be an outlier and can pull the mean upward.
+</div>
+</div>
+
+
+<!-- =====================================================
+SCORE CARD
+===================================================== -->
+
+<div class="score-card">
+
+<h2>🏆 Chapter 13 Score</h2>
+
+<div class="score-number"></div>
+
+<p>Correct answers out of 55</p>
+
+<p class="score-note">
+The score is calculated automatically using HTML + CSS.
+</p>
+
+</div>
+
+</form>
+
+<div class="nav">
+<a href="index.html">← Back to Chapter Index</a>
+</div>
+
+</div>
+
+<footer>
+Class 7 Mathematics • Ganita Prakash • Chapter 13
+</footer>
+
+</body>
+</html>
